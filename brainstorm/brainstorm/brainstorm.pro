@@ -13,9 +13,10 @@ SOURCES += \
     src/mainwindow.cpp
 
 HEADERS += \
-    include/mainwindow.h
+    include/headers/mainwindow.h
 
-FORMS +=
+FORMS += \
+    include/ui/mainwindow.ui
 
 TRANSLATIONS += \
     brainstorm_en_US.ts

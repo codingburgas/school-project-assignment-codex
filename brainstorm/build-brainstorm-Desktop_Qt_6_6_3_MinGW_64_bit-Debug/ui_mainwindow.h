@@ -38,10 +38,10 @@ public:
         centralwidget->setObjectName("centralwidget");
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(150, 190, 80, 18));
+        pushButton->setGeometry(QRect(140, 180, 80, 18));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(90, 90, 201, 71));
+        label->setGeometry(QRect(70, 50, 221, 101));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
