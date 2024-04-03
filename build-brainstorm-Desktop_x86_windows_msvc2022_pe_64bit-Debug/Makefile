@@ -430,11 +430,13 @@ Makefile: ..\brainstorm\brainstorm.pro D:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msv
 		..\brainstorm\brainstorm.pro \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.prl \
+		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Sql.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.prl \
 		D:\Qt\6.7.0\msvc2019_64\mkspecs\features\build_pass.prf \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgetsd.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Guid.prl \
+		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Sqld.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6Cored.prl \
 		D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPointd.prl
 	$(QMAKE) -o Makefile ..\brainstorm\brainstorm.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -784,11 +786,13 @@ D:\Qt\6.7.0\msvc2019_64\mkspecs\features\lex.prf:
 ..\brainstorm\brainstorm.pro:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.prl:
+D:\Qt\6.7.0\msvc2019_64\lib\Qt6Sql.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.prl:
 D:\Qt\6.7.0\msvc2019_64\mkspecs\features\build_pass.prf:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgetsd.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Guid.prl:
+D:\Qt\6.7.0\msvc2019_64\lib\Qt6Sqld.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6Cored.prl:
 D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPointd.prl:
 qmake: FORCE

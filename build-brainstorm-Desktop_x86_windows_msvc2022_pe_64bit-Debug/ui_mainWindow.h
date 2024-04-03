@@ -39,6 +39,30 @@ public:
     QLabel *labelPassword;
     QLineEdit *lineEditPassword;
     QPushButton *pushButtonLogin;
+    QWidget *layoutWidget1;
+    QVBoxLayout *verticalLayoutDb;
+    QPushButton *pushButtonDbDrivers;
+    QPushButton *pushButtonTestDb;
+    QGroupBox *groupBoxRegister;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *firstNameReg;
+    QLabel *labelFirstNameReg;
+    QLineEdit *lineEditFirstNameReg;
+    QHBoxLayout *lastNameReg;
+    QLabel *labelLastNameReg;
+    QLineEdit *lineEditLastNameReg;
+    QHBoxLayout *emailReg;
+    QLabel *labelEmailReg;
+    QLineEdit *lineEditEmailReg;
+    QHBoxLayout *usernameReg;
+    QLabel *labelUsernameReg;
+    QLineEdit *lineEditUsernameReg;
+    QHBoxLayout *passwordReg;
+    QLabel *labelPasswordReg;
+    QLineEdit *lineEditPasswordReg;
+    QPushButton *pushButtonRegister;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -99,6 +123,117 @@ public:
 
         verticalLayoutLogin->addWidget(pushButtonLogin);
 
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(360, 10, 82, 56));
+        verticalLayoutDb = new QVBoxLayout(layoutWidget1);
+        verticalLayoutDb->setObjectName("verticalLayoutDb");
+        verticalLayoutDb->setContentsMargins(0, 0, 0, 0);
+        pushButtonDbDrivers = new QPushButton(layoutWidget1);
+        pushButtonDbDrivers->setObjectName("pushButtonDbDrivers");
+
+        verticalLayoutDb->addWidget(pushButtonDbDrivers);
+
+        pushButtonTestDb = new QPushButton(layoutWidget1);
+        pushButtonTestDb->setObjectName("pushButtonTestDb");
+
+        verticalLayoutDb->addWidget(pushButtonTestDb);
+
+        groupBoxRegister = new QGroupBox(centralwidget);
+        groupBoxRegister->setObjectName("groupBoxRegister");
+        groupBoxRegister->setGeometry(QRect(70, 350, 291, 231));
+        widget = new QWidget(groupBoxRegister);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(10, 30, 271, 188));
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        firstNameReg = new QHBoxLayout();
+        firstNameReg->setObjectName("firstNameReg");
+        labelFirstNameReg = new QLabel(widget);
+        labelFirstNameReg->setObjectName("labelFirstNameReg");
+
+        firstNameReg->addWidget(labelFirstNameReg);
+
+        lineEditFirstNameReg = new QLineEdit(widget);
+        lineEditFirstNameReg->setObjectName("lineEditFirstNameReg");
+
+        firstNameReg->addWidget(lineEditFirstNameReg);
+
+
+        verticalLayout->addLayout(firstNameReg);
+
+        lastNameReg = new QHBoxLayout();
+        lastNameReg->setObjectName("lastNameReg");
+        labelLastNameReg = new QLabel(widget);
+        labelLastNameReg->setObjectName("labelLastNameReg");
+
+        lastNameReg->addWidget(labelLastNameReg);
+
+        lineEditLastNameReg = new QLineEdit(widget);
+        lineEditLastNameReg->setObjectName("lineEditLastNameReg");
+
+        lastNameReg->addWidget(lineEditLastNameReg);
+
+
+        verticalLayout->addLayout(lastNameReg);
+
+        emailReg = new QHBoxLayout();
+        emailReg->setObjectName("emailReg");
+        labelEmailReg = new QLabel(widget);
+        labelEmailReg->setObjectName("labelEmailReg");
+
+        emailReg->addWidget(labelEmailReg);
+
+        lineEditEmailReg = new QLineEdit(widget);
+        lineEditEmailReg->setObjectName("lineEditEmailReg");
+
+        emailReg->addWidget(lineEditEmailReg);
+
+
+        verticalLayout->addLayout(emailReg);
+
+        usernameReg = new QHBoxLayout();
+        usernameReg->setObjectName("usernameReg");
+        labelUsernameReg = new QLabel(widget);
+        labelUsernameReg->setObjectName("labelUsernameReg");
+
+        usernameReg->addWidget(labelUsernameReg);
+
+        lineEditUsernameReg = new QLineEdit(widget);
+        lineEditUsernameReg->setObjectName("lineEditUsernameReg");
+
+        usernameReg->addWidget(lineEditUsernameReg);
+
+
+        verticalLayout->addLayout(usernameReg);
+
+        passwordReg = new QHBoxLayout();
+        passwordReg->setObjectName("passwordReg");
+        labelPasswordReg = new QLabel(widget);
+        labelPasswordReg->setObjectName("labelPasswordReg");
+
+        passwordReg->addWidget(labelPasswordReg);
+
+        lineEditPasswordReg = new QLineEdit(widget);
+        lineEditPasswordReg->setObjectName("lineEditPasswordReg");
+        lineEditPasswordReg->setEnabled(true);
+
+        passwordReg->addWidget(lineEditPasswordReg);
+
+
+        verticalLayout->addLayout(passwordReg);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+        pushButtonRegister = new QPushButton(widget);
+        pushButtonRegister->setObjectName("pushButtonRegister");
+
+        verticalLayout_2->addWidget(pushButtonRegister);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -120,6 +255,15 @@ public:
         labelUsername->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         labelPassword->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         pushButtonLogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        pushButtonDbDrivers->setText(QCoreApplication::translate("MainWindow", "DB Drivers", nullptr));
+        pushButtonTestDb->setText(QCoreApplication::translate("MainWindow", "Test DB", nullptr));
+        groupBoxRegister->setTitle(QCoreApplication::translate("MainWindow", "Register", nullptr));
+        labelFirstNameReg->setText(QCoreApplication::translate("MainWindow", "First name", nullptr));
+        labelLastNameReg->setText(QCoreApplication::translate("MainWindow", "Last name", nullptr));
+        labelEmailReg->setText(QCoreApplication::translate("MainWindow", "Email", nullptr));
+        labelUsernameReg->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
+        labelPasswordReg->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        pushButtonRegister->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
     } // retranslateUi
 
 };
