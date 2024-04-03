@@ -44,7 +44,7 @@ public:
     QPushButton *pushButtonDbDrivers;
     QPushButton *pushButtonTestDb;
     QGroupBox *groupBoxRegister;
-    QWidget *widget;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *firstNameReg;
@@ -109,6 +109,7 @@ public:
         lineEditPassword = new QLineEdit(layoutWidget);
         lineEditPassword->setObjectName("lineEditPassword");
         lineEditPassword->setEnabled(true);
+        lineEditPassword->setEchoMode(QLineEdit::Password);
 
         horizontalLayoutPassword->addWidget(lineEditPassword);
 
@@ -142,22 +143,22 @@ public:
         groupBoxRegister = new QGroupBox(centralwidget);
         groupBoxRegister->setObjectName("groupBoxRegister");
         groupBoxRegister->setGeometry(QRect(70, 350, 291, 231));
-        widget = new QWidget(groupBoxRegister);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 30, 271, 188));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget2 = new QWidget(groupBoxRegister);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(10, 30, 271, 188));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
         firstNameReg = new QHBoxLayout();
         firstNameReg->setObjectName("firstNameReg");
-        labelFirstNameReg = new QLabel(widget);
+        labelFirstNameReg = new QLabel(layoutWidget2);
         labelFirstNameReg->setObjectName("labelFirstNameReg");
 
         firstNameReg->addWidget(labelFirstNameReg);
 
-        lineEditFirstNameReg = new QLineEdit(widget);
+        lineEditFirstNameReg = new QLineEdit(layoutWidget2);
         lineEditFirstNameReg->setObjectName("lineEditFirstNameReg");
 
         firstNameReg->addWidget(lineEditFirstNameReg);
@@ -167,12 +168,12 @@ public:
 
         lastNameReg = new QHBoxLayout();
         lastNameReg->setObjectName("lastNameReg");
-        labelLastNameReg = new QLabel(widget);
+        labelLastNameReg = new QLabel(layoutWidget2);
         labelLastNameReg->setObjectName("labelLastNameReg");
 
         lastNameReg->addWidget(labelLastNameReg);
 
-        lineEditLastNameReg = new QLineEdit(widget);
+        lineEditLastNameReg = new QLineEdit(layoutWidget2);
         lineEditLastNameReg->setObjectName("lineEditLastNameReg");
 
         lastNameReg->addWidget(lineEditLastNameReg);
@@ -182,12 +183,12 @@ public:
 
         emailReg = new QHBoxLayout();
         emailReg->setObjectName("emailReg");
-        labelEmailReg = new QLabel(widget);
+        labelEmailReg = new QLabel(layoutWidget2);
         labelEmailReg->setObjectName("labelEmailReg");
 
         emailReg->addWidget(labelEmailReg);
 
-        lineEditEmailReg = new QLineEdit(widget);
+        lineEditEmailReg = new QLineEdit(layoutWidget2);
         lineEditEmailReg->setObjectName("lineEditEmailReg");
 
         emailReg->addWidget(lineEditEmailReg);
@@ -197,12 +198,12 @@ public:
 
         usernameReg = new QHBoxLayout();
         usernameReg->setObjectName("usernameReg");
-        labelUsernameReg = new QLabel(widget);
+        labelUsernameReg = new QLabel(layoutWidget2);
         labelUsernameReg->setObjectName("labelUsernameReg");
 
         usernameReg->addWidget(labelUsernameReg);
 
-        lineEditUsernameReg = new QLineEdit(widget);
+        lineEditUsernameReg = new QLineEdit(layoutWidget2);
         lineEditUsernameReg->setObjectName("lineEditUsernameReg");
 
         usernameReg->addWidget(lineEditUsernameReg);
@@ -212,14 +213,15 @@ public:
 
         passwordReg = new QHBoxLayout();
         passwordReg->setObjectName("passwordReg");
-        labelPasswordReg = new QLabel(widget);
+        labelPasswordReg = new QLabel(layoutWidget2);
         labelPasswordReg->setObjectName("labelPasswordReg");
 
         passwordReg->addWidget(labelPasswordReg);
 
-        lineEditPasswordReg = new QLineEdit(widget);
+        lineEditPasswordReg = new QLineEdit(layoutWidget2);
         lineEditPasswordReg->setObjectName("lineEditPasswordReg");
         lineEditPasswordReg->setEnabled(true);
+        lineEditPasswordReg->setEchoMode(QLineEdit::Password);
 
         passwordReg->addWidget(lineEditPasswordReg);
 
@@ -229,7 +231,7 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        pushButtonRegister = new QPushButton(widget);
+        pushButtonRegister = new QPushButton(layoutWidget2);
         pushButtonRegister->setObjectName("pushButtonRegister");
 
         verticalLayout_2->addWidget(pushButtonRegister);

@@ -66,6 +66,9 @@
             <property name="enabled">
              <bool>true</bool>
             </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
            </widget>
           </item>
          </layout>
@@ -120,7 +123,7 @@
     <property name="title">
      <string>Register</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -201,6 +204,9 @@
            <widget class="QLineEdit" name="lineEditPasswordReg">
             <property name="enabled">
              <bool>true</bool>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
             </property>
            </widget>
           </item>

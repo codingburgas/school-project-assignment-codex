@@ -30,7 +30,8 @@ void Database::openConnection()
     }
 }
 
-void Database::closeConnection() {
+void Database::closeConnection()
+{
     // Close the database connection
     db.close();
 }

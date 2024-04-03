@@ -4,6 +4,8 @@
 #include <QDebug>
 #include "./include/mainWindow.h"
 #include "./include/db.h"
+#include "./include/loggedInWindow.h"
+#include "./include/loggedInWindowAdmin.h"
 #include "ui_mainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -21,7 +23,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButtonLogin_clicked()
 {
     QString username = ui->lineEditUsername->text();
-    QString password = ui->lineEditPassword->text(); // Fixed typo: used lineEditUsername for password
+    QString password = ui->lineEditPassword->text();
 
     // Hash the entered password using SHA-256
     QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
@@ -29,18 +31,50 @@ void MainWindow::on_pushButtonLogin_clicked()
     Database* db = new Database;
     db->openConnection();
     QSqlQuery query;
-    query.prepare("SELECT password FROM users WHERE username = :username");
+
+    // Retrieve password and perms in a single query
+    query.prepare("SELECT password, perms FROM users WHERE username = :username");
     query.bindValue(":username", username);
 
     if (query.exec() && query.next())
     {
-        //Retrieve the hashed password from the database
         QByteArray storedPassword = query.value("password").toByteArray();
 
-        //Compare the hashed passwords
-        if (hashedPassword == storedPassword)
-        {
+        if (hashedPassword == storedPassword) {
             QMessageBox::information(this, "Login", "Logged in");
+
+            int perms = query.value("perms").toInt(); // Get the permission value
+
+            // Update lastActive with current date and time (UTC)
+            QDateTime currentDateTime = QDateTime::currentDateTime();
+            QString formattedDateTime = currentDateTime.toString("yyyy-MM-dd hh:mm:ss");
+
+            // Prepare and execute update query
+            query.prepare("UPDATE users SET lastActive = :lastActive WHERE username = :username");
+            query.bindValue(":lastActive", formattedDateTime);
+            query.bindValue(":username", username);
+
+            if (!query.exec())
+            {
+                QMessageBox::warning(this, "Database Error", "Failed to update last active date: " + query.lastError().text());
+            }
+
+            // Open appropriate window based on perms
+            if (perms == 0)
+            {
+                LoggedInWindow* loggedInWindow = new LoggedInWindow(this);
+                loggedInWindow->show();
+            }
+            else if (perms == 1)
+            {
+                LoggedInWindowAdmin* loggedInWindowAdmin = new LoggedInWindowAdmin(this);
+                loggedInWindowAdmin->show();
+            }
+            else
+            {
+                QMessageBox::warning(this, "Login", "Invalid permission level");
+            }
+;
         }
         else
         {
@@ -50,8 +84,9 @@ void MainWindow::on_pushButtonLogin_clicked()
     }
     else
     {
-        QMessageBox::warning(this, "Login", "Login failed: Incorrect username or password");
+        QMessageBox::warning(this, "Login", "Login failed: Username not found");
     }
+
     db->closeConnection();
 }
 
@@ -174,7 +209,6 @@ void MainWindow::on_pushButtonRegister_clicked()
     }
 
     db->closeConnection();
-    delete db;
 }
 
 
