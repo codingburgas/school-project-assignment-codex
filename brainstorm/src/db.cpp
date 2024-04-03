@@ -1,4 +1,4 @@
-#include "./include/db.h"
+#include "../include/db.h"
 
 Database::Database() {}
 
@@ -35,3 +35,5 @@ void Database::closeConnection()
     // Close the database connection
     db.close();
 }
+
+Database::~Database() {}

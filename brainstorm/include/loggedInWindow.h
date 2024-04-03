@@ -1,11 +1,13 @@
 #ifndef LOGGEDINWINDOW_H
 #define LOGGEDINWINDOW_H
 
-#include <QDialog>
+#include "pch.h"
 
+QT_BEGIN_NAMESPACE
 namespace Ui {
 class LoggedInWindow;
 }
+QT_END_NAMESPACE
 
 class LoggedInWindow : public QDialog
 {

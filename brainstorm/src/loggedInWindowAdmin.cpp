@@ -1,4 +1,4 @@
-#include "loggedInWindowAdmin.h"
+#include "../include/loggedInWindowAdmin.h"
 #include "ui_loggedInWindowAdmin.h"
 
 LoggedInWindowAdmin::LoggedInWindowAdmin(QWidget *parent)

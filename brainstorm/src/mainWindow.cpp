@@ -1,11 +1,7 @@
-#include <QMessageBox>
-#include <QtSql/QSqlDatabase>
-#include <QCryptographicHash>
-#include <QDebug>
-#include "./include/mainWindow.h"
-#include "./include/db.h"
-#include "./include/loggedInWindow.h"
-#include "./include/loggedInWindowAdmin.h"
+#include "../include/mainWindow.h"
+#include "../include/db.h"
+#include "../include/loggedInWindow.h"
+#include "../include/loggedInWindowAdmin.h"
 #include "ui_mainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -88,6 +84,7 @@ void MainWindow::on_pushButtonLogin_clicked()
     }
 
     db->closeConnection();
+    delete db;
 }
 
 void MainWindow::on_pushButtonDbDrivers_clicked()
@@ -115,6 +112,7 @@ void MainWindow::on_pushButtonTestDb_clicked()
     }
 
     db->closeConnection();
+    delete db;
 }
 
 void MainWindow::on_pushButtonRegister_clicked()
@@ -146,6 +144,7 @@ void MainWindow::on_pushButtonRegister_clicked()
     QSqlQuery usernameQuery;
     usernameQuery.prepare("SELECT username FROM users WHERE username = :username");
     usernameQuery.bindValue(":username", username);
+
     if (usernameQuery.exec() && usernameQuery.next())
     {
         QMessageBox::warning(this, "Registration", "Username already exists");
@@ -209,7 +208,5 @@ void MainWindow::on_pushButtonRegister_clicked()
     }
 
     db->closeConnection();
+    delete db;
 }
-
-
-

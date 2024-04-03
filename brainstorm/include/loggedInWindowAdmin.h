@@ -1,11 +1,13 @@
 #ifndef LOGGEDINWINDOWADMIN_H
 #define LOGGEDINWINDOWADMIN_H
 
-#include <QDialog>
+#include "pch.h"
 
+QT_BEGIN_NAMESPACE
 namespace Ui {
 class LoggedInWindowAdmin;
 }
+QT_END_NAMESPACE
 
 class LoggedInWindowAdmin : public QDialog
 {

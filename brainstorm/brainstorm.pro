@@ -20,7 +20,8 @@ HEADERS += \
     include/db.h \
     include/mainWindow.h \
     include/loggedInWindow.h \
-    include/loggedInWindowAdmin.h
+    include/loggedInWindowAdmin.h \
+    include/pch.h
 
 FORMS += \
     forms/mainWindow.ui \
