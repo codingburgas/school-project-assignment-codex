@@ -6,19 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
-    <height>700</height>
+    <width>1160</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Brainstorm</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/icon.png</normaloff>../assets/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>110</y>
+      <x>10</x>
+      <y>120</y>
       <width>331</width>
       <height>271</height>
      </rect>
@@ -218,8 +222,8 @@
    <widget class="QPushButton" name="switchFormButton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>380</y>
+      <x>70</x>
+      <y>390</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -228,14 +232,27 @@
      <string>Don't have an account? Click here.</string>
     </property>
    </widget>
+   <widget class="QLabel" name="labelLogo">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>681</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>522</width>
-     <height>17</height>
+     <width>1160</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

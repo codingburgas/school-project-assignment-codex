@@ -10,6 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QIcon icon("../brainstorm/assets/icon.png");
+    this->setWindowIcon(icon);
+    QPixmap logo("../brainstorm/assets/logo.png");
+    ui->labelLogo->setPixmap(logo);
 }
 
 MainWindow::~MainWindow()

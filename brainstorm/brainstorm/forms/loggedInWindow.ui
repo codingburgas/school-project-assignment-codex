@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Brainstorm | Logged in (user)</string>
   </property>
   <widget class="QPushButton" name="pushButtonHead">
    <property name="geometry">
@@ -26,7 +26,7 @@
     <string>Brainstorm</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>560</x>

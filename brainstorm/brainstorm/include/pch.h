@@ -10,5 +10,7 @@
 #include <QMessageBox>
 #include <QDialog>
 #include <QDebug>
+#include <QIcon>
+#include <QPixmap>
 
 #endif // PCH_H
