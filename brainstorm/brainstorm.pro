@@ -4,6 +4,7 @@ QT       += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
+CONFIG +=
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,12 +22,15 @@ HEADERS += \
     include/mainWindow.h \
     include/loggedInWindow.h \
     include/loggedInWindowAdmin.h \
-    include/pch.h
+    include/pch.h \
+    include/validatorlib.h
 
 FORMS += \
     forms/mainWindow.ui \
     forms/loggedInWindow.ui \
     forms/loggedInWindowAdmin.ui
+
+LIBS += -L../lib/ -lvalidatorlib
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -34,4 +38,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    brainstorm.pro.user
+    brainstorm.pro.user \
+    lib/validatorlib.lib

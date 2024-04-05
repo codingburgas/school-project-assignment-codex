@@ -2,6 +2,7 @@
 #include "../include/db.h"
 #include "../include/loggedInWindow.h"
 #include "../include/loggedInWindowAdmin.h"
+#include "../include/validatorlib.h"
 #include "ui_mainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -70,7 +71,6 @@ void MainWindow::on_pushButtonLogin_clicked()
             {
                 QMessageBox::warning(this, "Login", "Invalid permission level");
             }
-;
         }
         else
         {
@@ -117,43 +117,33 @@ void MainWindow::on_pushButtonTestDb_clicked()
 
 void MainWindow::on_pushButtonRegister_clicked()
 {
+    Validator* validator = new Validator;
+
     QString firstName = ui->lineEditFirstNameReg->text();
     QString lastName = ui->lineEditLastNameReg->text();
     QString email = ui->lineEditEmailReg->text();
     QString username = ui->lineEditUsernameReg->text();
     QString password = ui->lineEditPasswordReg->text();
 
-    // Check if any of the input fields are empty
-    if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty())
-    {
-        QMessageBox::warning(this, "Registration", "Please fill in all the fields");
+    if (validator->areAllEmpty(firstName, lastName, email, username, password)) {
+        return;
+    }
+    if (!validator->validateEmail(email)) {
+        return;
+    }
+    if (!validator->validateUsername(username)) {
+        return;
+    }
+    if (!validator->validatePassword(password)) {
+        return;
+    }
+    if (!validator->validateName(firstName) || !validator->validateName(lastName)) {
         return;
     }
 
-    // Check if email is in a valid format
-    QRegularExpression emailRegex("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}");
-    if (!emailRegex.match(email).hasMatch())
-    {
-        QMessageBox::warning(this, "Registration", "Invalid email format");
-        return;
-    }
-
-    // Check if username already exists in the database
+    // Check if email already exists in the database
     Database* db = new Database;
     db->openConnection();
-    QSqlQuery usernameQuery;
-    usernameQuery.prepare("SELECT username FROM users WHERE username = :username");
-    usernameQuery.bindValue(":username", username);
-
-    if (usernameQuery.exec() && usernameQuery.next())
-    {
-        QMessageBox::warning(this, "Registration", "Username already exists");
-        db->closeConnection();
-        delete db;
-        return;
-    }
-
-    // Check if username already exists in the database
     QSqlQuery emailQuery;
     emailQuery.prepare("SELECT email FROM users WHERE email = :email");
     emailQuery.bindValue(":email", email);
@@ -165,22 +155,14 @@ void MainWindow::on_pushButtonRegister_clicked()
         return;
     }
 
-    // Check if username length is above 16 characters
-    if (username.length() > 16)
-    {
-        QMessageBox::warning(this, "Registration", "Username must be 16 characters or less");
-        db->closeConnection();
-        delete db;
-        return;
-    }
+    // Check if username already exists in the database
+    QSqlQuery usernameQuery;
+    usernameQuery.prepare("SELECT username FROM users WHERE username = :username");
+    usernameQuery.bindValue(":username", username);
 
-    // Check if password meets requirements
-    QRegularExpression uppercaseRegex("[A-Z]");
-    QRegularExpression numberRegex("[0-9]");
-
-    if (password.length() < 8 || !uppercaseRegex.match(password).hasMatch() || !numberRegex.match(password).hasMatch())
+    if (usernameQuery.exec() && usernameQuery.next())
     {
-        QMessageBox::warning(this, "Registration", "Password must be at least 8 characters long, contain at least one uppercase letter, and at least one number");
+        QMessageBox::warning(this, "Registration", "Username already exists");
         db->closeConnection();
         delete db;
         return;
