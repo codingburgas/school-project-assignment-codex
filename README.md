@@ -65,6 +65,7 @@
     
 ##  Used Technologies
 - <img src="https://cdn.discordapp.com/attachments/819832109031096321/1223633241651544204/IMG_1929-removebg-preview.png?ex=661a9042&is=66081b42&hm=5112349bf9f2598054b645e33b58c8075faf64129ed61e4eb1de069393a60a04&" width="20" alt="Qt Creator Logo"> <a href="https://www.qt.io/product/development-tools">Qt Creator</a>
+- <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/HeidiSQL_logo_image.png" width="20" alt="HeidiSQL Logo"> <a href="https://www.heidisql.com/">HeidiSQL</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="20" alt="Visual Studio Code Logo"> <a href="https://code.visualstudio.com/">Visual Studio Code</a>
 - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub Logo"> <a href="https://github.com/">GitHub</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Word Logo"> <a href="https://en.wikipedia.org/wiki/Microsoft_Word">MS Word</a>
@@ -72,7 +73,7 @@
 - <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="20" alt="MS PowerPoint Logo"> <a href="https://bg.wikipedia.org/wiki/Microsoft_PowerPoint">MS PowerPoint</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" width="20" alt="MS Teams Logo"> <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software">MS Teams</a>
 -----------------------------------------------------------------------------------------------------------------------------------
-- 👩🏻‍💻 Programing languages: <img src="https://brandslogos.com/wp-content/uploads/thumbs/c-logo-vector.svg" width="20" alt="C++ Logo"> <a href="https://cplusplus.com/">C++</a>
+- 👩🏻‍💻 Programing languages: <img src="https://brandslogos.com/wp-content/uploads/thumbs/c-logo-vector.svg" width="20" alt="C++ Logo"> <a href="https://cplusplus.com/">C++</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/640px-Sql_data_base_with_logo.png" width="40" alt="SQL Logo"> <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>
     
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
     
