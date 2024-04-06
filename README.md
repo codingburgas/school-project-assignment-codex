@@ -6,9 +6,10 @@
 <h3 align="center"> Decoding the future, line by line. </h3>  
     
 <hr>
-    <h4 align="center">We are team codeX and we want to show you our application: </h4>
-    <p align="center"> Logo to be added. </p>
-    <h1 align="center"> Brainstorm </h1>
+    <h4 align="center">We are team codeX and we would like to show you our application: </h4>
+    <p align="center">    
+        <img align="center" src="https://cdn.discordapp.com/attachments/1221804578933309460/1226084692214677594/logo_hd.png?ex=66237b5a&is=6611065a&hm=7a7c21aa4daa720890fdbbd3e1319e36be71141f9c6aa3dc51d91ff05132faa7&" alt="Brainstorm Logo" width="550", height="200">
+    </p>
 <hr>
     
 <p align="center">
