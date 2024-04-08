@@ -83,22 +83,22 @@
     
 <p>
     
-<b>Daniela D. Stoilova (Scrum Trainer)</b> <br>
+<b><a href="https://github.com/DDStoilova22">Daniela D. Stoilova</a> (Scrum Trainer)</b> <br>
     Email: <a>DDStoilova22@codingburgas.bg</a> <br>
     
-<b>Bozhidar A. Dimov (Back-End Developer)</b> <br>
+<b><a href="https://github.com/BADimov21">Bozhidar A. Dimov</a> (Back-End Developer)</b> <br>
     Email: <a>BADimov21@codingburgas.bg</a> <br>
     
-<b>Gospodin S. Radev (Back-End Developer)</b> <br>
+<b><a href="https://github.com/GSRadev21">Gospodin S. Radev</a> (Back-End Developer)</b> <br>
     Email: <a>GSRadev21@codingburgas.bg</a> <br>
     
-<b>Boris R. Milev (Back-End Developer)</b> <br>
+<b><a href="https://github.com/BRMilev22">Boris R. Milev</a> (Back-End Developer)</b> <br>
     Email: <a>BRMilev22@codingburgas.bg</a> <br>
 
-<b>Nikolai E. Kalashnik (Back-End Developer)</b> <br>
+<b><a href="https://github.com/NEKalashnik22">Nikolai E. Kalashnik</a> (Back-End Developer)</b> <br>
     Email: <a>NEKalashnik22@codingburgas.bg</a> <br>
 
-<b>Kristian K. Gaydov (QA Engineer)</b> <br>
+<b><a href="https://github.com/KKGaydov21">Kristian K. Gaydov</a> (QA Engineer)</b> <br>
     Email: <a>KKGaydov21@codingburgas.bg</a> <br>    
     
 </p>
