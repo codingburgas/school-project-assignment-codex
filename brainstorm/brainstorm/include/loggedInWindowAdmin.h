@@ -17,6 +17,13 @@ public:
     explicit LoggedInWindowAdmin(QWidget *parent = nullptr);
     ~LoggedInWindowAdmin();
 
+private slots:
+    void on_pushButtonAddGrade_clicked();
+
+    void on_pushButtonUpdateGrade_clicked();
+
+    void on_pushButtonDeleteGrade_clicked();
+
 private:
     Ui::LoggedInWindowAdmin *ui;
 };

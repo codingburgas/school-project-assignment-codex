@@ -6,6 +6,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++17
 
 SOURCES += \
+    src/grades.cpp \
     src/loggedInWindow.cpp \
     src/loggedInWindowAdmin.cpp \
     src/db.cpp \
@@ -14,6 +15,7 @@ SOURCES += \
 
 HEADERS += \
     include/db.h \
+    include/grades.h \
     include/mainWindow.h \
     include/loggedInWindow.h \
     include/loggedInWindowAdmin.h \
