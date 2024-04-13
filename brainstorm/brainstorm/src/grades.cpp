@@ -1,11 +1,10 @@
 #include "../include/db.h"
-#include <QDebug>
-#include <QMessageBox>
+#include "../include/grades.h"
 
-void addGrade(int userID, const QString& subject, int grade)
+void Grades::addGrade(int userID, const QString& subject, int grade)
 {
-    Database db;
-    QSqlDatabase database = db.getDb();
+    Database* db = new Database;
+    QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
     query.prepare("INSERT INTO grades (userID, subject, grade) VALUES (:userID, :subject, :grade)");
     query.bindValue(":userID", userID);
@@ -21,10 +20,10 @@ void addGrade(int userID, const QString& subject, int grade)
     }
 }
 
-void updateGrade(int gradeID, int newGrade)
+void Grades::updateGrade(int gradeID, int newGrade)
 {
-    Database db;
-    QSqlDatabase database = db.getDb();
+    Database* db = new Database;
+    QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
     query.prepare("UPDATE grades SET grade = :grade WHERE gradeID = :gradeID");
     query.bindValue(":grade", newGrade);
@@ -47,9 +46,9 @@ void updateGrade(int gradeID, int newGrade)
 }
 
 
-void deleteGrade(int gradeID) {
-    Database db;
-    QSqlDatabase database = db.getDb();
+void Grades::deleteGrade(int gradeID) {
+    Database* db = new Database;
+    QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
     query.prepare("DELETE FROM grades WHERE gradeID = :gradeID");
     query.bindValue(":gradeID", gradeID);

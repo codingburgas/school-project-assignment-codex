@@ -1,7 +1,6 @@
 #include "../include/gradesButtons.h"
-#include "ui_gradesButtons.h"
 #include "../include/grades.h" // Assuming Grades class is declared here
-#include "../include/pch.h"
+#include "ui_gradesButtons.h"
 
 GradesButtons::GradesButtons(QWidget *parent)
     : QDialog(parent)
@@ -29,27 +28,29 @@ void GradesButtons::setStackedWidgetIndex(int index)
 
 void GradesButtons::on_pushButtonAddGrade_clicked()
 {
+    Grades* gradeObj = new Grades;
     int userID = ui->lineEditUserID->text().toInt();
     QString subject = ui->lineEditSubject->text();
     int grade = ui->lineEditGrade->text().toInt();
 
-    addGrade(userID, subject, grade);
+    gradeObj->addGrade(userID, subject, grade);
 }
 
 
 void GradesButtons::on_pushButtonUpdateGrade_clicked()
 {
+    Grades* grade = new Grades;
     int gradeID = ui->lineEditGradeID->text().toInt();
     int newGrade = ui->lineEditnewGrade->text().toInt();
 
-    updateGrade(gradeID, newGrade);
+    grade->updateGrade(gradeID, newGrade);
 }
 
 
 void GradesButtons::on_pushButtonDeleteGrade_clicked()
 {
+    Grades* grade = new Grades;
     int gradeIDdel = ui->lineEditGradeIDdel->text().toInt();
 
-    deleteGrade(gradeIDdel);
+    grade->deleteGrade(gradeIDdel);
 }
-

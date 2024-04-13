@@ -1,7 +1,7 @@
 #ifndef GRADESBUTTONS_H
 #define GRADESBUTTONS_H
 
-#include <QDialog>
+#include "pch.h"
 
 namespace Ui {
 class GradesButtons;

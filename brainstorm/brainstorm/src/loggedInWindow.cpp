@@ -1,6 +1,6 @@
 #include "../include/loggedInWindow.h"
-#include "ui_loggedInWindow.h"
 #include "../include/gradesButtons.h" // Include the header for the GradesButtons class
+#include "ui_loggedInWindow.h"
 
 LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms)
     : QDialog(parent)
