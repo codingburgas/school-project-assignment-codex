@@ -21,10 +21,10 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>120</y>
+      <x>420</x>
+      <y>190</y>
       <width>331</width>
-      <height>271</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -35,7 +35,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>30</y>
+        <y>60</y>
         <width>291</width>
         <height>231</height>
        </rect>
@@ -49,7 +49,7 @@
          <x>10</x>
          <y>30</y>
          <width>271</width>
-         <height>188</height>
+         <height>196</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -88,7 +88,7 @@
             <item>
              <widget class="QLabel" name="labelEmailReg">
               <property name="text">
-               <string>Email</string>
+               <string>Email        </string>
               </property>
              </widget>
             </item>
@@ -116,7 +116,7 @@
             <item>
              <widget class="QLabel" name="labelPasswordReg">
               <property name="text">
-               <string>Password</string>
+               <string>Password </string>
               </property>
              </widget>
             </item>
@@ -136,6 +136,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="pushButtonRegister">
+          <property name="styleSheet">
+           <string notr="true">height: 20;</string>
+          </property>
           <property name="text">
            <string>Register</string>
           </property>
@@ -152,7 +155,7 @@
         <x>20</x>
         <y>60</y>
         <width>291</width>
-        <height>171</height>
+        <height>231</height>
        </rect>
       </property>
       <property name="title">
@@ -162,9 +165,9 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>29</y>
+         <y>30</y>
          <width>271</width>
-         <height>131</height>
+         <height>111</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayoutLogin">
@@ -180,7 +183,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEditUsername"/>
+             <widget class="QLineEdit" name="lineEditUsername">
+              <property name="styleSheet">
+               <string notr="true">height: 25px;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -188,8 +195,11 @@
            <layout class="QHBoxLayout" name="horizontalLayoutPassword">
             <item>
              <widget class="QLabel" name="labelPassword">
+              <property name="styleSheet">
+               <string notr="true">height: 30px;</string>
+              </property>
               <property name="text">
-               <string>Password</string>
+               <string>Password </string>
               </property>
              </widget>
             </item>
@@ -197,6 +207,9 @@
              <widget class="QLineEdit" name="lineEditPassword">
               <property name="enabled">
                <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">height: 25px;</string>
               </property>
               <property name="echoMode">
                <enum>QLineEdit::Password</enum>
@@ -207,44 +220,78 @@
           </item>
          </layout>
         </item>
-        <item>
-         <widget class="QPushButton" name="pushButtonLogin">
-          <property name="text">
-           <string>Login</string>
-          </property>
-         </widget>
-        </item>
        </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButtonRegister_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>271</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">height: 20;</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
       </widget>
      </widget>
     </widget>
    </widget>
-   <widget class="QPushButton" name="switchFormButton">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>390</y>
-      <width>211</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Don't have an account? Click here.</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelLogo">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>681</width>
-      <height>111</height>
+      <x>400</x>
+      <y>170</y>
+      <width>361</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap>../assets/logo.png</pixmap>
+    </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>140</y>
+      <width>381</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="switchFormButton">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>350</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Don't have an account? Click here.</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>labelLogo</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
