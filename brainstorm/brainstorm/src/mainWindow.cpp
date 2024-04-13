@@ -1,7 +1,6 @@
 #include "../include/mainWindow.h"
 #include "../include/db.h"
 #include "../include/loggedInWindow.h"
-#include "../include/loggedInWindowAdmin.h"
 #include "../include/validatorlib.h"
 #include "ui_mainWindow.h"
 
@@ -61,21 +60,8 @@ void MainWindow::on_pushButtonLogin_clicked()
                 QMessageBox::warning(this, "Database Error", "Failed to update last active date: " + query.lastError().text());
             }
 
-            // Open appropriate window based on perms
-            if (perms == 0)
-            {
-                LoggedInWindow* loggedInWindow = new LoggedInWindow(this);
-                loggedInWindow->show();
-            }
-            else if (perms == 1)
-            {
-                LoggedInWindowAdmin* loggedInWindowAdmin = new LoggedInWindowAdmin(this);
-                loggedInWindowAdmin->show();
-            }
-            else
-            {
-                QMessageBox::warning(this, "Login", "Invalid permission level.");
-            }
+            LoggedInWindow* loggedInWindow = new LoggedInWindow(this, username, perms);
+            loggedInWindow->show();
         }
         else
         {

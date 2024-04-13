@@ -1,4 +1,6 @@
 #include "../include/db.h"
+#include <QDebug>
+#include <QMessageBox>
 
 void addGrade(int userID, const QString& subject, int grade)
 {
@@ -9,9 +11,13 @@ void addGrade(int userID, const QString& subject, int grade)
     query.bindValue(":userID", userID);
     query.bindValue(":subject", subject);
     query.bindValue(":grade", grade);
-    if (!query.exec())
+    if (query.exec())
     {
-        qDebug() << "Error inserting grade:" << query.lastError().text();
+        QMessageBox::information(nullptr, "Success", "Grade added successfully!");
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, "Error", "Failed to add grade");
     }
 }
 
@@ -23,11 +29,23 @@ void updateGrade(int gradeID, int newGrade)
     query.prepare("UPDATE grades SET grade = :grade WHERE gradeID = :gradeID");
     query.bindValue(":grade", newGrade);
     query.bindValue(":gradeID", gradeID);
-    if (!query.exec())
+    if (query.exec())
     {
-        qDebug() << "Error updating grade:" << query.lastError().text();
+        if (query.numRowsAffected() > 0)
+        {
+            QMessageBox::information(nullptr, "Success", "Grade updated successfully!");
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, "Error", "Grade with ID " + QString::number(gradeID) + " does not exist in the database");
+        }
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, "Error", "Failed to update grade");
     }
 }
+
 
 void deleteGrade(int gradeID) {
     Database db;
@@ -35,8 +53,19 @@ void deleteGrade(int gradeID) {
     QSqlQuery query(database);
     query.prepare("DELETE FROM grades WHERE gradeID = :gradeID");
     query.bindValue(":gradeID", gradeID);
-    if (!query.exec())
+    if (query.exec())
     {
-        qDebug() << "Error deleting grade:" << query.lastError().text();
+        if (query.numRowsAffected() > 0)
+        {
+            QMessageBox::information(nullptr, "Success", "Grade deleted successfully!");
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, "Error", "Grade with ID " + QString::number(gradeID) + " does not exist in the database");
+        }
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, "Error", "Failed to delete grade");
     }
 }

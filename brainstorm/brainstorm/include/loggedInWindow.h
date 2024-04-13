@@ -14,11 +14,16 @@ class LoggedInWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit LoggedInWindow(QWidget *parent = nullptr);
+    explicit LoggedInWindow(QWidget *parent = nullptr, const QString& username = "", int perms = 0);
     ~LoggedInWindow();
+    void checkPermissions();
+    void handleButtonClick();
+
 
 private:
     Ui::LoggedInWindow *ui;
+    QString username;
+    int perms;
 };
 
 #endif // LOGGEDINWINDOW_H
