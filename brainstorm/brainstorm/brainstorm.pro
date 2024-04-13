@@ -40,3 +40,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     brainstorm.pro.user \
     lib/validatorlib.lib
+
+RESOURCES += \
+    ../assets/bg.png/background.qrc
