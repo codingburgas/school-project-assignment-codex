@@ -1,5 +1,5 @@
 #include "../include/gradesButtons.h"
-#include "../include/grades.h" // Assuming Grades class is declared here
+#include "../include/grades.h"
 #include "ui_gradesButtons.h"
 
 GradesButtons::GradesButtons(QWidget *parent)

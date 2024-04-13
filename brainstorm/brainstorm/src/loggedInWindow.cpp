@@ -1,5 +1,5 @@
 #include "../include/loggedInWindow.h"
-#include "../include/gradesButtons.h" // Include the header for the GradesButtons class
+#include "../include/gradesButtons.h"
 #include "ui_loggedInWindow.h"
 
 LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms)
@@ -37,7 +37,7 @@ void LoggedInWindow::checkPermissions()
 
 void LoggedInWindow::handleButtonClick()
 {
-    QPushButton *clickedButton = qobject_cast<QPushButton*>(sender());
+    QPushButton* clickedButton = qobject_cast<QPushButton*>(sender());
     if (clickedButton)
     {
         GradesButtons* gradesButtons = new GradesButtons(this);

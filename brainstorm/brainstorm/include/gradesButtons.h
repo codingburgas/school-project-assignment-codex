@@ -3,9 +3,11 @@
 
 #include "pch.h"
 
+QT_BEGIN_NAMESPACE
 namespace Ui {
 class GradesButtons;
 }
+QT_END_NAMESPACE
 
 class GradesButtons : public QDialog
 {
@@ -18,14 +20,12 @@ public:
 
 private slots:
     void on_pushButtonAddGrade_clicked();
-
     void on_pushButtonUpdateGrade_clicked();
-
     void on_pushButtonDeleteGrade_clicked();
 
 private:
     Ui::GradesButtons *ui;
-    int stackedWidgetIndex; // Declare here
+    int stackedWidgetIndex;
 };
 
 #endif // GRADESBUTTONS_H

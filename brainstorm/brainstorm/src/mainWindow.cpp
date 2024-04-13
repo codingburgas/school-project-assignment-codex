@@ -11,11 +11,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setFixedSize(size()); // Set fixed size
 
-    QIcon icon("../assets/icon.png");
+    QIcon icon("../brainstorm/assets/icon.png");
     this->setWindowIcon(icon);
-    QPixmap logo("../assets/logo.png");
+    QPixmap logo("../brainstorm/assets/logo.png");
     ui->labelLogo->setPixmap(logo);
 }
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -153,3 +154,4 @@ void MainWindow::on_switchFormButton_clicked()
         ui->switchFormButton->setText("Back to login page.");
     }
 }
+
