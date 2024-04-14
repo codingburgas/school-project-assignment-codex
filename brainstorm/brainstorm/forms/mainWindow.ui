@@ -28,7 +28,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QGroupBox" name="groupBoxRegister">
@@ -65,7 +65,12 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEditFirstNameReg"/>
+             <widget class="QLineEdit" name="lineEditFirstNameReg">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+color: black;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -79,7 +84,12 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEditLastNameReg"/>
+             <widget class="QLineEdit" name="lineEditLastNameReg">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+color: black;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -93,7 +103,12 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEditEmailReg"/>
+             <widget class="QLineEdit" name="lineEditEmailReg">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+color: black;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -107,7 +122,12 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEditUsernameReg"/>
+             <widget class="QLineEdit" name="lineEditUsernameReg">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+color: black;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -125,6 +145,10 @@
               <property name="enabled">
                <bool>true</bool>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+color: black;</string>
+              </property>
               <property name="echoMode">
                <enum>QLineEdit::Password</enum>
               </property>
@@ -137,7 +161,9 @@
         <item>
          <widget class="QPushButton" name="pushButtonRegister">
           <property name="styleSheet">
-           <string notr="true">height: 20;</string>
+           <string notr="true">height: 20;
+color: black;
+background-color: white;</string>
           </property>
           <property name="text">
            <string>Register</string>
@@ -185,7 +211,10 @@
             <item>
              <widget class="QLineEdit" name="lineEditUsername">
               <property name="styleSheet">
-               <string notr="true">height: 25px;</string>
+               <string notr="true">height: 25px;
+background-color: white;
+color: black;
+</string>
               </property>
              </widget>
             </item>
@@ -209,7 +238,9 @@
                <bool>true</bool>
               </property>
               <property name="styleSheet">
-               <string notr="true">height: 25px;</string>
+               <string notr="true">height: 25px;
+background-color: white;
+color: black;</string>
               </property>
               <property name="echoMode">
                <enum>QLineEdit::Password</enum>
@@ -232,7 +263,10 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">height: 20;</string>
+        <string notr="true">height: 20;
+color: black;
+background-color: white;
+</string>
        </property>
        <property name="text">
         <string>Login</string>
@@ -269,6 +303,14 @@
       <height>411</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    border-radius: 40px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 rgba(106, 13, 173, 0.7), stop:1 rgba(187, 134, 252, 0.7));
+}
+</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -284,11 +326,29 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;
+background-color: white;</string>
+     </property>
      <property name="text">
       <string>Don't have an account? Click here.</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="backgroundLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1161</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>backgroundLabel</zorder>
    <zorder>frame</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>labelLogo</zorder>
@@ -299,7 +359,7 @@
      <x>0</x>
      <y>0</y>
      <width>1160</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

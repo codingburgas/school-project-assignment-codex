@@ -15,6 +15,12 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowIcon(icon);
     QPixmap logo("../brainstorm/assets/logo.png");
     ui->labelLogo->setPixmap(logo);
+
+    // Set background image and make it transparent
+    QPixmap backgroundImage("../brainstorm/assets/bg2.png");
+    ui->backgroundLabel->setPixmap(backgroundImage);
+    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
+    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
 }
 
 MainWindow::~MainWindow()
