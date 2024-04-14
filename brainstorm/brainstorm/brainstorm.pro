@@ -30,7 +30,7 @@ FORMS += \
     forms/loggedInWindow.ui \
     forms/gradesButtons.ui
 
-LIBS += -L../lib/ -lvalidatorlib
+LIBS += -L$$PWD/../lib/ -lvalidatorlib
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

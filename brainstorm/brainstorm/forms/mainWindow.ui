@@ -24,7 +24,7 @@
       <x>420</x>
       <y>190</y>
       <width>331</width>
-      <height>301</height>
+      <height>311</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -35,9 +35,9 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>60</y>
+        <y>50</y>
         <width>291</width>
-        <height>231</height>
+        <height>251</height>
        </rect>
       </property>
       <property name="title">
@@ -49,10 +49,13 @@
          <x>10</x>
          <y>30</y>
          <width>271</width>
-         <height>196</height>
+         <height>214</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>10</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
@@ -160,10 +163,60 @@ color: black;</string>
         </item>
         <item>
          <widget class="QPushButton" name="pushButtonRegister">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>120</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Register&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
           <property name="styleSheet">
-           <string notr="true">height: 20;
-color: black;
-background-color: white;</string>
+           <string notr="true">QButton {
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+    height: 20px; /* Set the height to 30 pixels */
+}
+
+QButton:hover {
+    background-color: lightgray; 
+    color: gray; 
+}
+ QColor darkGray(53, 53, 53);
+    QColor gray(128, 128, 128);
+    QColor black(25, 25, 25);
+    QColor blue(42, 130, 218);
+
+    QPalette darkPalette;
+    darkPalette.setColor(QPalette::Window, darkGray);
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, black);
+    darkPalette.setColor(QPalette::AlternateBase, darkGray);
+    darkPalette.setColor(QPalette::ToolTipBase, blue);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Button, darkGray);
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Link, blue);
+    darkPalette.setColor(QPalette::Highlight, blue);
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+
+    darkPalette.setColor(QPalette::Active, QPalette::Button, gray.darker());
+    darkPalette.setColor(QPalette::Disabled, QPalette::ButtonText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::WindowText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Text, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Light, darkGray);</string>
           </property>
           <property name="text">
            <string>Register</string>
@@ -197,6 +250,9 @@ background-color: white;</string>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayoutLogin">
+        <property name="spacing">
+         <number>10</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayoutUserPass">
           <item>
@@ -257,15 +313,47 @@ color: black;</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>190</y>
+         <y>187</y>
          <width>271</width>
-         <height>28</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">height: 20;
-color: black;
-background-color: white;
+        <string notr="true">QButton {
+    border-radius: 40px;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+    height: 25px; /* Set the height to 50 pixels */
+}
+QButton:hover {
+    background-color: lightgray; 
+    color: gray; 
+}
+ QColor darkGray(53, 53, 53);
+    QColor gray(128, 128, 128);
+    QColor black(25, 25, 25);
+    QColor blue(42, 130, 218);
+
+    QPalette darkPalette;
+    darkPalette.setColor(QPalette::Window, darkGray);
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, black);
+    darkPalette.setColor(QPalette::AlternateBase, darkGray);
+    darkPalette.setColor(QPalette::ToolTipBase, blue);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Button, darkGray);
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Link, blue);
+    darkPalette.setColor(QPalette::Highlight, blue);
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+
+    darkPalette.setColor(QPalette::Active, QPalette::Button, gray.darker());
+    darkPalette.setColor(QPalette::Disabled, QPalette::ButtonText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::WindowText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Text, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Light, darkGray);
 </string>
        </property>
        <property name="text">
@@ -306,8 +394,8 @@ background-color: white;
     <property name="styleSheet">
      <string notr="true">QFrame {
     border-radius: 40px;
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 rgba(106, 13, 173, 0.7), stop:1 rgba(187, 134, 252, 0.7));
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                      stop:0 rgba(5, 5, 5, 0.7), stop:1 rgba(245, 245, 245, 0.5));
 }
 </string>
     </property>
@@ -321,14 +409,51 @@ background-color: white;
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>350</y>
+       <y>360</y>
        <width>211</width>
        <height>31</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: black;
-background-color: white;</string>
+      <string notr="true">QButton {
+    border-radius: 40px;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+    height: 25px; /* Set the height to 50 pixels */
+}
+QButton:hover {
+    background-color: lightgray; 
+    color: gray; 
+}
+ QColor darkGray(53, 53, 53);
+    QColor gray(128, 128, 128);
+    QColor black(25, 25, 25);
+    QColor blue(42, 130, 218);
+
+    QPalette darkPalette;
+    darkPalette.setColor(QPalette::Window, darkGray);
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, black);
+    darkPalette.setColor(QPalette::AlternateBase, darkGray);
+    darkPalette.setColor(QPalette::ToolTipBase, blue);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Button, darkGray);
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Link, blue);
+    darkPalette.setColor(QPalette::Highlight, blue);
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+
+    darkPalette.setColor(QPalette::Active, QPalette::Button, gray.darker());
+    darkPalette.setColor(QPalette::Disabled, QPalette::ButtonText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::WindowText, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Text, gray);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Light, darkGray);
+</string>
      </property>
      <property name="text">
       <string>Already have an account? Click here.</string>
@@ -359,7 +484,7 @@ background-color: white;</string>
      <x>0</x>
      <y>0</y>
      <width>1160</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
