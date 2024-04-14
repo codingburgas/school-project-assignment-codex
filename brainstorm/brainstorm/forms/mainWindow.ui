@@ -331,7 +331,7 @@ background-color: white;
 background-color: white;</string>
      </property>
      <property name="text">
-      <string>Don't have an account? Click here.</string>
+      <string>Already have an account? Click here.</string>
      </property>
     </widget>
    </widget>
@@ -359,7 +359,7 @@ background-color: white;</string>
      <x>0</x>
      <y>0</y>
      <width>1160</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

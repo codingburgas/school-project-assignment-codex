@@ -18,6 +18,7 @@ void Grades::addGrade(int userID, const QString& subject, int grade)
     {
         QMessageBox::critical(nullptr, "Error", "Failed to add grade");
     }
+    delete db;
 }
 
 void Grades::updateGrade(int gradeID, int newGrade)
@@ -43,6 +44,7 @@ void Grades::updateGrade(int gradeID, int newGrade)
     {
         QMessageBox::critical(nullptr, "Error", "Failed to update grade");
     }
+    delete db;
 }
 
 
@@ -67,4 +69,5 @@ void Grades::deleteGrade(int gradeID) {
     {
         QMessageBox::critical(nullptr, "Error", "Failed to delete grade");
     }
+    delete db;
 }

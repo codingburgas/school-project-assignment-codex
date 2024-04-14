@@ -34,6 +34,7 @@ void GradesButtons::on_pushButtonAddGrade_clicked()
     int grade = ui->lineEditGrade->text().toInt();
 
     gradeObj->addGrade(userID, subject, grade);
+    delete gradeObj;
 }
 
 
@@ -44,6 +45,7 @@ void GradesButtons::on_pushButtonUpdateGrade_clicked()
     int newGrade = ui->lineEditnewGrade->text().toInt();
 
     grade->updateGrade(gradeID, newGrade);
+    delete grade;
 }
 
 
@@ -53,4 +55,5 @@ void GradesButtons::on_pushButtonDeleteGrade_clicked()
     int gradeIDdel = ui->lineEditGradeIDdel->text().toInt();
 
     grade->deleteGrade(gradeIDdel);
+    delete grade;
 }

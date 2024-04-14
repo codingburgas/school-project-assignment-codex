@@ -147,6 +147,7 @@ void MainWindow::on_pushButtonRegister_clicked()
 
     db->closeConnection();
     delete db;
+    delete validator;
 }
 
 void MainWindow::on_switchFormButton_clicked()
