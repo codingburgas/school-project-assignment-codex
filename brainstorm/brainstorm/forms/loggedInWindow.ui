@@ -155,6 +155,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
      </item>
     </widget>
+    <widget class="QPushButton" name="pushButtonAddPerms">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add perms</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

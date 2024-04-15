@@ -2,11 +2,12 @@
 #include "../include/gradesButtons.h"
 #include "ui_loggedInWindow.h"
 
-LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms)
+LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms, int userID)
     : QDialog(parent)
     , ui(new Ui::LoggedInWindow)
     , username(username)
     , perms(perms)
+    , userID(userID)
 {
     ui->setupUi(this);
     checkPermissions();
@@ -15,6 +16,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonAddGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonAddPerms, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
 }
 
 LoggedInWindow::~LoggedInWindow()
@@ -40,25 +42,28 @@ void LoggedInWindow::handleButtonClick()
     QPushButton* clickedButton = qobject_cast<QPushButton*>(sender());
     if (clickedButton)
     {
-        GradesButtons* gradesButtons = new GradesButtons(this);
+        GradesButtons* gradesButtons = new GradesButtons(this, userID);
 
         if (clickedButton == ui->pushButtonAddGrade)
         {
             // Pass index to GradesButtons constructor
             gradesButtons->setStackedWidgetIndex(0);
         }
-        else if (clickedButton == ui->pushButtonDeleteGrade)
-        {
-            // Pass index to GradesButtons constructor
-            gradesButtons->setStackedWidgetIndex(2);
-        }
         else if (clickedButton == ui->pushButtonUpdateGrade)
         {
             // Pass index to GradesButtons constructor
             gradesButtons->setStackedWidgetIndex(1);
         }
+        else if (clickedButton == ui->pushButtonAddPerms)
+        {
+            gradesButtons->setStackedWidgetIndex(2);
+        }
+        else if (clickedButton == ui->pushButtonDeleteGrade)
+        {
+            // Pass index to GradesButtons constructor
+            gradesButtons->setStackedWidgetIndex(3);
+        }
 
         gradesButtons->show();
     }
 }
-

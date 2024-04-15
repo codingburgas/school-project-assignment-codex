@@ -14,7 +14,7 @@ class GradesButtons : public QDialog
     Q_OBJECT
 
 public:
-    explicit GradesButtons(QWidget *parent = nullptr);
+    explicit GradesButtons(QWidget *parent = nullptr, int userID = 0);
     ~GradesButtons();
     void setStackedWidgetIndex(int index);
 
@@ -23,9 +23,12 @@ private slots:
     void on_pushButtonUpdateGrade_clicked();
     void on_pushButtonDeleteGrade_clicked();
 
+    void on_pushButtonUpdatePerms_clicked();
+
 private:
     Ui::GradesButtons *ui;
     int stackedWidgetIndex;
+    int userID;
 };
 
 #endif // GRADESBUTTONS_H

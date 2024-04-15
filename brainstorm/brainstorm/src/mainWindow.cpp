@@ -42,7 +42,7 @@ void MainWindow::on_pushButtonLogin_clicked()
     QSqlQuery query;
 
     // Retrieve password and perms in a single query
-    query.prepare("SELECT password, perms FROM users WHERE username = :username");
+    query.prepare("SELECT password, perms, userID FROM users WHERE username = :username");
     query.bindValue(":username", username);
 
     if (query.exec() && query.next())
@@ -53,6 +53,7 @@ void MainWindow::on_pushButtonLogin_clicked()
             QMessageBox::information(this, "Login", "Logged in.");
 
             int perms = query.value("perms").toInt(); // Get the permission value
+            int userID = query.value("userID").toInt(); // Get the user ID
 
             // Update lastActive with current date and time (UTC)
             QDateTime currentDateTime = QDateTime::currentDateTime();
@@ -68,7 +69,7 @@ void MainWindow::on_pushButtonLogin_clicked()
                 QMessageBox::warning(this, "Database Error", "Failed to update last active date: " + query.lastError().text());
             }
 
-            LoggedInWindow* loggedInWindow = new LoggedInWindow(this, username, perms);
+            LoggedInWindow* loggedInWindow = new LoggedInWindow(this, username, perms, userID);
             loggedInWindow->show();
         }
         else

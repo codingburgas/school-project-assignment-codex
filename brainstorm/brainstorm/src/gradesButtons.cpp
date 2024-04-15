@@ -1,13 +1,15 @@
 #include "../include/gradesButtons.h"
 #include "../include/grades.h"
+#include "../include/admin.h"
 #include "ui_gradesButtons.h"
 
-GradesButtons::GradesButtons(QWidget *parent)
+GradesButtons::GradesButtons(QWidget *parent, int userID)
     : QDialog(parent)
     , ui(new Ui::GradesButtons)
+    , userID(userID)
 {
     ui->setupUi(this);
-    QIcon icon("C:/Users/Nick/Desktop/school-project-assignment-codex/brainstorm/brainstorm/assets/icon.png");
+    QIcon icon("../brainstorm/assets/icon.png");
     this->setWindowIcon(icon);
     // Initialize stackedWidgetIndex to 0 or any default value
     stackedWidgetIndex = 0;
@@ -57,3 +59,15 @@ void GradesButtons::on_pushButtonDeleteGrade_clicked()
     grade->deleteGrade(gradeIDdel);
     delete grade;
 }
+
+
+
+
+void GradesButtons::on_pushButtonUpdatePerms_clicked()
+{
+    int userIDPerms = ui->lineEditUserIDPerms->text().toInt();
+    int permsLevel = ui->lineEditPermsLevel->text().toInt();
+
+    setPermissions(userIDPerms, permsLevel, userID);
+}
+
