@@ -71,3 +71,13 @@ void GradesButtons::on_pushButtonUpdatePerms_clicked()
     setPermissions(userIDPerms, permsLevel, userID);
 }
 
+
+void GradesButtons::on_pushButtonAddToGrade_clicked()
+{
+    int userIDAddToGrade = ui->lineEditUserIDGradeAdd->text().toInt();
+    QString grade = ui->lineEditAddToGrade->text();
+
+    addToGrade(userIDAddToGrade, grade, userID);
+}
+
+

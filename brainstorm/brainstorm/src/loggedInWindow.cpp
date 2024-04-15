@@ -17,6 +17,8 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonDeleteGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonAddPerms, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonAddToGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+
 }
 
 LoggedInWindow::~LoggedInWindow()
@@ -52,18 +54,23 @@ void LoggedInWindow::handleButtonClick()
         else if (clickedButton == ui->pushButtonUpdateGrade)
         {
             // Pass index to GradesButtons constructor
-            gradesButtons->setStackedWidgetIndex(1);
+            gradesButtons->setStackedWidgetIndex(3);
         }
         else if (clickedButton == ui->pushButtonAddPerms)
         {
-            gradesButtons->setStackedWidgetIndex(2);
+            gradesButtons->setStackedWidgetIndex(4);
         }
         else if (clickedButton == ui->pushButtonDeleteGrade)
         {
             // Pass index to GradesButtons constructor
-            gradesButtons->setStackedWidgetIndex(3);
+            gradesButtons->setStackedWidgetIndex(5);
+        }
+        else if (clickedButton == ui->pushButtonAddToGrade)
+        {
+            gradesButtons->setStackedWidgetIndex(1);
         }
 
         gradesButtons->show();
     }
 }
+

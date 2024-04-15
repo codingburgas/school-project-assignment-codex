@@ -168,6 +168,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string>Add perms</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButtonAddToGrade">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add to class</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

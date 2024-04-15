@@ -25,6 +25,8 @@ private slots:
 
     void on_pushButtonUpdatePerms_clicked();
 
+    void on_pushButtonAddToGrade_clicked();
+
 private:
     Ui::GradesButtons *ui;
     int stackedWidgetIndex;

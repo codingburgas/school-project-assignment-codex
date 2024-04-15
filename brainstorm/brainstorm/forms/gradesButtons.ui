@@ -16,6 +16,12 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
+     <property name="minimumSize">
+      <size>
+       <width>496</width>
+       <height>0</height>
+      </size>
+     </property>
      <widget class="QWidget" name="pageAddGrade">
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
@@ -82,6 +88,64 @@
         </item>
        </layout>
       </widget>
+     </widget>
+     <widget class="QWidget" name="pageAddToGrade">
+      <widget class="QWidget" name="layoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>220</y>
+         <width>361</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutGradeID_3">
+            <item>
+             <widget class="QLabel" name="labelUserIDGradeAdd">
+              <property name="text">
+               <string>UserID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditUserIDGradeAdd"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutNewGrade_3">
+            <item>
+             <widget class="QLabel" name="labelAddToGrade">
+              <property name="text">
+               <string>Grade</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditAddToGrade"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonAddToGrade">
+          <property name="text">
+           <string>Add to class</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageUpdateClass">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QWidget" name="pageUpdateGrade">
       <widget class="QWidget" name="layoutWidget">
