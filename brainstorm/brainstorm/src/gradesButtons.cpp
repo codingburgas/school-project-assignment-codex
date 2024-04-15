@@ -65,19 +65,21 @@ void GradesButtons::on_pushButtonDeleteGrade_clicked()
 
 void GradesButtons::on_pushButtonUpdatePerms_clicked()
 {
+    Admin* admin = new Admin;
     int userIDPerms = ui->lineEditUserIDPerms->text().toInt();
     int permsLevel = ui->lineEditPermsLevel->text().toInt();
 
-    setPermissions(userIDPerms, permsLevel, userID);
+    admin->setPermissions(userIDPerms, permsLevel, userID);
+    delete admin;
 }
 
 
 void GradesButtons::on_pushButtonAddToGrade_clicked()
 {
+    Admin* admin = new Admin;
     int userIDAddToGrade = ui->lineEditUserIDGradeAdd->text().toInt();
     QString grade = ui->lineEditAddToGrade->text();
 
-    addToGrade(userIDAddToGrade, grade, userID);
+    admin->addToGrade(userIDAddToGrade, grade, userID);
+    delete admin;
 }
-
-

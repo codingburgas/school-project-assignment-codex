@@ -1,7 +1,7 @@
 #include "../include/db.h"
 #include "../include/admin.h"
 
-void setPermissions(int userID, int perms, int loggedInUserID)
+void Admin::setPermissions(int userID, int perms, int loggedInUserID)
 {
     if (userID == loggedInUserID)
     {
@@ -33,7 +33,7 @@ void setPermissions(int userID, int perms, int loggedInUserID)
     delete db;
 }
 
-void addToGrade(int userID, QString grade, int loggedInUserID)
+void Admin::addToGrade(int userID, QString grade, int loggedInUserID)
 {
     QSet<QString> validGrades = {"9A", "9B", "9V", "9G", "10A", "10B", "10V", "10G"};
 

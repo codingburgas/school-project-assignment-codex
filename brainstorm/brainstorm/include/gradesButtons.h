@@ -22,9 +22,7 @@ private slots:
     void on_pushButtonAddGrade_clicked();
     void on_pushButtonUpdateGrade_clicked();
     void on_pushButtonDeleteGrade_clicked();
-
     void on_pushButtonUpdatePerms_clicked();
-
     void on_pushButtonAddToGrade_clicked();
 
 private:

@@ -11,7 +11,6 @@ SOURCES += \
     src/gradesButtons.cpp \
     src/grades.cpp \
     src/loggedInWindow.cpp \
-    src/db.cpp \
     src/mainWindow.cpp \
     src/main.cpp
 
@@ -32,7 +31,8 @@ FORMS += \
     forms/loggedInWindow.ui \
     forms/gradesButtons.ui
 
-LIBS += -L$$PWD/../lib/ -lvalidatorlib
+LIBS += -L../lib/ -lvalidatorlib \
+        -L../lib/ -ldatabaselib
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -41,7 +41,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     brainstorm.pro.user \
-    lib/validatorlib.lib
+    lib/validatorlib.lib \
+    lib/databaselib.lib
 
 RESOURCES += \
     ../assets/bg.png/background.qrc
