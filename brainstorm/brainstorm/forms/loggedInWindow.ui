@@ -26,7 +26,7 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>10</x>
        <y>10</y>
        <width>541</width>
        <height>71</height>
@@ -41,8 +41,8 @@
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>30</y>
+       <x>690</x>
+       <y>10</y>
        <width>461</width>
        <height>31</height>
       </rect>
@@ -65,8 +65,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>190</y>
+       <x>530</x>
+       <y>520</y>
        <width>82</width>
        <height>116</height>
       </rect>
@@ -98,8 +98,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QTableWidget" name="tableWidget">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>120</y>
+       <x>630</x>
+       <y>370</y>
        <width>521</width>
        <height>271</height>
       </rect>
@@ -158,8 +158,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButtonAddPerms">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>100</y>
+       <x>980</x>
+       <y>340</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -171,14 +171,262 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButtonAddToGrade">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>100</y>
+       <x>1070</x>
+       <y>340</y>
        <width>80</width>
        <height>24</height>
       </rect>
      </property>
      <property name="text">
       <string>Add to class</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>541</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pageChemistry">
+    <widget class="QTableWidget" name="tableWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>10</y>
+       <width>521</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="rowCount">
+      <number>8</number>
+     </property>
+     <property name="columnCount">
+      <number>5</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Monday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tuesday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Wednesday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Thursday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Friday</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>9A</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>9V</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>10G</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>10A</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>10A</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>9A</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>9V</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>10G</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>10A</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>9G</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>9B</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>10G</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>9G</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>9B</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>10V</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>10V</string>
+      </property>
+     </item>
+     <item row="4" column="1">
+      <property name="text">
+       <string>10A</string>
+      </property>
+     </item>
+     <item row="4" column="2">
+      <property name="text">
+       <string>10V</string>
+      </property>
+     </item>
+     <item row="4" column="4">
+      <property name="text">
+       <string>10B</string>
+      </property>
+     </item>
+     <item row="5" column="0">
+      <property name="text">
+       <string>10G</string>
+      </property>
+     </item>
+     <item row="5" column="1">
+      <property name="text">
+       <string>10V</string>
+      </property>
+     </item>
+     <item row="5" column="4">
+      <property name="text">
+       <string>10B</string>
+      </property>
+     </item>
+     <item row="6" column="3">
+      <property name="text">
+       <string>10B</string>
+      </property>
+     </item>
+     <item row="7" column="3">
+      <property name="text">
+       <string>10B</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>82</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButtonAddGrade_2">
+        <property name="text">
+         <string>Add Grade</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUpdateGrade_2">
+        <property name="text">
+         <string>Update Grade</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteGrade_2">
+        <property name="text">
+         <string>Delete Grade</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidgetChemistry">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>290</y>
+       <width>531</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="page"/>
+     <widget class="QWidget" name="page_2"/>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>541</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>

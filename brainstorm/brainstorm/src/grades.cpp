@@ -3,6 +3,12 @@
 
 void Grades::addGrade(int userID, const QString& subject, int grade)
 {
+    if (grade < 2 || grade > 6)
+    {
+        QMessageBox::critical(nullptr, "Error", "Invalid grade value. Grade must be between 2 and 6.");
+        return;
+    }
+
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
@@ -23,6 +29,12 @@ void Grades::addGrade(int userID, const QString& subject, int grade)
 
 void Grades::updateGrade(int gradeID, int newGrade)
 {
+    if (newGrade < 2 || newGrade > 6)
+    {
+        QMessageBox::critical(nullptr, "Error", "Invalid grade value. Grade must be between 2 and 6.");
+        return;
+    }
+
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
