@@ -39,7 +39,7 @@
 <h2 id="about-the-project">About The Project</h2>
     
 <p align="justify">
-    Information to be added.
+    Our team is launching a project called "Brainstorm" to revolutionise education through technology. We believe that technology can simplify learning and organisation, making it more effective when fully digitised. With "Brainstorm", we aim to assist teachers and students in maintaining organisation through innovative digital methods. Join us on this journey to enhance education for everyone! 
 </p>
 <p> - The codeX Team ❤️</p>
     
@@ -52,9 +52,9 @@
 <br>
     
     
-|                               Main Menu                               |
+|                               Register                                |
 | :-------------------------------------------------------------------: | 
-| Screenshots to be added.                                              |
+| <img src="https://cdn.discordapp.com/attachments/1221804578933309460/1231288279907700837/image.png?ex=66254612&is=6623f492&hm=d0c64395bd8abf29f578c235c42f57b6ae6216f8d401a69df771d56659b2ae62&" alt="Brainstorm Register Screenshot">|
 
     
 </details>
