@@ -24,17 +24,11 @@ private slots:
     void on_pushButtonDeleteGrade_clicked();
     void on_pushButtonUpdatePerms_clicked();
     void on_pushButtonAddToGrade_clicked();
-
     void on_pushButtonAddAbsence_2_clicked();
-
     void on_pushButtonUpdateAbsence_clicked();
-
     void on_pushButtonDeleteAbsence_clicked();
-
     void on_pushButtonAddFeedback_clicked();
-
     void on_pushButtonUpdateFeedback_clicked();
-
     void on_pushButtonDeleteFeedback_clicked();
 
 private:

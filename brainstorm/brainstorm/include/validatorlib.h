@@ -11,6 +11,7 @@ public:
     bool validatePassword(const QString& password);
     bool validateEmail(const QString& email);
     bool validateName(const QString& name);
+    bool validateID(const QString& id);
 };
 
 #endif // VALIDATOR_H

@@ -5,8 +5,8 @@
 
 class Feedbacks {
 public:
-    void addFeedback(int userID, const QString& subject, const QString& type);
-    void updateFeedback(int feedbackID, const QString& newType);
+    void addFeedback(int userID, const QString& subject, const QString& type, const QString& reason);
+    void updateFeedback(int feedbackID, const QString& newType, const QString& newReason);
     void deleteFeedback(int feedbackID);
 };
 

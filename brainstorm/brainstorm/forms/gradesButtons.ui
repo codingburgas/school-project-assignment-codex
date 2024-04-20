@@ -23,7 +23,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>10</number>
      </property>
      <widget class="QWidget" name="pageAddGrade">
       <widget class="QWidget" name="layoutWidget">
@@ -512,6 +512,20 @@
          </layout>
         </item>
         <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutReasonFeedback">
+          <item>
+           <widget class="QLabel" name="labelReasonFeedback_12">
+            <property name="text">
+             <string>Reason</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditReasonFeedback_12"/>
+          </item>
+         </layout>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButtonAddFeedback">
           <property name="text">
            <string>Add Feedback</string>
@@ -561,6 +575,20 @@
              <widget class="QComboBox" name="comboBoxUpdateFeedback"/>
             </item>
            </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutNewReason">
+          <item>
+           <widget class="QLabel" name="labelNewReason">
+            <property name="text">
+             <string>New Reason</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditNewReason"/>
           </item>
          </layout>
         </item>

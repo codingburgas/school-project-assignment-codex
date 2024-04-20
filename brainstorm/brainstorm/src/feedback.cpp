@@ -1,15 +1,16 @@
 #include "../include/db.h"
 #include "../include/feedback.h"
 
-void Feedbacks::addFeedback(int userID, const QString& subject, const QString& type)
+void Feedbacks::addFeedback(int userID, const QString& subject, const QString& type, const QString& reason)
 {
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
-    query.prepare("INSERT INTO feedback (userID, subject, type) VALUES (:userID, :subject, :type)");
+    query.prepare("INSERT INTO feedback (userID, subject, type, reason) VALUES (:userID, :subject, :type, :reason)");
     query.bindValue(":userID", userID);
     query.bindValue(":subject", subject);
     query.bindValue(":type", type);
+    query.bindValue(":reason", reason);
     if (query.exec())
     {
         QMessageBox::information(nullptr, "Success", "Feedback added successfully!");
@@ -21,13 +22,14 @@ void Feedbacks::addFeedback(int userID, const QString& subject, const QString& t
     delete db;
 }
 
-void Feedbacks::updateFeedback(int feedbackID, const QString& newType)
+void Feedbacks::updateFeedback(int feedbackID, const QString& newType, const QString& newReason)
 {
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
-    query.prepare("UPDATE feedback SET type = :type WHERE feedbackID = :feedbackID");
+    query.prepare("UPDATE feedback SET type = :type, reason = :reason WHERE feedbackID = :feedbackID");
     query.bindValue(":type", newType);
+    query.bindValue(":reason", newReason);
     query.bindValue(":feedbackID", feedbackID);
     if (query.exec())
     {
