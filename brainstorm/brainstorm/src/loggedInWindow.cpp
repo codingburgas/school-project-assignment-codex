@@ -14,6 +14,12 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->setupUi(this);
     checkPermissions();
 
+    // Set background image and make it transparent
+    QPixmap backgroundImage("C:/Users/Nick/Desktop/school-project-assignment-codex/brainstorm/brainstorm/assets/background.jpg");
+    ui->backgroundLabel->setPixmap(backgroundImage);
+    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
+    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
+
     // Connect button signals to handleButtonClick slot
     connect(ui->pushButtonAddGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);

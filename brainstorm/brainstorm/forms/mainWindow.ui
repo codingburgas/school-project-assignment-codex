@@ -395,7 +395,7 @@ QButton:hover {
      <string notr="true">QFrame {
     border-radius: 40px;
     background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-                                      stop:0 rgba(5, 5, 5, 0.7), stop:1 rgba(245, 245, 245, 0.5));
+                                      stop:0 rgba(15, 15, 15, 0.6), stop:1 rgba(245, 245, 245, 0.5));
 }
 </string>
     </property>

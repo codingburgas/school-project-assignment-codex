@@ -202,8 +202,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>10</y>
+       <x>530</x>
+       <y>190</y>
        <width>521</width>
        <height>271</height>
       </rect>
@@ -377,15 +377,30 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QWidget" name="layoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>540</x>
-       <y>10</y>
-       <width>82</width>
-       <height>116</height>
+       <x>20</x>
+       <y>180</y>
+       <width>111</width>
+       <height>91</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QPushButton" name="pushButtonAddGrade_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Grade</string>
         </property>
@@ -393,6 +408,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateGrade_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Grade</string>
         </property>
@@ -400,6 +430,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteGrade_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Grade</string>
         </property>
@@ -407,26 +452,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
      </layout>
     </widget>
-    <widget class="QStackedWidget" name="stackedWidgetChemistry">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>290</y>
-       <width>531</width>
-       <height>341</height>
-      </rect>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="page"/>
-     <widget class="QWidget" name="page_2"/>
-    </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
+       <x>0</x>
+       <y>0</y>
        <width>541</width>
        <height>71</height>
       </rect>
@@ -438,15 +468,30 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QWidget" name="layoutWidget_3">
      <property name="geometry">
       <rect>
-       <x>540</x>
-       <y>160</y>
-       <width>82</width>
-       <height>116</height>
+       <x>20</x>
+       <y>295</y>
+       <width>111</width>
+       <height>91</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QPushButton" name="pushButtonAddAbsence">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Absence</string>
         </property>
@@ -454,6 +499,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateAbsence">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Absence</string>
         </property>
@@ -461,6 +521,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteAbsence">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Absence</string>
         </property>
@@ -471,15 +546,30 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QWidget" name="layoutWidget_7">
      <property name="geometry">
       <rect>
-       <x>540</x>
-       <y>310</y>
-       <width>82</width>
-       <height>116</height>
+       <x>20</x>
+       <y>425</y>
+       <width>111</width>
+       <height>91</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_7">
       <item>
        <widget class="QPushButton" name="pushButtonAddFeedback">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Feedback</string>
         </property>
@@ -487,6 +577,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateFeedback">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Feedback</string>
         </property>
@@ -494,6 +599,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteFeedback">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Feedback</string>
         </property>
@@ -501,8 +621,61 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </item>
      </layout>
     </widget>
+    <widget class="QStackedWidget" name="stackedWidgetChemistry">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>470</y>
+       <width>501</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="page"/>
+     <widget class="QWidget" name="page_2"/>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+background: qlineargradient( spread:pad, x1:0 y1:0, x2:1 y2:0, stop:0 rgba(25, 25, 25, 240), stop:1 rgba(255, 255, 255, 240))
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>tableWidget_2</zorder>
+    <zorder>layoutWidget_2</zorder>
+    <zorder>layoutWidget_3</zorder>
+    <zorder>layoutWidget_7</zorder>
+    <zorder>stackedWidgetChemistry</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_2</zorder>
    </widget>
   </widget>
+  <widget class="QLabel" name="backgroundLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1281</width>
+     <height>721</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>backgroundLabel</zorder>
+  <zorder>stackedWidget</zorder>
  </widget>
  <resources/>
  <connections/>
