@@ -131,7 +131,7 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
     }
 
     QSqlQuery query;
-    QString queryString = "SELECT u.userID, u.firstName, u.lastName, g.subject, g.grade "
+    QString queryString = "SELECT u.userID, u.firstName, u.lastName, g.gradeID, g.subject, g.grade "
                           "FROM users u "
                           "LEFT JOIN grades g ON u.userID = g.userID "
                           "WHERE u.grade = :grade";
@@ -154,8 +154,9 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
             QString userID = query.value(0).toString();
             QString firstName = query.value(1).toString();
             QString lastName = query.value(2).toString();
-            QString subject = query.value(3).toString();
-            QString grade = query.value(4).toString();
+            QString gradeID = query.value(3).toString();
+            QString subject = query.value(4).toString();
+            QString gradeValue = query.value(5).toString();
 
             //If it's a new user, display the information for the previous user (if any)
             if (userID != currentUserID && !currentUserID.isEmpty())
@@ -167,11 +168,11 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
                 currentUserID = userID;
                 currentName = firstName;
                 currentLastName = lastName;
-                currentUserGrades = subject + " " + grade;
+                currentUserGrades = subject + " (ID: " + gradeID + ") " + gradeValue; // Include gradeID
             }
-            else //If it's the same user, append the grade to the current user's grades
+            else // If it's the same user, append the grade to the current user's grades
             {
-                currentUserGrades += "; " + subject + " " + grade;
+                currentUserGrades += "; (ID: " + gradeID + ") " + subject + " " + gradeValue; // Include gradeID before subject
             }
 
             //Update the current user's information
