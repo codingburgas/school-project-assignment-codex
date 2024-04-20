@@ -31,6 +31,12 @@ private slots:
 
     void on_pushButtonDeleteAbsence_clicked();
 
+    void on_pushButtonAddFeedback_clicked();
+
+    void on_pushButtonUpdateFeedback_clicked();
+
+    void on_pushButtonDeleteFeedback_clicked();
+
 private:
     Ui::GradesButtons *ui;
     int stackedWidgetIndex;

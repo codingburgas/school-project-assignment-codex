@@ -9,6 +9,7 @@ CONFIG += c++17
 SOURCES += \
     src/absences.cpp \
     src/admin.cpp \
+    src/feedback.cpp \
     src/gradesButtons.cpp \
     src/grades.cpp \
     src/loggedInWindow.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     include/absences.h \
     include/admin.h \
+    include/feedback.h \
     include/gradesButtons.h \
     include/db.h \
     include/grades.h \

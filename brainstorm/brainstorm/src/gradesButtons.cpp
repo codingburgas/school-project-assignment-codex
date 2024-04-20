@@ -1,5 +1,6 @@
 #include "../include/gradesButtons.h"
 #include "../include/absences.h"
+#include "../include/feedback.h"
 #include "../include/grades.h"
 #include "../include/admin.h"
 #include "ui_gradesButtons.h"
@@ -114,4 +115,35 @@ void GradesButtons::on_pushButtonDeleteAbsence_clicked()
 
     absence->deleteAbsence(absenceIDdel);
     delete absence;
+}
+
+void GradesButtons::on_pushButtonAddFeedback_clicked()
+{
+    Feedbacks* feedback = new Feedbacks;
+    int userID = ui->lineEditUserID_3->text().toInt();
+    QString subject = ui->lineEditSubject_3->text();
+    QString type = ui->lineEditFeedback->text();
+
+    feedback->addFeedback(userID, subject, type);
+    delete feedback;
+}
+
+
+void GradesButtons::on_pushButtonUpdateFeedback_clicked()
+{
+    Feedbacks* feedback = new Feedbacks;
+    int feedbackID = ui->lineEditFeedbackID->text().toInt();
+    QString newFeedback = ui->lineEditNewFeedback->text();
+
+    feedback->updateFeedback(feedbackID, newFeedback);
+    delete feedback;
+}
+
+void GradesButtons::on_pushButtonDeleteFeedback_clicked()
+{
+    Feedbacks* feedback = new Feedbacks;
+    int feedbackIDdel = ui->lineEditFeedbackIDdel->text().toInt();
+
+    feedback->deleteFeedback(feedbackIDdel);
+    delete feedback;
 }

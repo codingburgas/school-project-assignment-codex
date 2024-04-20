@@ -26,6 +26,9 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonAddAbsence, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateAbsence, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteAbsence, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonAddFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonUpdateFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonDeleteFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
 
     ui->label->setText("Welcome back, " + firstName + " " + lastName + "!");
     ui->label_2->setText("Welcome back, " + firstName + " " + lastName + "!");
@@ -87,6 +90,18 @@ void LoggedInWindow::handleButtonClick()
         else if (clickedButton == ui->pushButtonDeleteAbsence)
         {
             gradesButtons->setStackedWidgetIndex(8);
+        }
+        else if (clickedButton == ui->pushButtonAddFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(9);
+        }
+        else if (clickedButton == ui->pushButtonUpdateFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(10);
+        }
+        else if (clickedButton == ui->pushButtonDeleteFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(11);
         }
         else if (clickedButton == ui->pushButtonAddPerms)
         {
