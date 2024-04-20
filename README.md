@@ -1,5 +1,5 @@
 <p align="center">
-     Logo to be added.
+     <img align="center" src="https://cdn.discordapp.com/attachments/1221804578933309460/1229865599698735164/OU78iOV.png?ex=6624b658&is=662364d8&hm=098831fc2f5a38de852181b7a7f80cec0443bb0fc89cd31f3dd9ac9a07003c04&" alt="codeX logo" width="550", height="450">
 </p>
     
 <h1 align="center"> codeX </h1>
