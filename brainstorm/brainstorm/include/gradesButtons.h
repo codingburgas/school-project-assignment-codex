@@ -25,6 +25,12 @@ private slots:
     void on_pushButtonUpdatePerms_clicked();
     void on_pushButtonAddToGrade_clicked();
 
+    void on_pushButtonAddAbsence_2_clicked();
+
+    void on_pushButtonUpdateAbsence_clicked();
+
+    void on_pushButtonDeleteAbsence_clicked();
+
 private:
     Ui::GradesButtons *ui;
     int stackedWidgetIndex;

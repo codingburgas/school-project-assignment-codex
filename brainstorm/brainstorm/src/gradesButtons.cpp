@@ -1,4 +1,5 @@
 #include "../include/gradesButtons.h"
+#include "../include/absences.h"
 #include "../include/grades.h"
 #include "../include/admin.h"
 #include "ui_gradesButtons.h"
@@ -82,4 +83,35 @@ void GradesButtons::on_pushButtonAddToGrade_clicked()
 
     admin->addToGrade(userIDAddToGrade, grade, userID);
     delete admin;
+}
+
+void GradesButtons::on_pushButtonAddAbsence_2_clicked()
+{
+    Absences* absence = new Absences;
+    int userID = ui->lineEditUserID_2->text().toInt();
+    QString subject = ui->lineEditSubject_2->text();
+    QString type = ui->lineEditAbsence->text();
+
+    absence->addAbsence(userID, subject, type);
+    delete absence;
+}
+
+
+void GradesButtons::on_pushButtonUpdateAbsence_clicked()
+{
+    Absences* absence = new Absences;
+    int absenceID = ui->lineEditAbsenceID_2->text().toInt();
+    QString newAbsence = ui->lineEditNewAbsence->text();
+
+    absence->updateAbsence(absenceID, newAbsence);
+    delete absence;
+}
+
+void GradesButtons::on_pushButtonDeleteAbsence_clicked()
+{
+    Absences* absence = new Absences;
+    int absenceIDdel = ui->lineEditAbsenceIDdel->text().toInt();
+
+    absence->deleteAbsence(absenceIDdel);
+    delete absence;
 }

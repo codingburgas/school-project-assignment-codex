@@ -7,6 +7,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++17
 
 SOURCES += \
+    src/absences.cpp \
     src/admin.cpp \
     src/gradesButtons.cpp \
     src/grades.cpp \
@@ -15,6 +16,7 @@ SOURCES += \
     src/main.cpp
 
 HEADERS += \
+    include/absences.h \
     include/admin.h \
     include/gradesButtons.h \
     include/db.h \

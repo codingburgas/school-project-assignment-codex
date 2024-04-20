@@ -22,6 +22,9 @@
        <height>0</height>
       </size>
      </property>
+     <property name="currentIndex">
+      <number>8</number>
+     </property>
      <widget class="QWidget" name="pageAddGrade">
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
@@ -286,6 +289,165 @@
          <widget class="QPushButton" name="pushButtonDeleteGrade">
           <property name="text">
            <string>Delete Grade</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageAddAbsences">
+      <widget class="QWidget" name="layoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>280</y>
+         <width>361</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutUserID_2">
+            <item>
+             <widget class="QLabel" name="labelUserID_2">
+              <property name="text">
+               <string>User ID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditUserID_2"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutSubject_2">
+            <item>
+             <widget class="QLabel" name="labelSubject_2">
+              <property name="text">
+               <string>Subject</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditSubject_2"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutType">
+            <item>
+             <widget class="QLabel" name="labelAbsence">
+              <property name="text">
+               <string>Type</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditAbsence"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonAddAbsence_2">
+          <property name="text">
+           <string>Add Absence</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageUpdateAbsences">
+      <widget class="QWidget" name="layoutWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>320</y>
+         <width>361</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutAbsenceID_2">
+            <item>
+             <widget class="QLabel" name="labelAbsenceID_2">
+              <property name="text">
+               <string>AbsenceID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditAbsenceID_2"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutNewAbsence">
+            <item>
+             <widget class="QLabel" name="labelNewAbsence">
+              <property name="text">
+               <string>New Status</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditNewAbsence"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonUpdateAbsence">
+          <property name="text">
+           <string>Update Absence</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageDeleteAbsence">
+      <widget class="QWidget" name="layoutWidget_7">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>360</y>
+         <width>361</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_15">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutAbsenceIDdel">
+            <item>
+             <widget class="QLabel" name="labelAbsenceIDdel">
+              <property name="text">
+               <string>AbsenceID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditAbsenceIDdel"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonDeleteAbsence">
+          <property name="text">
+           <string>Delete Absence</string>
           </property>
          </widget>
         </item>

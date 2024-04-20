@@ -22,6 +22,9 @@
      <height>721</height>
     </rect>
    </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -413,6 +416,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <height>341</height>
       </rect>
      </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <widget class="QWidget" name="page"/>
      <widget class="QWidget" name="page_2"/>
     </widget>
@@ -428,6 +434,39 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>160</y>
+       <width>82</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QPushButton" name="pushButtonAddAbsence">
+        <property name="text">
+         <string>Add Absence</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUpdateAbsence">
+        <property name="text">
+         <string>Update Absence</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteAbsence">
+        <property name="text">
+         <string>Delete Absence</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
   </widget>
