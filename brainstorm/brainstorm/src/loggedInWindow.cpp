@@ -51,6 +51,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonAddFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonDeleteAccount, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
 
     connect(ui->comboBoxUsers, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LoggedInWindow::onComboBoxUserChanged);
     connect(ui->comboBoxGrades, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LoggedInWindow::onComboBoxGradesChanged);
@@ -229,6 +230,10 @@ void LoggedInWindow::handleButtonClick()
         else if (clickedButton == ui->pushButtonDeleteFeedback_2)
         {
             gradesButtons->setStackedWidgetIndex(11);
+        }
+        else if (clickedButton == ui->pushButtonDeleteAccount)
+        {
+            gradesButtons->setStackedWidgetIndex(2);
         }
 
 

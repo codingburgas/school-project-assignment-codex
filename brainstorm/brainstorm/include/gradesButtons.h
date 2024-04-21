@@ -30,6 +30,8 @@ private slots:
     void on_pushButtonAddFeedback_clicked();
     void on_pushButtonUpdateFeedback_clicked();
     void on_pushButtonDeleteFeedback_clicked();
+    void on_pushButtonDeleteAccount_clicked();
+    void deleteAccount(int loggedInUserID);
 
 private:
     Ui::GradesButtons *ui;

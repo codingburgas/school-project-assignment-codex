@@ -46,6 +46,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    assets/icons/lateness.png \
     brainstorm.pro.user \
     lib/validatorlib.lib \
     lib/databaselib.lib

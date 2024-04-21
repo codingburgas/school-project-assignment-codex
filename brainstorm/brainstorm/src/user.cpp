@@ -29,9 +29,9 @@ QList<float> User::retrieveAbsences(int userID) {
     if (query.exec()) {
         while (query.next()) {
             QString type = query.value(0).toString();
-            if (type == "Absence") {
+            if (type == "    Absence") {
                 absences.append(1);
-            } else if (type == "Lateness") {
+            } else if (type == "    Lateness") {
                 absences.append(0.5);
             }
         }

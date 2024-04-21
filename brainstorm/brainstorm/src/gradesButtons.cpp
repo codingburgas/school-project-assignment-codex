@@ -20,17 +20,17 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     stackedWidgetIndex = 0;
     ui->stackedWidget->setCurrentIndex(stackedWidgetIndex);
 
-    ui->comboBoxAbsenceType->addItem("Absence");
-    ui->comboBoxAbsenceType->addItem("Lateness");
+    ui->comboBoxAbsenceType->addItem(QIcon(":/ico/assets/icons/absence.png"), "    Absence");
+    ui->comboBoxAbsenceType->addItem(QIcon(":/ico/assets/icons/lateness.png"), "    Lateness");
 
-    ui->comboBoxUpdateAbsence->addItem("Absence");
-    ui->comboBoxUpdateAbsence->addItem("Lateness");
+    ui->comboBoxUpdateAbsence->addItem(QIcon(":/ico/assets/icons/absence.png"), "    Absence");
+    ui->comboBoxUpdateAbsence->addItem(QIcon(":/ico/assets/icons/lateness.png"), "    Lateness");
 
-    ui->comboBoxUpdateFeedback->addItem("Remark");
-    ui->comboBoxUpdateFeedback->addItem("Praise");
+    ui->comboBoxUpdateFeedback->addItem(QIcon(":/ico/assets/icons/remark.png"), "    Remark");
+    ui->comboBoxUpdateFeedback->addItem(QIcon(":/ico/assets/icons/praise.png"), "    Praise");
 
-    ui->comboBoxFeedbackType->addItem("Remark");
-    ui->comboBoxFeedbackType->addItem("Praise");
+    ui->comboBoxFeedbackType->addItem(QIcon(":/ico/assets/icons/remark.png"), "    Remark");
+    ui->comboBoxFeedbackType->addItem(QIcon(":/ico/assets/icons/praise.png"), "    Praise");
 
     ui->comboBoxPermissionLevel->addItem("0");
     ui->comboBoxPermissionLevel->addItem("1");
@@ -46,17 +46,17 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     ui->comboBoxAddGrade->addItem("10V");
     ui->comboBoxAddGrade->addItem("10G");
 
-    ui->comboBoxGrade->addItem("2");
-    ui->comboBoxGrade->addItem("3");
-    ui->comboBoxGrade->addItem("4");
-    ui->comboBoxGrade->addItem("5");
-    ui->comboBoxGrade->addItem("6");
+    ui->comboBoxGrade->addItem(QIcon(":/ico/assets/icons/2.png"), "    2");
+    ui->comboBoxGrade->addItem(QIcon(":/ico/assets/icons/3.png"), "    3");
+    ui->comboBoxGrade->addItem(QIcon(":/ico/assets/icons/4.png"), "    4");
+    ui->comboBoxGrade->addItem(QIcon(":/ico/assets/icons/5.png"), "    5");
+    ui->comboBoxGrade->addItem(QIcon(":/ico/assets/icons/6.png"), "    6");
 
-    ui->comboBoxNewGrade->addItem("2");
-    ui->comboBoxNewGrade->addItem("3");
-    ui->comboBoxNewGrade->addItem("4");
-    ui->comboBoxNewGrade->addItem("5");
-    ui->comboBoxNewGrade->addItem("6");
+    ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/2.png"), "    2");
+    ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/3.png"), "    3");
+    ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/4.png"), "    4");
+    ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/5.png"), "    5");
+    ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/6.png"), "    6");
 
     ui->comboSubject->addItem("Chemistry");
     ui->comboSubject->addItem("Programming");
@@ -458,3 +458,40 @@ void GradesButtons::on_pushButtonDeleteFeedback_clicked()
     delete validator;
     delete db;
 }
+
+void GradesButtons::deleteAccount(int loggedInUserID)
+{
+    if (userID == loggedInUserID)
+    {
+        QMessageBox::critical(nullptr, "Error", "Cannot delete your own account");
+        return;
+    }
+
+    QString userIDStr = ui->lineEditDeleteAccount->text();
+    // Prepare the SQL query to delete the account
+    QSqlQuery queryDeleteAccount;
+    QString queryDeleteAccountString = "DELETE FROM users WHERE userID = :userID";
+    queryDeleteAccount.prepare(queryDeleteAccountString);
+    queryDeleteAccount.bindValue(":userID", userID);
+
+    if (queryDeleteAccount.numRowsAffected() > 0)
+    {
+        QMessageBox::information(nullptr, "Success", "Absence updated successfully!");
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, "Error", "User with with ID " + QString::number(userID) + " does not exist in the database");
+    }
+
+    // Execute the query to delete the account
+    if(queryDeleteAccount.exec())
+    {
+        QMessageBox::information(nullptr, "Account Deleted", "Account deleted successfully.");
+    }
+}
+
+void GradesButtons::on_pushButtonDeleteAccount_clicked()
+{
+    deleteAccount(userID);
+}
+

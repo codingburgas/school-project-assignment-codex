@@ -147,8 +147,45 @@
      </widget>
      <widget class="QWidget" name="pageUpdateClass">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
+      <widget class="QWidget" name="layoutWidget_11">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>210</y>
+         <width>361</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_23">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_24">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutGradeIDdel_2">
+            <item>
+             <widget class="QLabel" name="labelDeleteAccount">
+              <property name="text">
+               <string>userID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditDeleteAccount"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonDeleteAccount">
+          <property name="text">
+           <string>Delete Account</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
      <widget class="QWidget" name="pageUpdateGrade">
       <widget class="QWidget" name="layoutWidget">
@@ -353,7 +390,7 @@
 }
 
 QComboBox::icon {
-    margin-right: 8px; /* Adjust margin as needed */
+    margin-right: 20px; /* Adjust margin as needed */
 }</string>
               </property>
              </widget>

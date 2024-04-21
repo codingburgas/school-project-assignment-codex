@@ -8,5 +8,6 @@
         <file>assets/icons/6.png</file>
         <file>assets/icons/praise.png</file>
         <file>assets/icons/remark.png</file>
+        <file>assets/icons/lateness.png</file>
     </qresource>
 </RCC>
