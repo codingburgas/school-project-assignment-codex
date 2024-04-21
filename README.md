@@ -102,16 +102,56 @@
     Email: <a>KKGaydov21@codingburgas.bg</a> <br>    
     
 </p>
-    
+
+<h2 id="instalation">Instalation</h2>
+<table border="1">
+    <tr>
+        <th> 1) Download Qt and create an account.</th>
+        <th> 2) Open "Qt Maintenance Tool" and in section "Select components" expand the Qt tab.</th>
+        <th> 3) Select version 6.7.0 and then select MSVS 2019 64-bit.</th>
+    </tr>
+    <tr>
+         <td><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/7b65a574-b7ad-4033-b63f-5844faa9cd9a" alt="Image 1" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/75395d95-a7ab-42f9-adec-45d23f02fba6" alt="Image 2" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/38edbc0b-c7c7-4c97-aac3-2eb57fc8e2a7" alt="Image 3" width="250" height="230"></td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th> 4) Download the last release from "https://github.com/thecodemonkey86/qt_mysql_driver" and extract all files.</th>
+        <th> 5) Find the Qt folder on your device and navigate to "Qt/6.7.0/msvs2019_64/plugins/sqldrivers" and put the three files from the "sqldrivers" folder you just extracted to the one you just navigated to.</th>
+        <th> 6) Open "Edit environmental variables for your account" and add a new path in the system variables.</th>
+    </tr>
+    <tr>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/981fcf11-a062-4039-ad8d-64f332db3c3b" alt="Image 4" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/7b4c8097-2e6e-4bed-960e-0e5acb6443e0" alt="Image 5" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/98ab8d60-d52f-4c7f-8ed0-e3f9ad87f365" alt="Image 6" width="250" height="230"></td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th> 7) Select the first two files from the extracted folder and add them to the new path (added in the system variables) on your computer.</th>
+        <th> 8) Clone our repository and open ".pro" file.</th>
+        <th> 9) Debug the application and enjoy!</th>
+    </tr>
+    <tr>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/427253f9-f852-476a-b471-cb1b099f6851" alt="Image 7" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/d9fb696f-df7f-4b66-97da-d3f13b8fa013" alt="Image 8" width="250" height="230"></td>
+         <td align = "center"><img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/a88a9b24-eb91-48dd-b417-ea2e085fe354" alt="Image 9" width="250" height="230"></td>
+    </tr>
+</table>
+
 <h2 id="download">Download</h2>
     
 <p align="center">To download our project, clone our repository by pasting this command in your command prompt:</p>
     
 <pre align="center">git clone "https://github.com/codingburgas/school-project-assignment-codex.git"</pre>
 
+<hr>
 <h3 align="center"> Thank you and enjoy our app! <h3>
 <h4 align="center"> Made with ❤️, C++ & Qt </h4>
-
 <hr>
 
 <h6 align="center">This README was designed by Bozhidar Dimov, one of the back-end developers of team codeX.</h6>
