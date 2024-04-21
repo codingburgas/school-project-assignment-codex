@@ -13,8 +13,9 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     , userID(userID)
 {
     ui->setupUi(this);
-    QIcon icon("../assets/icon.png");
+    QIcon icon("..brainstorm/assets/icon.png");
     this->setWindowIcon(icon);
+    setFixedSize(size());
     // Initialize stackedWidgetIndex to 0 or any default value
     stackedWidgetIndex = 0;
     ui->stackedWidget->setCurrentIndex(stackedWidgetIndex);

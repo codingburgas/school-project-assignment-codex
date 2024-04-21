@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Brainstorm | Grade Action</string>
+   <string>Brainstorm | Actions</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -23,7 +23,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>10</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="pageAddGrade">
       <widget class="QWidget" name="layoutWidget">
@@ -346,7 +346,17 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBoxAbsenceType"/>
+             <widget class="QComboBox" name="comboBoxAbsenceType">
+              <property name="styleSheet">
+               <string notr="true">QComboBox::item {
+    padding: 4px 24px 4px 4px; /* Adjust padding as needed */
+}
+
+QComboBox::icon {
+    margin-right: 8px; /* Adjust margin as needed */
+}</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

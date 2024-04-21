@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>assets/icons/absence.png</file>
+        <file>assets/icons/2.png</file>
+        <file>assets/icons/3.png</file>
+        <file>assets/icons/4.png</file>
+        <file>assets/icons/5.png</file>
+        <file>assets/icons/6.png</file>
+        <file>assets/icons/praise.png</file>
+        <file>assets/icons/remark.png</file>
+    </qresource>
+</RCC>

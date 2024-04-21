@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
@@ -664,45 +664,6 @@ QHeaderView::section:pressed {
     <zorder>label_logo_7</zorder>
    </widget>
    <widget class="QWidget" name="pageAdmin">
-    <widget class="QPushButton" name="pushButtonAddPerms">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Add perms</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonAddToGrade">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Add to class</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonDeleteAccount">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Delete account</string>
-     </property>
-    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
@@ -928,122 +889,137 @@ QHeaderView::section:pressed {
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButtonAddGrade">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>10</x>
        <y>100</y>
-       <width>80</width>
-       <height>23</height>
+       <width>301</width>
+       <height>26</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Add Grade</string>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteAccount">
+        <property name="text">
+         <string>Delete account</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAddPerms">
+        <property name="text">
+         <string>Add perms</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAddToGrade">
+        <property name="text">
+         <string>Add to class</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="pushButtonUpdateGrade">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>320</x>
        <y>100</y>
-       <width>80</width>
-       <height>24</height>
+       <width>301</width>
+       <height>26</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Update Grade</string>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButtonAddGrade">
+        <property name="text">
+         <string>Add Grade</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUpdateGrade">
+        <property name="text">
+         <string>Update Grade</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteGrade">
+        <property name="text">
+         <string>Delete Grade</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="pushButtonDeleteGrade">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>520</x>
+       <x>640</x>
        <y>100</y>
-       <width>80</width>
-       <height>24</height>
+       <width>301</width>
+       <height>26</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Delete Grade</string>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="pushButtonAddFeedback_2">
+        <property name="text">
+         <string>Add Feedback</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUpdateFeedback_2">
+        <property name="text">
+         <string>Update Feedback</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteFeedback_2">
+        <property name="text">
+         <string>Delete Feedback</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="pushButtonAddGrade_3">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>100</y>
-       <width>80</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Add Feedback</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonDeleteGrade_3">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Delete Feedback</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonUpdateGrade_3">
-     <property name="geometry">
-      <rect>
-       <x>740</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Update Feedback</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonDeleteGrade_7">
-     <property name="geometry">
-      <rect>
-       <x>1170</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Delete Absence</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonAddGrade_7">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
        <x>950</x>
        <y>100</y>
-       <width>80</width>
-       <height>23</height>
+       <width>321</width>
+       <height>26</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Add Absence</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButtonUpdateGrade_7">
-     <property name="geometry">
-      <rect>
-       <x>1060</x>
-       <y>100</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Update Absence</string>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="pushButtonAddAbsence_2">
+        <property name="text">
+         <string>Add Absence</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUpdateAbsence_2">
+        <property name="text">
+         <string>Update Absence</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDeleteAbsence_2">
+        <property name="text">
+         <string>Delete Absence</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
     <zorder>label_18</zorder>
     <zorder>label_logo_2</zorder>
@@ -1057,12 +1033,12 @@ QHeaderView::section:pressed {
     <zorder>pushButtonAddGrade</zorder>
     <zorder>pushButtonUpdateGrade</zorder>
     <zorder>pushButtonDeleteGrade</zorder>
-    <zorder>pushButtonAddGrade_3</zorder>
-    <zorder>pushButtonDeleteGrade_3</zorder>
-    <zorder>pushButtonUpdateGrade_3</zorder>
-    <zorder>pushButtonDeleteGrade_7</zorder>
-    <zorder>pushButtonAddGrade_7</zorder>
-    <zorder>pushButtonUpdateGrade_7</zorder>
+    <zorder>pushButtonAddFeedback_2</zorder>
+    <zorder>pushButtonDeleteFeedback_2</zorder>
+    <zorder>pushButtonUpdateFeedback_2</zorder>
+    <zorder>pushButtonDeleteAbsence_2</zorder>
+    <zorder>pushButtonAddAbsence_2</zorder>
+    <zorder>pushButtonUpdateAbsence_2</zorder>
    </widget>
    <widget class="QWidget" name="pageChemistry">
     <widget class="QTableWidget" name="tableWidget_2">

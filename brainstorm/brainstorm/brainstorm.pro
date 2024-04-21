@@ -51,4 +51,5 @@ DISTFILES += \
     lib/databaselib.lib
 
 RESOURCES += \
-    ../assets/bg.png/background.qrc
+    ../assets/bg.png/background.qrc \
+    icons.qrc

@@ -17,13 +17,15 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     , lastName(lastName)
 {
     ui->setupUi(this);
+    setFixedSize(size());
+
     checkPermissions();
     addUsersToComboBox();
     addUsersIDsToComboBox();
 
 
     // Set background image and make it transparent
-    QPixmap backgroundImage("../assets/background.jpg");
+    QPixmap backgroundImage("../brainstorm/assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
     ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
     ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
@@ -43,6 +45,12 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonAddFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonAddAbsence_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonUpdateAbsence_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonDeleteAbsence_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonAddFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonUpdateFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
+    connect(ui->pushButtonDeleteFeedback_2, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
 
     connect(ui->comboBoxUsers, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LoggedInWindow::onComboBoxUserChanged);
     connect(ui->comboBoxGrades, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LoggedInWindow::onComboBoxGradesChanged);
@@ -57,7 +65,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->tabWidget->setTabText(1, "Absences");
     ui->tabWidget->setTabText(2, "Feedbacks");
 
-    QPixmap pixmap("../assets/logo.png");
+    QPixmap pixmap("../brainstorm/assets/logo.png");
 
     // Set the pixmap to the QLabel
     ui->label_logo->setPixmap(pixmap);
@@ -198,6 +206,31 @@ void LoggedInWindow::handleButtonClick()
         {
             gradesButtons->setStackedWidgetIndex(1);
         }
+        else if (clickedButton == ui->pushButtonAddAbsence_2)
+        {
+            gradesButtons->setStackedWidgetIndex(6);
+        }
+        else if (clickedButton == ui->pushButtonUpdateAbsence_2)
+        {
+            gradesButtons->setStackedWidgetIndex(7);
+        }
+        else if (clickedButton == ui->pushButtonDeleteAbsence_2)
+        {
+            gradesButtons->setStackedWidgetIndex(8);
+        }
+        else if (clickedButton == ui->pushButtonAddFeedback_2)
+        {
+            gradesButtons->setStackedWidgetIndex(9);
+        }
+        else if (clickedButton == ui->pushButtonUpdateFeedback_2)
+        {
+            gradesButtons->setStackedWidgetIndex(10);
+        }
+        else if (clickedButton == ui->pushButtonDeleteFeedback_2)
+        {
+            gradesButtons->setStackedWidgetIndex(11);
+        }
+
 
         gradesButtons->show();
     }
