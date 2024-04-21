@@ -1,5 +1,6 @@
 #include "../include/loggedInWindow.h"
 #include "../include/gradesButtons.h"
+#include "../include/user.h"
 #include "ui_loggedInWindow.h"
 
 LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms, int userID, const QString &firstName, const QString &lastName)
@@ -36,6 +37,14 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     connect(ui->pushButtonUpdateFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteFeedback, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
 
+    setAverageGradeLabel();
+    setAbsenceLabel();
+    setFeedbackLabel();
+
+    ui->tabWidget->setTabText(0, "GPA");
+    ui->tabWidget->setTabText(1, "Absences");
+    ui->tabWidget->setTabText(2, "Feedbacks");
+
     ui->label->setText("Welcome back, " + firstName + " " + lastName + "!");
     ui->label_2->setText("Welcome back, " + firstName + " " + lastName + "!");
     ui->label_3->setText("Welcome back, " + firstName + " " + lastName + "!");
@@ -44,6 +53,13 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->label->setFont(font);
     ui->label_2->setFont(font);
     ui->label_3->setFont(font);
+    ui->label_5->setFont(font);
+    ui->label_6->setFont(font);
+    ui->label_7->setFont(font);
+    ui->label_8->setFont(font);
+    ui->gpaLabel->setFont(font);
+    ui->absenceLabel->setFont(font);
+    ui->feedbackLabel->setFont(font);
 }
 
 LoggedInWindow::~LoggedInWindow()
@@ -205,7 +221,6 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
 }
 
 
-
 void LoggedInWindow::on_tableWidget_2_cellClicked(int row, int column)
 {
     if(ui->tableWidget_2->item(row, column) == nullptr)
@@ -219,4 +234,22 @@ void LoggedInWindow::on_tableWidget_2_cellClicked(int row, int column)
 
     // Display users with the clicked grade
     displayUsersWithGrade(ui->stackedWidgetChemistry, grade);
+}
+
+void LoggedInWindow::setAverageGradeLabel() {
+    User* user = new User;
+    user->avgGrade(userID, ui->gpaLabel);
+    delete user;
+}
+
+void LoggedInWindow::setAbsenceLabel() {
+    User* user = new User;
+    user->totalAbsences(userID, ui->absenceLabel);
+    delete user;
+}
+
+void LoggedInWindow::setFeedbackLabel() {
+    User* user = new User;
+    user->totalFeedbacks(userID, ui->feedbackLabel);
+    delete user;
 }

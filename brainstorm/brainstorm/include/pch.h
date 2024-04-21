@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QDialog>
+#include <QLabel>
 #include <QDebug>
 #include <QIcon>
 

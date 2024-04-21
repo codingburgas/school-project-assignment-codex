@@ -18,6 +18,9 @@ public:
     ~LoggedInWindow();
     void checkPermissions();
     void handleButtonClick();
+    void setAverageGradeLabel();
+    void setAbsenceLabel();
+    void setFeedbackLabel();
 
 private slots:
     void on_tableWidget_2_cellClicked(int row, int column);

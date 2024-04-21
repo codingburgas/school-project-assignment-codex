@@ -14,7 +14,8 @@ SOURCES += \
     src/grades.cpp \
     src/loggedInWindow.cpp \
     src/mainWindow.cpp \
-    src/main.cpp
+    src/main.cpp \
+    src/user.cpp
 
 HEADERS += \
     include/absences.h \
@@ -26,6 +27,7 @@ HEADERS += \
     include/mainWindow.h \
     include/loggedInWindow.h \
     include/pch.h \
+    include/user.h \
     include/validatorlib.h
 
 FORMS += \
