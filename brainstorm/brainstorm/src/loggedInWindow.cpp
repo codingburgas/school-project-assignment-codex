@@ -3,6 +3,9 @@
 #include "../include/user.h"
 #include "../include/db.h"
 #include "ui_loggedInWindow.h"
+#include <QPixmap>
+
+
 
 LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms, int userID, const QString &firstName, const QString &lastName)
     : QDialog(parent)
@@ -18,8 +21,9 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     addUsersToComboBox();
     addUsersIDsToComboBox();
 
+
     // Set background image and make it transparent
-    QPixmap backgroundImage("../brainstorm/assets/background.jpg");
+    QPixmap backgroundImage("../assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
     ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
     ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
@@ -53,18 +57,24 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->tabWidget->setTabText(1, "Absences");
     ui->tabWidget->setTabText(2, "Feedbacks");
 
-    ui->label->setText("Welcome back, " + firstName + " " + lastName + "!");
-    ui->label_2->setText("Welcome back, " + firstName + " " + lastName + "!");
-    ui->label_3->setText("Welcome back, " + firstName + " " + lastName + "!");
+    QPixmap pixmap("../assets/logo.png");
+
+    // Set the pixmap to the QLabel
+    ui->label_logo->setPixmap(pixmap);
+    ui->label_logo_2->setPixmap(pixmap);
+    ui->label_logo_7->setPixmap(pixmap);
+
+
+    ui->label->setText("<b>Welcome back, " + firstName + " " + lastName + "!</b>");
+    ui->label_2->setText("<b>Welcome back, " + firstName + " " + lastName + "!</b>");
     QFont font = ui->label->font();
     font.setPointSize(24);
     ui->label->setFont(font);
     ui->label_2->setFont(font);
-    ui->label_3->setFont(font);
     ui->label_5->setFont(font);
     ui->label_6->setFont(font);
     ui->label_7->setFont(font);
-    ui->label_8->setFont(font);
+    ui->label_53->setFont(font);
     ui->gpaLabel->setFont(font);
     ui->absenceLabel->setFont(font);
     ui->feedbackLabel->setFont(font);

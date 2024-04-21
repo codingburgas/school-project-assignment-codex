@@ -29,8 +29,8 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
+       <x>20</x>
+       <y>100</y>
        <width>541</width>
        <height>71</height>
       </rect>
@@ -42,11 +42,16 @@
     <widget class="QTabWidget" name="tabWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
+       <x>30</x>
+       <y>200</y>
        <width>331</width>
        <height>201</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+}</string>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -58,11 +63,16 @@
       <widget class="QLabel" name="label_5">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>10</x>
          <y>10</y>
          <width>191</width>
-         <height>31</height>
+         <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
+}</string>
        </property>
        <property name="text">
         <string>Your GPA:</string>
@@ -71,11 +81,16 @@
       <widget class="QLabel" name="gpaLabel">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>60</y>
+         <x>60</x>
+         <y>70</y>
          <width>151</width>
          <height>51</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
+}</string>
        </property>
        <property name="text">
         <string/>
@@ -89,11 +104,16 @@
       <widget class="QLabel" name="absenceLabel">
        <property name="geometry">
         <rect>
-         <x>130</x>
+         <x>60</x>
          <y>70</y>
          <width>191</width>
          <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
        </property>
        <property name="text">
         <string/>
@@ -102,11 +122,16 @@
       <widget class="QLabel" name="label_6">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>10</x>
          <y>10</y>
          <width>261</width>
          <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
        </property>
        <property name="text">
         <string>Your absences:</string>
@@ -120,11 +145,16 @@
       <widget class="QLabel" name="feedbackLabel">
        <property name="geometry">
         <rect>
-         <x>140</x>
+         <x>60</x>
          <y>70</y>
          <width>191</width>
          <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
        </property>
        <property name="text">
         <string/>
@@ -133,11 +163,16 @@
       <widget class="QLabel" name="label_7">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>10</x>
          <y>10</y>
          <width>251</width>
          <height>41</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
        </property>
        <property name="text">
         <string>Your feedbacks:</string>
@@ -148,20 +183,26 @@
     <widget class="QListView" name="listView">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>100</y>
-       <width>256</width>
+       <x>430</x>
+       <y>220</y>
+       <width>251</width>
        <height>181</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+border-radius: 5px;
+}</string>
      </property>
     </widget>
     <widget class="QPushButton" name="gradesButton">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>130</y>
-       <width>80</width>
-       <height>18</height>
+       <x>510</x>
+       <y>250</y>
+       <width>91</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -171,10 +212,10 @@
     <widget class="QPushButton" name="absencesButton">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>180</y>
-       <width>80</width>
-       <height>18</height>
+       <x>510</x>
+       <y>300</y>
+       <width>91</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -184,50 +225,80 @@
     <widget class="QPushButton" name="feedbacksButton">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>230</y>
-       <width>80</width>
-       <height>18</height>
+       <x>510</x>
+       <y>350</y>
+       <width>91</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>Your Feedbacks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>440</x>
-       <y>70</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Your Stats</string>
-     </property>
-    </widget>
     <widget class="QCalendarWidget" name="calendarWidget">
      <property name="geometry">
       <rect>
-       <x>720</x>
-       <y>410</y>
+       <x>730</x>
+       <y>480</y>
        <width>521</width>
-       <height>181</height>
+       <height>211</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    background-color: rgba(255, 255, 255, 1); /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+QTableWidget::item {
+    padding: 5px; /* Padding around each item */
+}
+
+QHeaderView::section {
+    background-color: rgba(200, 200, 200, 1); /* Light gray background for header */
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 5px; /* Padding for header sections */
+    font-weight: bold; /* Bold font for header sections */
+}
+
+QHeaderView::section:checked {
+    background-color: rgba(150, 150, 150, 1); /* Darker background for checked header sections */
+}
+
+QHeaderView::section:pressed {
+    background-color: rgba(100, 100, 100, 1); /* Even darker background when header section is pressed */
+}
+</string>
      </property>
     </widget>
     <widget class="QTableWidget" name="tableWidget_3">
      <property name="geometry">
       <rect>
-       <x>710</x>
-       <y>100</y>
+       <x>730</x>
+       <y>170</y>
        <width>521</width>
        <height>271</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QTableWidget {
+    background-color: rgba(50, 50, 50, 1); /* Dark gray background */
+    border: 1px solid #555; /* Dark gray border */
+}
+
+
+
+
+
+QHeaderView::section:checked {
+    background-color: rgba(30, 30, 30, 1); /* Darker background for checked header sections */
+}
+
+QHeaderView::section:pressed {
+    background-color: rgba(20, 20, 20, 1); /* Even darker background when header section is pressed */
+}
+</string>
      </property>
      <property name="rowCount">
       <number>8</number>
@@ -470,24 +541,39 @@
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>60</y>
+       <x>730</x>
+       <y>150</y>
        <width>251</width>
-       <height>41</height>
+       <height>21</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+    border-radius: 5px; /* Rounded corners */
+}</string>
      </property>
      <property name="text">
       <string>Your Schedule</string>
+     </property>
+     <property name="margin">
+      <number>5</number>
      </property>
     </widget>
     <widget class="QStackedWidget" name="stackedWidget_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>290</y>
-       <width>571</width>
+       <x>30</x>
+       <y>410</y>
+       <width>651</width>
        <height>271</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); 
+    border-radius: 5px;
+}</string>
      </property>
      <property name="currentIndex">
       <number>1</number>
@@ -509,46 +595,80 @@
       <string/>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="pageAdmin">
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QLabel" name="label_52">
      <property name="geometry">
       <rect>
-       <x>840</x>
+       <x>0</x>
        <y>0</y>
-       <width>82</width>
-       <height>86</height>
+       <width>1281</width>
+       <height>81</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButtonAddGrade">
-        <property name="text">
-         <string>Add Grade</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonUpdateGrade">
-        <property name="text">
-         <string>Update Grade</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonDeleteGrade">
-        <property name="text">
-         <string>Delete Grade</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(48, 48, 48, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
+    <widget class="QLabel" name="label_logo_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>451</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_53">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>200</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+    border-radius: 5px; /* Rounded corners */
+}</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Your Stats&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="margin">
+      <number>8</number>
+     </property>
+    </widget>
+    <zorder>label_53</zorder>
+    <zorder>label</zorder>
+    <zorder>tabWidget</zorder>
+    <zorder>listView</zorder>
+    <zorder>gradesButton</zorder>
+    <zorder>absencesButton</zorder>
+    <zorder>feedbacksButton</zorder>
+    <zorder>calendarWidget</zorder>
+    <zorder>tableWidget_3</zorder>
+    <zorder>label_13</zorder>
+    <zorder>stackedWidget_2</zorder>
+    <zorder>label_14</zorder>
+    <zorder>label_52</zorder>
+    <zorder>label_logo_7</zorder>
+   </widget>
+   <widget class="QWidget" name="pageAdmin">
     <widget class="QPushButton" name="pushButtonAddPerms">
      <property name="geometry">
       <rect>
-       <x>670</x>
-       <y>0</y>
+       <x>100</x>
+       <y>100</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -560,8 +680,8 @@
     <widget class="QPushButton" name="pushButtonAddToGrade">
      <property name="geometry">
       <rect>
-       <x>760</x>
-       <y>0</y>
+       <x>200</x>
+       <y>100</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -570,24 +690,11 @@
       <string>Add to class</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>541</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButtonDeleteAccount">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>0</y>
+       <x>10</x>
+       <y>100</y>
        <width>80</width>
        <height>24</height>
       </rect>
@@ -600,9 +707,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>80</y>
+       <y>160</y>
        <width>301</width>
-       <height>571</height>
+       <height>541</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -610,18 +717,35 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QLabel" name="label_9">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+          </property>
           <property name="text">
            <string>User Info</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBoxUsers"/>
+         <widget class="QComboBox" name="comboBoxUsers">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.5); /* Very dark gray with 50% opacity */
+}</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidgetUserInfo">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+        </property>
         <widget class="QWidget" name="page_3"/>
         <widget class="QWidget" name="page_4"/>
        </widget>
@@ -632,9 +756,9 @@
      <property name="geometry">
       <rect>
        <x>320</x>
-       <y>80</y>
+       <y>160</y>
        <width>311</width>
-       <height>571</height>
+       <height>541</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -642,18 +766,35 @@
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
          <widget class="QLabel" name="label_10">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+          </property>
           <property name="text">
            <string>Grades info</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBoxGrades"/>
+         <widget class="QComboBox" name="comboBoxGrades">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.5); /* Very dark gray with 50% opacity */
+}</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidgetGrades">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+        </property>
         <property name="currentIndex">
          <number>1</number>
         </property>
@@ -667,24 +808,41 @@
      <property name="geometry">
       <rect>
        <x>640</x>
-       <y>80</y>
+       <y>160</y>
        <width>301</width>
-       <height>571</height>
+       <height>541</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_9">
       <item>
        <widget class="QLabel" name="label_11">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
         <property name="text">
          <string>Feedback info</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBoxFeedback"/>
+       <widget class="QComboBox" name="comboBoxFeedback">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.5); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidgetFeedback">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -698,49 +856,257 @@
      <property name="geometry">
       <rect>
        <x>950</x>
-       <y>80</y>
+       <y>160</y>
        <width>321</width>
-       <height>581</height>
+       <height>541</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_10">
       <item>
        <widget class="QLabel" name="label_12">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
         <property name="text">
          <string>Absence info</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBoxAbsence"/>
+       <widget class="QComboBox" name="comboBoxAbsence">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.5); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidgetAbsence">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+        </property>
         <widget class="QWidget" name="page_9"/>
         <widget class="QWidget" name="page_10"/>
        </widget>
       </item>
      </layout>
     </widget>
+    <widget class="QLabel" name="label_logo_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>451</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddGrade">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>100</y>
+       <width>80</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Grade</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonUpdateGrade">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Grade</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonDeleteGrade">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete Grade</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddGrade_3">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>100</y>
+       <width>80</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Feedback</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonDeleteGrade_3">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete Feedback</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonUpdateGrade_3">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Feedback</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonDeleteGrade_7">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete Absence</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddGrade_7">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>100</y>
+       <width>80</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Absence</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonUpdateGrade_7">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>100</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Absence</string>
+     </property>
+    </widget>
+    <zorder>label_18</zorder>
+    <zorder>label_logo_2</zorder>
+    <zorder>pushButtonAddPerms</zorder>
+    <zorder>pushButtonAddToGrade</zorder>
+    <zorder>pushButtonDeleteAccount</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>pushButtonAddGrade</zorder>
+    <zorder>pushButtonUpdateGrade</zorder>
+    <zorder>pushButtonDeleteGrade</zorder>
+    <zorder>pushButtonAddGrade_3</zorder>
+    <zorder>pushButtonDeleteGrade_3</zorder>
+    <zorder>pushButtonUpdateGrade_3</zorder>
+    <zorder>pushButtonDeleteGrade_7</zorder>
+    <zorder>pushButtonAddGrade_7</zorder>
+    <zorder>pushButtonUpdateGrade_7</zorder>
    </widget>
    <widget class="QWidget" name="pageChemistry">
     <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>190</y>
-       <width>521</width>
-       <height>271</height>
+       <x>490</x>
+       <y>170</y>
+       <width>741</width>
+       <height>291</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QTableWidget {
+    background-color: rgba(50, 50, 50, 1); /* Dark gray background */
+    alternate-background-color: rgba(30, 30, 30, 1); /* Darker background for alternate rows */
+    border: 1px solid #555; /* Dark gray border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+QTableWidget::item {
+    padding: 10px; /* Padding around each item */
+    padding-bottom: 12px;
+}
+
+QHeaderView::section {
+    background-color: rgba(70, 70, 70, 1); /* Dark gray background for header */
+    border: 1px solid #555; /* Dark gray border */
+    padding: 8px; /* Padding for header sections */
+}
+
+QHeaderView::section:checked {
+    background-color: rgba(30, 30, 30, 1); /* Darker background for checked header sections */
+}
+
+QHeaderView::section:pressed {
+    background-color: rgba(20, 20, 20, 1); /* Even darker background when header section is pressed */
+}
+</string>
      </property>
      <property name="rowCount">
       <number>8</number>
      </property>
      <property name="columnCount">
-      <number>5</number>
+      <number>7</number>
      </property>
      <attribute name="horizontalHeaderVisible">
       <bool>true</bool>
@@ -776,6 +1142,16 @@
      <column>
       <property name="text">
        <string>Friday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Saturday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Sunday</string>
       </property>
      </column>
      <item row="0" column="0">
@@ -902,9 +1278,9 @@
     <widget class="QWidget" name="layoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>180</y>
-       <width>111</width>
+       <x>60</x>
+       <y>210</y>
+       <width>101</width>
        <height>91</height>
       </rect>
      </property>
@@ -980,22 +1356,22 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
+       <x>20</x>
+       <y>80</y>
        <width>541</width>
        <height>71</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:700;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>295</y>
-       <width>111</width>
+       <x>60</x>
+       <y>340</y>
+       <width>101</width>
        <height>91</height>
       </rect>
      </property>
@@ -1071,9 +1447,9 @@
     <widget class="QWidget" name="layoutWidget_7">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>425</y>
-       <width>111</width>
+       <x>60</x>
+       <y>470</y>
+       <width>101</width>
        <height>91</height>
       </rect>
      </property>
@@ -1149,11 +1525,20 @@
     <widget class="QStackedWidget" name="stackedWidgetChemistry">
      <property name="geometry">
       <rect>
-       <x>540</x>
+       <x>490</x>
        <y>470</y>
-       <width>501</width>
+       <width>741</width>
        <height>181</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page"/>
      <widget class="QWidget" name="page_2"/>
@@ -1164,19 +1549,112 @@
        <x>0</x>
        <y>0</y>
        <width>1281</width>
-       <height>61</height>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-background: qlineargradient( spread:pad, x1:0 y1:0, x2:1 y2:0, stop:0 rgba(25, 25, 25, 240), stop:1 rgba(255, 255, 255, 240))
-}
-</string>
+    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
+}</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_logo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>451</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>200</y>
+       <width>191</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+     </property>
+     <property name="text">
+      <string>Grade 
+ settings</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="margin">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>330</y>
+       <width>191</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+     </property>
+     <property name="text">
+      <string>Absence 
+ settings</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="margin">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>460</y>
+       <width>191</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
+}</string>
+     </property>
+     <property name="text">
+      <string>Feedback 
+ settings</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="margin">
+      <number>20</number>
+     </property>
+    </widget>
+    <zorder>label_17</zorder>
+    <zorder>label_16</zorder>
+    <zorder>label_15</zorder>
     <zorder>tableWidget_2</zorder>
     <zorder>layoutWidget_2</zorder>
     <zorder>layoutWidget_3</zorder>
@@ -1184,6 +1662,7 @@ background: qlineargradient( spread:pad, x1:0 y1:0, x2:1 y2:0, stop:0 rgba(25, 2
     <zorder>stackedWidgetChemistry</zorder>
     <zorder>label_4</zorder>
     <zorder>label_2</zorder>
+    <zorder>label_logo</zorder>
    </widget>
   </widget>
   <widget class="QLabel" name="backgroundLabel">
