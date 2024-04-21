@@ -23,6 +23,10 @@ public:
     void setAverageGradeLabel();
     void setAbsenceLabel();
     void setFeedbackLabel();
+    void showFirstPage();
+    void showSecondPage();
+    void showThirdPage();
+
 
 private slots:
     void on_tableWidget_2_cellClicked(int row, int column);
@@ -31,6 +35,9 @@ private slots:
     void onComboBoxFeedbackChanged(int index);
     void onComboBoxAbsenceChanged(int index);
     //void on_comboBoxUsers_currentIndexChanged(int index);
+    void on_gradesButton_clicked();
+    void on_absencesButton_clicked();
+    void on_feedbacksButton_clicked();
 
 private:
     Ui::LoggedInWindow *ui;

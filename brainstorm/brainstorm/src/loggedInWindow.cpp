@@ -528,6 +528,134 @@ void deleteAccount(const QString& userID)
 }
 */
 
+void displayGrades(QStackedWidget *stackedWidgetChemistry, int userID)
+{
+    while (stackedWidgetChemistry->count() > 0)
+    {
+        QWidget *widget = stackedWidgetChemistry->widget(0);
+        stackedWidgetChemistry->removeWidget(widget);
+        delete widget;
+    }
+
+    QSqlQuery query;
+    QString queryString = "SELECT g.subject, g.grade "
+                          "FROM users u "
+                          "LEFT JOIN grades g ON u.userID = g.userID "
+                          "WHERE u.userID = :userID";
+
+    query.prepare(queryString);
+    query.bindValue(":userID", userID);
+
+    if(query.exec())
+    {
+        // Create a new widget to display the results
+        QWidget *page = new QWidget();
+        QVBoxLayout *layout = new QVBoxLayout();
+
+        while (query.next())
+        {
+            QString subject = query.value(0).toString();
+            QString gradeValue = query.value(1).toString();
+
+            QLabel *label = new QLabel(subject + " - " + gradeValue);
+            layout->addWidget(label);
+        }
+
+        page->setLayout(layout);
+        stackedWidgetChemistry->addWidget(page);
+        page->show();
+    }
+    else
+    {
+        qDebug() << "Error executing query: " << query.lastError().text();
+    }
+}
+
+void displayAbsences(QStackedWidget *stackedWidgetChemistry, int userID)
+{
+    while (stackedWidgetChemistry->count() > 0)
+    {
+        QWidget *widget = stackedWidgetChemistry->widget(0);
+        stackedWidgetChemistry->removeWidget(widget);
+        delete widget;
+    }
+
+    QSqlQuery query;
+    QString queryString = "SELECT a.subject, a.type "
+                          "FROM absences a "
+                          "WHERE a.userID = :userID";
+
+    query.prepare(queryString);
+    query.bindValue(":userID", userID);
+
+    if(query.exec())
+    {
+        // Create a new widget to display the results
+        QWidget *page = new QWidget();
+        QVBoxLayout *layout = new QVBoxLayout();
+
+        while (query.next())
+        {
+            QString subject = query.value(0).toString();
+            QString type = query.value(1).toString();
+
+            QLabel *label = new QLabel(subject + " - " + type);
+            layout->addWidget(label);
+        }
+
+        page->setLayout(layout);
+        stackedWidgetChemistry->addWidget(page);
+        page->show();
+    }
+    else
+    {
+        qDebug() << "Error executing query: " << query.lastError().text();
+    }
+}
+
+void displayFeedbacks(QStackedWidget *stackedWidgetFeedback, int userID)
+{
+    while (stackedWidgetFeedback->count() > 0)
+    {
+        QWidget *widget = stackedWidgetFeedback->widget(0);
+        stackedWidgetFeedback->removeWidget(widget);
+        delete widget;
+    }
+
+    QSqlQuery query;
+    QString queryString = "SELECT f.type, f.subject, f.reason "
+                          "FROM feedback f "
+                          "WHERE f.userID = :userID";
+
+    query.prepare(queryString);
+    query.bindValue(":userID", userID);
+
+    if(query.exec())
+    {
+        // Create a new widget to display the results
+        QWidget *page = new QWidget();
+        QVBoxLayout *layout = new QVBoxLayout();
+
+        while (query.next())
+        {
+            QString type = query.value(0).toString();
+            QString subject = query.value(1).toString();
+            QString reason = query.value(2).toString();
+
+            QLabel *label = new QLabel(type + " - " + subject + " - " + reason);
+            layout->addWidget(label);
+        }
+
+        page->setLayout(layout);
+        stackedWidgetFeedback->addWidget(page);
+        page->show();
+    }
+    else
+    {
+        qDebug() << "Error executing query: " << query.lastError().text();
+    }
+}
+
 void LoggedInWindow::on_tableWidget_2_cellClicked(int row, int column)
 {
     if(ui->tableWidget_2->item(row, column) == nullptr)
@@ -595,4 +723,33 @@ void LoggedInWindow::onComboBoxAbsenceChanged(int index)
         QString selectedGradeID = ui->comboBoxAbsence->itemText(index);
         displayAbsence(selectedGradeID, ui->stackedWidgetAbsence);
     }
+}
+
+void LoggedInWindow::showFirstPage() {
+    displayGrades(ui->stackedWidget_2, userID);
+}
+
+void LoggedInWindow::showSecondPage() {
+    displayAbsences(ui->stackedWidget_2, userID);
+}
+
+void LoggedInWindow::showThirdPage() {
+    displayFeedbacks(ui->stackedWidget_2, userID);
+}
+
+void LoggedInWindow::on_gradesButton_clicked() {
+    ui->stackedWidget_2->setCurrentIndex(0);
+    displayGrades(ui->stackedWidget_2, userID);
+}
+
+void LoggedInWindow::on_absencesButton_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+    displayAbsences(ui->stackedWidget_2, userID);
+}
+
+void LoggedInWindow::on_feedbacksButton_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+    displayFeedbacks(ui->stackedWidget_2, userID);
 }

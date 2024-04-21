@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
@@ -49,7 +49,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -155,7 +155,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="gradesButton">
      <property name="geometry">
       <rect>
        <x>460</x>
@@ -168,7 +168,7 @@
       <string>Your Grades</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="absencesButton">
      <property name="geometry">
       <rect>
        <x>460</x>
@@ -181,7 +181,7 @@
       <string>Your Absences</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="feedbacksButton">
      <property name="geometry">
       <rect>
        <x>460</x>
@@ -205,6 +205,308 @@
      </property>
      <property name="text">
       <string>Your Stats</string>
+     </property>
+    </widget>
+    <widget class="QCalendarWidget" name="calendarWidget">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>410</y>
+       <width>521</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>100</y>
+       <width>521</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="rowCount">
+      <number>8</number>
+     </property>
+     <property name="columnCount">
+      <number>5</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Monday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tuesday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Wednesday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Thursday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Friday</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>Mathematics</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>Geography</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>Programming</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>Mathematics</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>Geography</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>History</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>Programming</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>Geography</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>Music</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>History</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>Programming</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>Music</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>German</string>
+      </property>
+     </item>
+     <item row="4" column="0">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="4" column="1">
+      <property name="text">
+       <string>IT</string>
+      </property>
+     </item>
+     <item row="4" column="2">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="4" column="3">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="4" column="4">
+      <property name="text">
+       <string>Mathematics</string>
+      </property>
+     </item>
+     <item row="5" column="0">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="5" column="1">
+      <property name="text">
+       <string>IT</string>
+      </property>
+     </item>
+     <item row="5" column="2">
+      <property name="text">
+       <string>Chemistry</string>
+      </property>
+     </item>
+     <item row="5" column="3">
+      <property name="text">
+       <string>Physics</string>
+      </property>
+     </item>
+     <item row="5" column="4">
+      <property name="text">
+       <string>Mathematics</string>
+      </property>
+     </item>
+     <item row="6" column="0">
+      <property name="text">
+       <string>Programming</string>
+      </property>
+     </item>
+     <item row="6" column="1">
+      <property name="text">
+       <string>IT</string>
+      </property>
+     </item>
+     <item row="6" column="2">
+      <property name="text">
+       <string>Philosophy</string>
+      </property>
+     </item>
+     <item row="6" column="3">
+      <property name="text">
+       <string>Physics</string>
+      </property>
+     </item>
+     <item row="6" column="4">
+      <property name="text">
+       <string>Sports</string>
+      </property>
+     </item>
+     <item row="7" column="0">
+      <property name="text">
+       <string>Programming</string>
+      </property>
+     </item>
+     <item row="7" column="1">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item row="7" column="3">
+      <property name="text">
+       <string>Physics</string>
+      </property>
+     </item>
+     <item row="7" column="4">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>60</y>
+       <width>251</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Your Schedule</string>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>290</y>
+       <width>571</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page_14"/>
+     <widget class="QWidget" name="page_15"/>
+     <widget class="QWidget" name="page_16"/>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>50</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -294,7 +596,7 @@
       <string>Delete account</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -326,7 +628,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -361,7 +663,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>640</x>
@@ -392,7 +694,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>950</x>
