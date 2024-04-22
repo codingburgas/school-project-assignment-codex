@@ -2,6 +2,7 @@
      <img align="center" src="https://cdn.discordapp.com/attachments/1221804578933309460/1229865599698735164/OU78iOV.png?ex=6624b658&is=662364d8&hm=098831fc2f5a38de852181b7a7f80cec0443bb0fc89cd31f3dd9ac9a07003c04&" alt="codeX logo" width="550", height="450">
 </p>
     
+    
 <h1 align="center"> codeX </h1>
 <h3 align="center"> Decoding the future, line by line. </h3>  
     
@@ -67,8 +68,8 @@
 ##  Used Technologies
 - <img src="https://cdn.discordapp.com/attachments/819832109031096321/1223633241651544204/IMG_1929-removebg-preview.png?ex=661a9042&is=66081b42&hm=5112349bf9f2598054b645e33b58c8075faf64129ed61e4eb1de069393a60a04&" width="20" alt="Qt Creator Logo"> <a href="https://www.qt.io/product/development-tools">Qt Creator</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/HeidiSQL_logo_image.png" width="20" alt="HeidiSQL Logo"> <a href="https://www.heidisql.com/">HeidiSQL</a>
-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="20" alt="Visual Studio Code Logo"> <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-- <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub Logo"> <a href="https://github.com/">GitHub</a>
+- <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png" width="20" alt="Visual Studio Code Logo"> <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+- <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="20" alt="GitHub Logo"> <a href="https://github.com/">GitHub</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Word Logo"> <a href="https://en.wikipedia.org/wiki/Microsoft_Word">MS Word</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Excel Logo"> <a href="https://en.wikipedia.org/wiki/Microsoft_Excel">MS Excel</a>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="20" alt="MS PowerPoint Logo"> <a href="https://bg.wikipedia.org/wiki/Microsoft_PowerPoint">MS PowerPoint</a>
