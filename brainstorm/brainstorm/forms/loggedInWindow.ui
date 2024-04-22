@@ -205,6 +205,21 @@ border-radius: 5px;
        <height>21</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+     </property>
      <property name="text">
       <string>Your Grades</string>
      </property>
@@ -218,6 +233,21 @@ border-radius: 5px;
        <height>21</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+     </property>
      <property name="text">
       <string>Your Absences</string>
      </property>
@@ -230,6 +260,21 @@ border-radius: 5px;
        <width>91</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
      </property>
      <property name="text">
       <string>Your Feedbacks</string>
@@ -889,7 +934,7 @@ QHeaderView::section:pressed {
       <string/>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -901,6 +946,21 @@ QHeaderView::section:pressed {
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="pushButtonDeleteAccount">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete account</string>
         </property>
@@ -908,6 +968,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonAddPerms">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add perms</string>
         </property>
@@ -915,6 +990,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonAddToGrade">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add to class</string>
         </property>
@@ -922,7 +1012,7 @@ QHeaderView::section:pressed {
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -934,6 +1024,21 @@ QHeaderView::section:pressed {
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="pushButtonAddGrade">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Grade</string>
         </property>
@@ -941,6 +1046,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateGrade">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Grade</string>
         </property>
@@ -948,6 +1068,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteGrade">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Grade</string>
         </property>
@@ -955,7 +1090,7 @@ QHeaderView::section:pressed {
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>640</x>
@@ -967,6 +1102,21 @@ QHeaderView::section:pressed {
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="pushButtonAddFeedback_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Feedback</string>
         </property>
@@ -974,6 +1124,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateFeedback_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Feedback</string>
         </property>
@@ -981,6 +1146,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteFeedback_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Feedback</string>
         </property>
@@ -988,7 +1168,7 @@ QHeaderView::section:pressed {
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>950</x>
@@ -1000,6 +1180,21 @@ QHeaderView::section:pressed {
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QPushButton" name="pushButtonAddAbsence_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Add Absence</string>
         </property>
@@ -1007,6 +1202,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonUpdateAbsence_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Update Absence</string>
         </property>
@@ -1014,6 +1224,21 @@ QHeaderView::section:pressed {
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonDeleteAbsence_2">
+        <property name="styleSheet">
+         <string notr="true">#minimalButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    color: #000000; /* Black text color */
+    padding: 8px 16px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+}
+
+#minimalButton:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #FFFFFF; /* White text color on hover */
+}</string>
+        </property>
         <property name="text">
          <string>Delete Absence</string>
         </property>
@@ -1021,24 +1246,16 @@ QHeaderView::section:pressed {
       </item>
      </layout>
     </widget>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
     <zorder>label_18</zorder>
     <zorder>label_logo_2</zorder>
-    <zorder>pushButtonAddPerms</zorder>
-    <zorder>pushButtonAddToGrade</zorder>
-    <zorder>pushButtonDeleteAccount</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
-    <zorder>pushButtonAddGrade</zorder>
-    <zorder>pushButtonUpdateGrade</zorder>
-    <zorder>pushButtonDeleteGrade</zorder>
-    <zorder>pushButtonAddFeedback_2</zorder>
-    <zorder>pushButtonDeleteFeedback_2</zorder>
-    <zorder>pushButtonUpdateFeedback_2</zorder>
-    <zorder>pushButtonDeleteAbsence_2</zorder>
-    <zorder>pushButtonAddAbsence_2</zorder>
-    <zorder>pushButtonUpdateAbsence_2</zorder>
    </widget>
    <widget class="QWidget" name="pageChemistry">
     <widget class="QTableWidget" name="tableWidget_2">

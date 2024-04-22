@@ -9,5 +9,12 @@
         <file>assets/icons/praise.png</file>
         <file>assets/icons/remark.png</file>
         <file>assets/icons/lateness.png</file>
+        <file>assets/icons/programming.png</file>
+        <file>assets/icons/chemistry.png</file>
+    </qresource>
+    <qresource prefix="/assets">
+        <file>assets/background.jpg</file>
+        <file>assets/icon.png</file>
+        <file>assets/logo.png</file>
     </qresource>
 </RCC>

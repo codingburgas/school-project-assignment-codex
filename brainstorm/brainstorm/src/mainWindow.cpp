@@ -11,13 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setFixedSize(size()); // Set fixed size
 
-    QIcon icon("../brainstorm/assets/icon.png");
+    QIcon icon(":/assets/assets/icon.png");
     this->setWindowIcon(icon);
-    QPixmap logo("../brainstorm/assets/logo.png");
+    QPixmap logo(":/assets/assets/logo.png");
     ui->labelLogo->setPixmap(logo);
 
     // Set background image and make it transparent
-    QPixmap backgroundImage("../brainstorm/assets/background.jpg");
+    QPixmap backgroundImage(":/assets/assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
     ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
     ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency

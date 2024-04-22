@@ -25,7 +25,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
 
 
     // Set background image and make it transparent
-    QPixmap backgroundImage("../brainstorm/assets/background.jpg");
+    QPixmap backgroundImage(":/assets/assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
     ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
     ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
@@ -66,7 +66,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->tabWidget->setTabText(1, "Absences");
     ui->tabWidget->setTabText(2, "Feedbacks");
 
-    QPixmap pixmap("../brainstorm/assets/logo.png");
+    QPixmap pixmap(":/assets/assets/logo.png");
 
     // Set the pixmap to the QLabel
     ui->label_logo->setPixmap(pixmap);

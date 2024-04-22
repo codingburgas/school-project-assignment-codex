@@ -13,7 +13,7 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     , userID(userID)
 {
     ui->setupUi(this);
-    QIcon icon("..brainstorm/assets/icon.png");
+    QIcon icon(":/assets/assets/icon.png");
     this->setWindowIcon(icon);
     setFixedSize(size());
     // Initialize stackedWidgetIndex to 0 or any default value
@@ -58,12 +58,12 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/5.png"), "    5");
     ui->comboBoxNewGrade->addItem(QIcon(":/ico/assets/icons/6.png"), "    6");
 
-    ui->comboSubject->addItem("Chemistry");
-    ui->comboSubject->addItem("Programming");
-    ui->comboSubject_2->addItem("Chemistry");
-    ui->comboSubject_2->addItem("Programming");
-    ui->comboBoxSubject->addItem("Chemistry");
-    ui->comboBoxSubject->addItem("Programming");
+    ui->comboSubject->addItem(QIcon(":/ico/assets/icons/chemistry.png"), "    Chemistry");
+    ui->comboSubject->addItem(QIcon(":/ico/assets/icons/programming.png"), "    Programming");
+    ui->comboSubject_2->addItem(QIcon(":/ico/assets/icons/chemistry.png"), "    Chemistry");
+    ui->comboSubject_2->addItem(QIcon(":/ico/assets/icons/programming.png"), "    Programming");
+    ui->comboBoxSubject->addItem(QIcon(":/ico/assets/icons/chemistry.png"), "    Chemistry");
+    ui->comboBoxSubject->addItem(QIcon(":/ico/assets/icons/programming.png"), "    Programming");
 }
 
 GradesButtons::~GradesButtons()
@@ -90,7 +90,8 @@ void GradesButtons::on_pushButtonAddGrade_clicked()
     int grade = ui->comboBoxGrade->currentText().toInt();
 
     QString id = QString::number(userID);
-    if (!validator->validateID(id)) {
+    if (!validator->validateID(id))
+    {
         return;
     }
 
@@ -98,13 +99,16 @@ void GradesButtons::on_pushButtonAddGrade_clicked()
     query.prepare("SELECT userID FROM users WHERE userID = :userID");
     query.bindValue(":userID", userID);
 
-    if (query.exec()) {
-        if (!query.next()) {
+    if (query.exec())
+    {
+        if (!query.next())
+        {
             QMessageBox::warning(nullptr, "Validation", "User ID does not exist.");
             return;
         }
     }
-    else {
+    else
+    {
         QMessageBox::critical(nullptr, "Error", "Failed to check User ID existence: " + query.lastError().text());
     }
 
