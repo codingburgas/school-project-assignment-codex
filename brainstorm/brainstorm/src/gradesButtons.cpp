@@ -79,7 +79,7 @@ void GradesButtons::setStackedWidgetIndex(int index)
     ui->stackedWidget->setCurrentIndex(stackedWidgetIndex);
 }
 
-// Method for add grade actions.
+// Method for adding grade actions.
 void GradesButtons::on_pushButtonAddGrade_clicked()
 {
     Database* db = new Database;
@@ -119,7 +119,7 @@ void GradesButtons::on_pushButtonAddGrade_clicked()
     delete db;
 }
 
-// Method for update grade actions.
+// Method for updating grade actions.
 void GradesButtons::on_pushButtonUpdateGrade_clicked()
 {
     Database* db = new Database;
@@ -154,7 +154,7 @@ void GradesButtons::on_pushButtonUpdateGrade_clicked()
     delete db;
 }
 
-// Method for delete grade actions.
+// Method for deleting grade actions.
 void GradesButtons::on_pushButtonDeleteGrade_clicked()
 {
     Database* db = new Database;
@@ -475,6 +475,8 @@ void GradesButtons::on_pushButtonDeleteFeedback_clicked()
 // Method which deletes a particular user's account.
 void GradesButtons::deleteAccount(int loggedInUserID)
 {
+    Database* db = new Database;
+    QSqlDatabase database = db->getDb();
     QString userIDStr = ui->lineEditDeleteAccount->text();
     int userIDint = ui->lineEditDeleteAccount->text().toInt();
 
@@ -484,21 +486,67 @@ void GradesButtons::deleteAccount(int loggedInUserID)
         return;
     }
 
-    // Prepare the SQL query to delete the account.
-    QSqlQuery queryDeleteAccount;
-    QString queryDeleteAccountString = "DELETE FROM users WHERE userID = :userID";
-    queryDeleteAccount.prepare(queryDeleteAccountString);
-    queryDeleteAccount.bindValue(":userID", userIDint);
+    QSqlQuery query(database);
+    database.transaction();
 
-    if (queryDeleteAccount.exec() && !queryDeleteAccount.isActive())
+    // Check if the user exists
+    query.prepare("SELECT COUNT(*) FROM users WHERE userID = :userID");
+    query.bindValue(":userID", userIDint);
+    if (!query.exec() || !query.first())
     {
-        QMessageBox::information(nullptr, "Success", "Account deleted successfully.");
+        QMessageBox::critical(nullptr, "Error", "Database error occurred");
+        database.rollback();
+        return;
     }
-    else
+    int userCount = query.value(0).toInt();
+    if (userCount <= 0)
     {
-        QMessageBox::critical(nullptr, "Error", "Failed to delete user with ID " + QString::number(userIDint));
+        QMessageBox::critical(nullptr, "Error", "User with ID " + userIDStr + " does not exist");
+        database.rollback();
+        return;
     }
+
+    // Delete referencing records in the grades table
+    query.prepare("DELETE FROM grades WHERE userID = :userID");
+    query.bindValue(":userID", userIDint);
+    if (!query.exec()) {
+        QMessageBox::critical(nullptr, "Error", "Database error occurred while deleting referencing records from grades: " + query.lastError().text());
+        database.rollback();
+        return;
+    }
+
+    // Delete referencing records in the feedback table
+    query.prepare("DELETE FROM feedback WHERE userID = :userID");
+    query.bindValue(":userID", userIDint);
+    if (!query.exec()) {
+        QMessageBox::critical(nullptr, "Error", "Database error occurred while deleting referencing records from feedback: " + query.lastError().text());
+        database.rollback();
+        return;
+    }
+
+    // Delete referencing records in the absences table
+    query.prepare("DELETE FROM absences WHERE userID = :userID");
+    query.bindValue(":userID", userIDint);
+    if (!query.exec()) {
+        QMessageBox::critical(nullptr, "Error", "Database error occurred while deleting referencing records from absences: " + query.lastError().text());
+        database.rollback();
+        return;
+    }
+
+    // Delete the user's account
+    query.prepare("DELETE FROM users WHERE userID = :userID");
+    query.bindValue(":userID", userIDint);
+    if (!query.exec()) {
+        QMessageBox::critical(nullptr, "Error", "Database error occurred while deleting user account: " + query.lastError().text());
+        database.rollback();
+        return;
+    }
+
+    database.commit();
+
+    QMessageBox::information(nullptr, "Success", "User with ID " + userIDStr + " and associated records have been deleted successfully.");
 }
+
 
 // Method which deletes a particular user's account when the push button is clicked.
 void GradesButtons::on_pushButtonDeleteAccount_clicked()
