@@ -4,30 +4,33 @@
 #include "../include/validatorlib.h"
 #include "ui_mainWindow.h"
 
+// Constructor.
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setFixedSize(size()); // Set fixed size
+    setFixedSize(size()); // Set fixed size.
 
     QIcon icon(":/assets/assets/icon.png");
     this->setWindowIcon(icon);
     QPixmap logo(":/assets/assets/logo.png");
     ui->labelLogo->setPixmap(logo);
 
-    // Set background image and make it transparent
+    // Set background image and make it transparent.
     QPixmap backgroundImage(":/assets/assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
-    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
-    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
+    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
+    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
 }
 
+// Destructor.
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+// Login button actions when clicked.
 void MainWindow::on_pushButtonLogin_clicked()
 {
     Database* db = new Database;
@@ -35,13 +38,13 @@ void MainWindow::on_pushButtonLogin_clicked()
     QString username = ui->lineEditUsername->text();
     QString password = ui->lineEditPassword->text();
 
-    // Hash the entered password using SHA-256
+    // Hash the entered password using SHA-256.
     QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
 
     db->openConnection();
     QSqlQuery query;
 
-    // Retrieve password and perms in a single query
+    // Retrieve password and perms in a single query.
     query.prepare("SELECT password, perms, userID, firstName, lastName FROM users WHERE username = :username");
     query.bindValue(":username", username);
 
@@ -52,16 +55,16 @@ void MainWindow::on_pushButtonLogin_clicked()
         if (hashedPassword == storedPassword) {
             QMessageBox::information(this, "Login", "Logged in.");
 
-            int perms = query.value("perms").toInt(); // Get the permission value
-            int userID = query.value("userID").toInt(); // Get the user ID
+            int perms = query.value("perms").toInt(); // Get the permission value.
+            int userID = query.value("userID").toInt(); // Get the user ID.
             QString firstName = query.value("firstName").toString();
             QString lastName = query.value("lastName").toString();
 
-            // Update lastActive with current date and time (UTC)
+            // Update lastActive with current date and time (UTC).
             QDateTime currentDateTime = QDateTime::currentDateTime();
             QString formattedDateTime = currentDateTime.toString("yyyy-MM-dd hh:mm:ss");
 
-            // Prepare and execute update query
+            // Prepare and execute update query.
             query.prepare("UPDATE users SET lastActive = :lastActive WHERE username = :username");
             query.bindValue(":lastActive", formattedDateTime);
             query.bindValue(":username", username);
@@ -89,6 +92,7 @@ void MainWindow::on_pushButtonLogin_clicked()
     delete db;
 }
 
+// Register button actions when clicked.
 void MainWindow::on_pushButtonRegister_clicked()
 {
     Validator* validator = new Validator;
@@ -104,7 +108,7 @@ void MainWindow::on_pushButtonRegister_clicked()
         return;
     }
 
-    // Check if email already exists in the database
+    // Check if email already exists in the database.
     Database* db = new Database;
     db->openConnection();
     QSqlQuery emailQuery;
@@ -117,7 +121,7 @@ void MainWindow::on_pushButtonRegister_clicked()
         return;
     }
 
-    // Check if username already exists in the database
+    // Check if username already exists in the database.
     QSqlQuery usernameQuery;
     usernameQuery.prepare("SELECT username FROM users WHERE username = :username");
     usernameQuery.bindValue(":username", username);
@@ -129,10 +133,10 @@ void MainWindow::on_pushButtonRegister_clicked()
         return;
     }
 
-    // Hash the password using SHA-256
+    // Hash the password using SHA-256.
     QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
 
-    // Proceed with registration
+    // Proceed with registration.
     QSqlQuery query;
     query.prepare("INSERT INTO users (firstName, lastName, email, username, password) VALUES (:firstName, :lastName, :email, :username, :password)");
     query.bindValue(":firstName", firstName);
@@ -153,6 +157,7 @@ void MainWindow::on_pushButtonRegister_clicked()
     delete validator;
 }
 
+// Switch form button actions when clicked.
 void MainWindow::on_switchFormButton_clicked()
 {
     if (ui->stackedWidget->currentIndex() == 0) {

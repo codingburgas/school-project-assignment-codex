@@ -9,16 +9,22 @@ class GradesButtons;
 }
 QT_END_NAMESPACE
 
+// Contains the grades buttons action methods.
 class GradesButtons : public QDialog
 {
     Q_OBJECT
 
 public:
+    // Constructor.
     explicit GradesButtons(QWidget *parent = nullptr, int userID = 0);
+    // Destructor.
     ~GradesButtons();
+
+    // Sets the stacked widget index when called.
     void setStackedWidgetIndex(int index);
 
 private slots:
+    // Methods for button actions.
     void on_pushButtonAddGrade_clicked();
     void on_pushButtonUpdateGrade_clicked();
     void on_pushButtonDeleteGrade_clicked();
@@ -31,6 +37,8 @@ private slots:
     void on_pushButtonUpdateFeedback_clicked();
     void on_pushButtonDeleteFeedback_clicked();
     void on_pushButtonDeleteAccount_clicked();
+
+    // Method which deletes a particular user's account.
     void deleteAccount(int loggedInUserID);
 
 private:

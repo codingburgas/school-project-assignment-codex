@@ -7,6 +7,7 @@
 #include "../include/db.h"
 #include "ui_gradesButtons.h"
 
+// Constructor.
 GradesButtons::GradesButtons(QWidget *parent, int userID)
     : QDialog(parent)
     , ui(new Ui::GradesButtons)
@@ -16,7 +17,6 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     QIcon icon(":/assets/assets/icon.png");
     this->setWindowIcon(icon);
     setFixedSize(size());
-    // Initialize stackedWidgetIndex to 0 or any default value
     stackedWidgetIndex = 0;
     ui->stackedWidget->setCurrentIndex(stackedWidgetIndex);
 
@@ -66,26 +66,27 @@ GradesButtons::GradesButtons(QWidget *parent, int userID)
     ui->comboBoxSubject->addItem(QIcon(":/ico/assets/icons/programming.png"), "    Programming");
 }
 
+// Destructor.
 GradesButtons::~GradesButtons()
 {
     delete ui;
 }
 
+// Sets the stacked widget index when called.
 void GradesButtons::setStackedWidgetIndex(int index)
 {
     stackedWidgetIndex = index;
     ui->stackedWidget->setCurrentIndex(stackedWidgetIndex);
 }
 
-
+// Method for add grade actions.
 void GradesButtons::on_pushButtonAddGrade_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Grades* gradeObj = new Grades;
+
     int userID = ui->lineEditUserID->text().toInt();
-    //QString subject = ui->lineEditSubject->text();
-    //int grade = ui->lineEditGrade->text().toInt();
     QString subject = ui->comboBoxSubject->currentText();
     int grade = ui->comboBoxGrade->currentText().toInt();
 
@@ -118,14 +119,14 @@ void GradesButtons::on_pushButtonAddGrade_clicked()
     delete db;
 }
 
-
+// Method for update grade actions.
 void GradesButtons::on_pushButtonUpdateGrade_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Grades* grade = new Grades;
+
     int gradeID = ui->lineEditGradeID->text().toInt();
-    //int newGrade = ui->lineEditnewGrade->text().toInt();
     int newGrade = ui->comboBoxNewGrade->currentText().toInt();
 
     QString id = QString::number(gradeID);
@@ -153,12 +154,13 @@ void GradesButtons::on_pushButtonUpdateGrade_clicked()
     delete db;
 }
 
-
+// Method for delete grade actions.
 void GradesButtons::on_pushButtonDeleteGrade_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Grades* grade = new Grades;
+
     int gradeIDdel = ui->lineEditGradeIDdel->text().toInt();
 
     QString id = QString::number(gradeIDdel);
@@ -186,14 +188,14 @@ void GradesButtons::on_pushButtonDeleteGrade_clicked()
     delete db;
 }
 
-
+// Method which updates a particular user's permissions when the push button is clicked.
 void GradesButtons::on_pushButtonUpdatePerms_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Admin* admin = new Admin;
+
     int userIDPerms = ui->lineEditUserIDPerms->text().toInt();
-    //int permsLevel = ui->lineEditPermsLevel->text().toInt();
     int permsLevel = ui->comboBoxPermissionLevel->currentText().toInt();
 
     QString id = QString::number(userIDPerms);
@@ -221,17 +223,17 @@ void GradesButtons::on_pushButtonUpdatePerms_clicked()
     delete db;
 }
 
-
+// Method which adds a particular user to a grade when the push button is clicked.
 void GradesButtons::on_pushButtonAddToGrade_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Admin* admin = new Admin;
-    int userIDAddToGrade = ui->lineEditUserIDGradeAdd->text().toInt();
-    //QString grade = ui->lineEditAddToGrade->text();
-    QString grade = ui->comboBoxAddGrade->currentText();
 
+    int userIDAddToGrade = ui->lineEditUserIDGradeAdd->text().toInt();
+    QString grade = ui->comboBoxAddGrade->currentText();
     QString id = QString::number(userIDAddToGrade);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -256,14 +258,14 @@ void GradesButtons::on_pushButtonAddToGrade_clicked()
     delete db;
 }
 
+// Method which adds an absence to a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonAddAbsence_2_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Absences* absence = new Absences;
+
     int userID = ui->lineEditUserID_2->text().toInt();
-    //QString subject = ui->lineEditSubject_2->text();
-    //QString type = ui->lineEditAbsence->text();
     QString subject = ui->comboSubject->currentText();
     QString type = ui->comboBoxAbsenceType->currentText();
 
@@ -293,17 +295,17 @@ void GradesButtons::on_pushButtonAddAbsence_2_clicked()
     delete db;
 }
 
-
+// Method which updates an absence of a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonUpdateAbsence_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Absences* absence = new Absences;
-    int absenceID = ui->lineEditAbsenceID_2->text().toInt();
-    //QString newAbsence = ui->lineEditNewAbsence->text();
-    QString newAbsence = ui->comboBoxUpdateAbsence->currentText();
 
+    int absenceID = ui->lineEditAbsenceID_2->text().toInt();
+    QString newAbsence = ui->comboBoxUpdateAbsence->currentText();
     QString id = QString::number(absenceID);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -328,14 +330,16 @@ void GradesButtons::on_pushButtonUpdateAbsence_clicked()
     delete db;
 }
 
+// Method which deletes an absence of a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonDeleteAbsence_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Absences* absence = new Absences;
-    int absenceIDdel = ui->lineEditAbsenceIDdel->text().toInt();
 
+    int absenceIDdel = ui->lineEditAbsenceIDdel->text().toInt();
     QString id = QString::number(absenceIDdel);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -361,17 +365,19 @@ void GradesButtons::on_pushButtonDeleteAbsence_clicked()
     delete db;
 }
 
+// Method which adds a feedback to a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonAddFeedback_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Feedbacks* feedback = new Feedbacks;
+
     int userID = ui->lineEditUserID_3->text().toInt();
     QString subject = ui->comboSubject_2->currentText();
     QString type = ui->comboBoxFeedbackType->currentText();
     QString reason = ui->lineEditReasonFeedback_12->text();
-
     QString id = QString::number(userID);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -397,16 +403,18 @@ void GradesButtons::on_pushButtonAddFeedback_clicked()
     delete db;
 }
 
+// Method which updates a feedback of a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonUpdateFeedback_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Feedbacks* feedback = new Feedbacks;
+
     int feedbackID = ui->lineEditFeedbackID->text().toInt();
     QString newType = ui->comboBoxUpdateFeedback->currentText();
     QString newReason = ui->lineEditNewReason->text();
-
     QString id = QString::number(feedbackID);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -431,14 +439,15 @@ void GradesButtons::on_pushButtonUpdateFeedback_clicked()
     delete db;
 }
 
+// Method which updates a feedback of a particular user when the push button is clicked.
 void GradesButtons::on_pushButtonDeleteFeedback_clicked()
 {
     Database* db = new Database;
     Validator* validator = new Validator;
     Feedbacks* feedback = new Feedbacks;
     int feedbackIDdel = ui->lineEditFeedbackIDdel->text().toInt();
-
     QString id = QString::number(feedbackIDdel);
+
     if (!validator->validateID(id)) {
         return;
     }
@@ -463,37 +472,35 @@ void GradesButtons::on_pushButtonDeleteFeedback_clicked()
     delete db;
 }
 
+// Method which deletes a particular user's account.
 void GradesButtons::deleteAccount(int loggedInUserID)
 {
-    if (userID == loggedInUserID)
+    QString userIDStr = ui->lineEditDeleteAccount->text();
+    int userIDint = ui->lineEditDeleteAccount->text().toInt();
+
+    if (userIDint == loggedInUserID)
     {
         QMessageBox::critical(nullptr, "Error", "Cannot delete your own account");
         return;
     }
 
-    QString userIDStr = ui->lineEditDeleteAccount->text();
-    // Prepare the SQL query to delete the account
+    // Prepare the SQL query to delete the account.
     QSqlQuery queryDeleteAccount;
     QString queryDeleteAccountString = "DELETE FROM users WHERE userID = :userID";
     queryDeleteAccount.prepare(queryDeleteAccountString);
-    queryDeleteAccount.bindValue(":userID", userID);
+    queryDeleteAccount.bindValue(":userID", userIDint);
 
-    if (queryDeleteAccount.numRowsAffected() > 0)
+    if (queryDeleteAccount.exec() && !queryDeleteAccount.isActive())
     {
-        QMessageBox::information(nullptr, "Success", "Absence updated successfully!");
+        QMessageBox::information(nullptr, "Success", "Account deleted successfully.");
     }
     else
     {
-        QMessageBox::critical(nullptr, "Error", "User with with ID " + QString::number(userID) + " does not exist in the database");
-    }
-
-    // Execute the query to delete the account
-    if(queryDeleteAccount.exec())
-    {
-        QMessageBox::information(nullptr, "Account Deleted", "Account deleted successfully.");
+        QMessageBox::critical(nullptr, "Error", "Failed to delete user with ID " + QString::number(userIDint));
     }
 }
 
+// Method which deletes a particular user's account when the push button is clicked.
 void GradesButtons::on_pushButtonDeleteAccount_clicked()
 {
     deleteAccount(userID);

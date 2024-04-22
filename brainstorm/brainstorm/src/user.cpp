@@ -1,5 +1,6 @@
 #include "../include/user.h"
 
+// Retrieves a particular user's grades from the database.
 QList<int> User::retrieveGrades(int userID) {
     QList<int> grades;
 
@@ -18,6 +19,7 @@ QList<int> User::retrieveGrades(int userID) {
     return grades;
 }
 
+// Retrieves a particular user's absences from the database.
 QList<float> User::retrieveAbsences(int userID) {
     QList<float> absences;
 
@@ -46,6 +48,7 @@ QList<float> User::retrieveAbsences(int userID) {
     return absences;
 }
 
+// Retrieves a particular user's feedbacks from the database.
 int User::retrieveFeedbacks(int userID) {
     int feedbackCount = 0;
 
@@ -64,7 +67,7 @@ int User::retrieveFeedbacks(int userID) {
     return feedbackCount;
 }
 
-
+// Displays a particular user's GPA on a label.
 void User::avgGrade(int userID, QLabel* gpaLabel) {
     QList<int> grades = retrieveGrades(userID);
 
@@ -82,6 +85,7 @@ void User::avgGrade(int userID, QLabel* gpaLabel) {
     }
 }
 
+// Displays a particular user's absences count on a label.
 void User::totalAbsences(int userID, QLabel* absencesLabel) {
     QList<float> absences = retrieveAbsences(userID);
     double total = 0.0;
@@ -93,6 +97,7 @@ void User::totalAbsences(int userID, QLabel* absencesLabel) {
     absencesLabel->setText(QString("%1").arg(total));
 }
 
+// Displays a particular user's feedbacks count on a label.
 void User::totalFeedbacks(int userID, QLabel* feedbackLabel) {
     int feedbackCount = retrieveFeedbacks(userID);
 

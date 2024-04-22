@@ -1,6 +1,7 @@
 #include "../include/db.h"
 #include "../include/absences.h"
 
+// Adds an absence to the database for a particular user.
 void Absences::addAbsence(int userID, const QString& subject, const QString& type)
 {
     Database* db = new Database;
@@ -21,6 +22,7 @@ void Absences::addAbsence(int userID, const QString& subject, const QString& typ
     delete db;
 }
 
+// Updates an absence in the database for a particular user.
 void Absences::updateAbsence(int absenceID, const QString& newType)
 {
     Database* db = new Database;
@@ -47,6 +49,7 @@ void Absences::updateAbsence(int absenceID, const QString& newType)
     delete db;
 }
 
+// Deletes an absence in the database for a particular user.
 void Absences::deleteAbsence(int absenceID)
 {
     Database* db = new Database;

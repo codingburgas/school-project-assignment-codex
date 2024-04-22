@@ -1,6 +1,7 @@
 #include "../include/db.h"
 #include "../include/feedback.h"
 
+// Adds a feedback to the database for a particuar user.
 void Feedbacks::addFeedback(int userID, const QString& subject, const QString& type, const QString& reason)
 {
     Database* db = new Database;
@@ -22,6 +23,7 @@ void Feedbacks::addFeedback(int userID, const QString& subject, const QString& t
     delete db;
 }
 
+// Updates a feedback in the database for a particuar user.
 void Feedbacks::updateFeedback(int feedbackID, const QString& newType, const QString& newReason)
 {
     Database* db = new Database;
@@ -49,6 +51,7 @@ void Feedbacks::updateFeedback(int feedbackID, const QString& newType, const QSt
     delete db;
 }
 
+// Deletes a feedback in the database for a particuar user.
 void Feedbacks::deleteFeedback(int feedbackID)
 {
     Database* db = new Database;

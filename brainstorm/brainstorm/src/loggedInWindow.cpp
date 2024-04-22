@@ -3,10 +3,8 @@
 #include "../include/user.h"
 #include "../include/db.h"
 #include "ui_loggedInWindow.h"
-#include <QPixmap>
 
-
-
+// Constructor.
 LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int perms, int userID, const QString &firstName, const QString &lastName)
     : QDialog(parent)
     , ui(new Ui::LoggedInWindow)
@@ -23,14 +21,13 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     addUsersToComboBox();
     addUsersIDsToComboBox();
 
-
-    // Set background image and make it transparent
+    // Sets background image and makes it transparent.
     QPixmap backgroundImage(":/assets/assets/background.jpg");
     ui->backgroundLabel->setPixmap(backgroundImage);
-    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label
-    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency
+    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
+    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
 
-    // Connect button signals to handleButtonClick slot
+    // Connect button signals to handleButtonClick slot.
     connect(ui->pushButtonAddGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonDeleteGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
     connect(ui->pushButtonUpdateGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);
@@ -68,7 +65,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
 
     QPixmap pixmap(":/assets/assets/logo.png");
 
-    // Set the pixmap to the QLabel
+    // Set the pixmap to the QLabel.
     ui->label_logo->setPixmap(pixmap);
     ui->label_logo_2->setPixmap(pixmap);
     ui->label_logo_7->setPixmap(pixmap);
@@ -76,8 +73,10 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
 
     ui->label->setText("<b>Welcome back, " + firstName + " " + lastName + "!</b>");
     ui->label_2->setText("<b>Welcome back, " + firstName + " " + lastName + "!</b>");
+
     QFont font = ui->label->font();
     font.setPointSize(24);
+
     ui->label->setFont(font);
     ui->label_2->setFont(font);
     ui->label_5->setFont(font);
@@ -89,17 +88,19 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     ui->feedbackLabel->setFont(font);
 }
 
+// Destructor.
 LoggedInWindow::~LoggedInWindow()
 {
     delete ui;
 }
 
+// Checks the particular user's permissions.
 void LoggedInWindow::checkPermissions()
 {
-    // Based on the permission level, set the initial stacked widget index
+    // Based on the permission level, set the initial stacked widget index.
     if (perms == 1)
     {
-        ui->stackedWidget->setCurrentIndex(1); // Index of the page for permission level 1
+        ui->stackedWidget->setCurrentIndex(1); // Index of the page for permission level 1.
     }
     else if (perms == 2)
     {
@@ -107,16 +108,19 @@ void LoggedInWindow::checkPermissions()
     }
     else
     {
-        ui->stackedWidget->setCurrentIndex(0); // Index of the page other permission level 0
+        ui->stackedWidget->setCurrentIndex(0); // Index of the page other permission level 0.
     }
 }
 
+// Adds the users to a drop down menu (combo box).
 void LoggedInWindow::addUsersToComboBox()
 {
     ui->comboBoxUsers->clear();
+
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
+
     if(query.exec("SELECT username FROM users"))
     {
         while(query.next())
@@ -131,12 +135,15 @@ void LoggedInWindow::addUsersToComboBox()
     }
 }
 
+// Adds the users' IDs to a drop down menu (combo box).
 void LoggedInWindow::addUsersIDsToComboBox()
 {
     ui->comboBoxGrades->clear();
+
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
     QSqlQuery query(database);
+
     if(query.exec("SELECT userID FROM users"))
     {
         while(query.next())
@@ -153,6 +160,7 @@ void LoggedInWindow::addUsersIDsToComboBox()
     }
 }
 
+// Handles buttons' actions when clicked.
 void LoggedInWindow::handleButtonClick()
 {
     QPushButton* clickedButton = qobject_cast<QPushButton*>(sender());
@@ -162,37 +170,20 @@ void LoggedInWindow::handleButtonClick()
 
         if (clickedButton == ui->pushButtonAddGrade || clickedButton == ui->pushButtonAddGrade_2)
         {
-            // Pass index to GradesButtons constructor
+            // Pass index to GradesButtons constructor.
             gradesButtons->setStackedWidgetIndex(0);
+        }
+        else if (clickedButton == ui->pushButtonAddToGrade)
+        {
+            gradesButtons->setStackedWidgetIndex(1);
+        }
+        else if (clickedButton == ui->pushButtonDeleteAccount)
+        {
+            gradesButtons->setStackedWidgetIndex(2);
         }
         else if (clickedButton == ui->pushButtonUpdateGrade || clickedButton == ui->pushButtonUpdateGrade_2)
         {
-            // Pass index to GradesButtons constructor
             gradesButtons->setStackedWidgetIndex(3);
-        }
-        else if (clickedButton == ui->pushButtonAddAbsence)
-        {
-            gradesButtons->setStackedWidgetIndex(6);
-        }
-        else if (clickedButton == ui->pushButtonUpdateAbsence)
-        {
-            gradesButtons->setStackedWidgetIndex(7);
-        }
-        else if (clickedButton == ui->pushButtonDeleteAbsence)
-        {
-            gradesButtons->setStackedWidgetIndex(8);
-        }
-        else if (clickedButton == ui->pushButtonAddFeedback)
-        {
-            gradesButtons->setStackedWidgetIndex(9);
-        }
-        else if (clickedButton == ui->pushButtonUpdateFeedback)
-        {
-            gradesButtons->setStackedWidgetIndex(10);
-        }
-        else if (clickedButton == ui->pushButtonDeleteFeedback)
-        {
-            gradesButtons->setStackedWidgetIndex(11);
         }
         else if (clickedButton == ui->pushButtonAddPerms)
         {
@@ -200,47 +191,62 @@ void LoggedInWindow::handleButtonClick()
         }
         else if (clickedButton == ui->pushButtonDeleteGrade || clickedButton == ui->pushButtonDeleteGrade_2)
         {
-            // Pass index to GradesButtons constructor
             gradesButtons->setStackedWidgetIndex(5);
         }
-        else if (clickedButton == ui->pushButtonAddToGrade)
+        else if (clickedButton == ui->pushButtonAddAbsence)
         {
-            gradesButtons->setStackedWidgetIndex(1);
+            gradesButtons->setStackedWidgetIndex(6);
         }
         else if (clickedButton == ui->pushButtonAddAbsence_2)
         {
             gradesButtons->setStackedWidgetIndex(6);
         }
+        else if (clickedButton == ui->pushButtonUpdateAbsence)
+        {
+            gradesButtons->setStackedWidgetIndex(7);
+        }
         else if (clickedButton == ui->pushButtonUpdateAbsence_2)
         {
             gradesButtons->setStackedWidgetIndex(7);
+        }
+        else if (clickedButton == ui->pushButtonDeleteAbsence)
+        {
+            gradesButtons->setStackedWidgetIndex(8);
         }
         else if (clickedButton == ui->pushButtonDeleteAbsence_2)
         {
             gradesButtons->setStackedWidgetIndex(8);
         }
+        else if (clickedButton == ui->pushButtonAddFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(9);
+        }
         else if (clickedButton == ui->pushButtonAddFeedback_2)
         {
             gradesButtons->setStackedWidgetIndex(9);
+        }
+        else if (clickedButton == ui->pushButtonUpdateFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(10);
         }
         else if (clickedButton == ui->pushButtonUpdateFeedback_2)
         {
             gradesButtons->setStackedWidgetIndex(10);
         }
+        else if (clickedButton == ui->pushButtonDeleteFeedback)
+        {
+            gradesButtons->setStackedWidgetIndex(11);
+        }
         else if (clickedButton == ui->pushButtonDeleteFeedback_2)
         {
             gradesButtons->setStackedWidgetIndex(11);
         }
-        else if (clickedButton == ui->pushButtonDeleteAccount)
-        {
-            gradesButtons->setStackedWidgetIndex(2);
-        }
-
 
         gradesButtons->show();
     }
 }
 
+// Displays the particular user with their grade.
 void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grade)
 {
     while (stackedWidgetChemistry->count() > 0)
@@ -261,7 +267,7 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
 
     if(query.exec())
     {
-        //Create a new widget to display the results
+        //Create a new widget to display the results.
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
         QString currentUserID;
@@ -278,30 +284,31 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
             QString subject = query.value(4).toString();
             QString gradeValue = query.value(5).toString();
 
-            //If it's a new user, display the information for the previous user (if any)
+            //If it's a new user, display the information for the previous user (if any).
             if (userID != currentUserID && !currentUserID.isEmpty())
             {
                 QLabel *label = new QLabel(currentUserID + " " + currentName + " " + currentLastName + ": " + currentUserGrades);
                 layout->addWidget(label);
 
-                //Reset the information for the new user
+                //Reset the information for the new user.
                 currentUserID = userID;
                 currentName = firstName;
                 currentLastName = lastName;
-                currentUserGrades = subject + " (ID: " + gradeID + ") " + gradeValue; // Include gradeID
+                currentUserGrades = subject + " (ID: " + gradeID + ") " + gradeValue; // Include gradeID.
             }
-            else // If it's the same user, append the grade to the current user's grades
+            // If it's the same user, append the grade to the current user's grades.
+            else
             {
-                currentUserGrades += "; (ID: " + gradeID + ") " + subject + " " + gradeValue; // Include gradeID before subject
+                currentUserGrades += "; (ID: " + gradeID + ") " + subject + " " + gradeValue; // Include gradeID before subject.
             }
 
-            //Update the current user's information
+            //Update the current user's information.
             currentUserID = userID;
             currentName = firstName;
             currentLastName = lastName;
         }
 
-        //Display the last user's information
+        // Display the last user's information.
         if (!currentUserID.isEmpty())
         {
             QLabel *label = new QLabel(currentUserID + " " + currentName + " " + currentLastName + ": " + currentUserGrades);
@@ -318,9 +325,10 @@ void displayUsersWithGrade(QStackedWidget *stackedWidgetChemistry, QString& grad
     }
 }
 
+// Displays the particular user's with their information.
 void displayUsersInfo(const QString& selectedUsername, QStackedWidget *stackedWidget)
 {
-    // Clear existing widgets in the stackedWidget
+    // Clear existing widgets in the stackedWidget.
     while (stackedWidget->count() > 0)
     {
         QWidget *widget = stackedWidget->widget(0);
@@ -328,7 +336,7 @@ void displayUsersInfo(const QString& selectedUsername, QStackedWidget *stackedWi
         delete widget;
     }
 
-    // Fetch user information from the database
+    // Fetch user information from the database.
     QSqlQuery queryUsers;
     QString queryUsersString = "SELECT userID, firstName, lastName, email, grade, perms FROM users WHERE username = :username";
     queryUsers.prepare(queryUsersString);
@@ -336,13 +344,13 @@ void displayUsersInfo(const QString& selectedUsername, QStackedWidget *stackedWi
 
     if(queryUsers.exec())
     {
-        //Create a new widget to display the user information
+        // Create a new widget to display the user information.
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
         layout->setSpacing(1);
 
-        // Iterate over the results
+        // Iterate over the results.
         while (queryUsers.next())
         {
             QString userID = queryUsers.value(0).toString();
@@ -351,40 +359,25 @@ void displayUsersInfo(const QString& selectedUsername, QStackedWidget *stackedWi
             QString email = queryUsers.value(3).toString();
             QString grade = queryUsers.value(4).toString();
             QString perms = queryUsers.value(5).toString();
-            //QString lastActive = query.value(5).toString();
-            // Retrieve other columns as needed
 
-            // Create labels to display user information
+            // Create labels to display user information.
             QLabel *userIDLabel = new QLabel("User ID: " + userID);
             QLabel *fullNameLabel = new QLabel("Name: " + firstName + " " + lastName);
             QLabel *emailLabel = new QLabel("Email: " + email);
             QLabel *gradeLabel = new QLabel("Grade: " + grade);
             QLabel *permsLabel = new QLabel("Perms: " + perms);
-            //QLabel *lastActiveLabel = new QLabel("Last active: " + lastActive);
-            /*
-            QLabel *usernameLabel = new QLabel("Username: " + username);
-            QLabel *permsLabel = new QLabel("Perms: " + perms);
-            // Add other labels for additional information
-*/
 
-            // Add labels to the layout
+            // Add labels to the layout.
             layout->addWidget(userIDLabel);
             layout->addWidget(fullNameLabel);
             layout->addWidget(emailLabel);
             layout->addWidget(gradeLabel);
             layout->addWidget(permsLabel);
-            //layout->addWidget(lastActiveLabel);
-            /*
-            layout->addWidget(usernameLabel);
-            layout->addWidget(permsLabel);
-*/
-            // Add other labels to display additional information
 
-            // Set layout for the page
             page->setLayout(layout);
         }
 
-        // Add the page to the stackedWidget and display it
+        // Add the page to the stackedWidget and display it.
         stackedWidget->addWidget(page);
         page->show();
     }
@@ -394,9 +387,10 @@ void displayUsersInfo(const QString& selectedUsername, QStackedWidget *stackedWi
     }
 }
 
+// Displays a particular user's grades.
 void displayAllGrades(const QString& userID, QStackedWidget *stackedWidget)
 {
-    // Clear existing widgets in the stackedWidget
+    // Clear existing widgets in the stackedWidget.
     while (stackedWidget->count() > 0)
     {
         QWidget *widget = stackedWidget->widget(0);
@@ -404,7 +398,7 @@ void displayAllGrades(const QString& userID, QStackedWidget *stackedWidget)
         delete widget;
     }
 
-    // Fetch grades information from the database
+    // Fetch grades information from the database.
     QSqlQuery queryGrades;
     QString queryGradesString = "SELECT gradeID, subject, grade FROM grades WHERE userID = :userID";
     queryGrades.prepare(queryGradesString);
@@ -412,31 +406,27 @@ void displayAllGrades(const QString& userID, QStackedWidget *stackedWidget)
 
     if(queryGrades.exec())
     {
-        // Create a new widget to display the grades information
+        // Create a new widget to display the grades information.
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
         layout->setSpacing(1);
 
-        // Iterate over the results
+        // Iterate over the results.
         while (queryGrades.next())
         {
             QString gradeID = queryGrades.value(0).toString();
             QString subject = queryGrades.value(1).toString();
             QString grade = queryGrades.value(2).toString();
 
-            // Concatenate grade information into one label
             QString gradeInfo = "Grade ID: " + gradeID + ", Subject: " + subject + ", Grade: " + grade;
             QLabel *gradeInfoLabel = new QLabel(gradeInfo);
 
-            // Add the concatenated label to the layout
             layout->addWidget(gradeInfoLabel);
         }
 
-        // Set layout for the page
         page->setLayout(layout);
 
-        // Add the page to the stackedWidget and display it
         stackedWidget->addWidget(page);
         page->show();
     }
@@ -446,9 +436,10 @@ void displayAllGrades(const QString& userID, QStackedWidget *stackedWidget)
     }
 }
 
+// Displays a particular user's feedbacks.
 void displayFeedback(const QString& userID, QStackedWidget *stackedWidget)
 {
-    // Clear existing widgets in the stackedWidget
+    // Clear existing widgets in the stackedWidget.
     while (stackedWidget->count() > 0)
     {
         QWidget *widget = stackedWidget->widget(0);
@@ -456,44 +447,37 @@ void displayFeedback(const QString& userID, QStackedWidget *stackedWidget)
         delete widget;
     }
 
-    // Fetch feedback information from the database
+    // Fetch feedback information from the database.
     QSqlQuery queryFeedback;
     QString queryFeedbackString = "SELECT feedbackID, type, subject, reason FROM feedback WHERE userID = :userID";
     queryFeedback.prepare(queryFeedbackString);
     queryFeedback.bindValue(":userID", userID);
 
-    if(queryFeedback.exec())
+    if (queryFeedback.exec())
     {
-        // Create a new widget to display the feedback information
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
         layout->setSpacing(1);
 
-        // Iterate over the results
+        // Iterate over the results.
         while (queryFeedback.next())
         {
             QString feedbackID = queryFeedback.value(0).toString();
             QString type = queryFeedback.value(1).toString();
             QString subject = queryFeedback.value(2).toString();
             QString reason = queryFeedback.value(3).toString();
-
-            // Concatenate feedback information except reason into one label
             QString feedbackInfo = "Feedback ID: " + feedbackID + ", Type: " + type + ", Subject: " + subject;
-            QLabel *feedbackInfoLabel = new QLabel(feedbackInfo);
 
-            // Create label for reason
-            QLabel *reasonLabel = new QLabel("Reason: " + reason);
+            QLabel* feedbackInfoLabel = new QLabel(feedbackInfo);
+            QLabel* reasonLabel = new QLabel("Reason: " + reason);
 
-            // Add labels to the layout
             layout->addWidget(feedbackInfoLabel);
             layout->addWidget(reasonLabel);
         }
 
-        // Set layout for the page
         page->setLayout(layout);
 
-        // Add the page to the stackedWidget and display it
         stackedWidget->addWidget(page);
         page->show();
     }
@@ -503,9 +487,9 @@ void displayFeedback(const QString& userID, QStackedWidget *stackedWidget)
     }
 }
 
+// Displays a particular user's absences.
 void displayAbsence(const QString& userID, QStackedWidget *stackedWidget)
 {
-    // Clear existing widgets in the stackedWidget
     while (stackedWidget->count() > 0)
     {
         QWidget *widget = stackedWidget->widget(0);
@@ -513,39 +497,31 @@ void displayAbsence(const QString& userID, QStackedWidget *stackedWidget)
         delete widget;
     }
 
-    // Fetch absence information from the database
     QSqlQuery queryAbsence;
     QString queryAbsenceString = "SELECT absenceID, subject, type FROM absences WHERE userID = :userID";
     queryAbsence.prepare(queryAbsenceString);
     queryAbsence.bindValue(":userID", userID);
 
-    if(queryAbsence.exec())
+    if (queryAbsence.exec())
     {
-        // Create a new widget to display the absence information
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
         layout->setSpacing(1);
 
-        // Iterate over the results
         while (queryAbsence.next())
         {
             QString absenceID = queryAbsence.value(0).toString();
             QString subject = queryAbsence.value(1).toString();
             QString type = queryAbsence.value(2).toString();
-
-            // Concatenate absence information into one label
             QString absenceInfo = "Absence ID: " + absenceID + ", Subject: " + subject + ", Type: " + type;
+
             QLabel *absenceInfoLabel = new QLabel(absenceInfo);
 
-            // Add the concatenated label to the layout
             layout->addWidget(absenceInfoLabel);
         }
 
-        // Set layout for the page
         page->setLayout(layout);
-
-        // Add the page to the stackedWidget and display it
         stackedWidget->addWidget(page);
         page->show();
     }
@@ -555,27 +531,7 @@ void displayAbsence(const QString& userID, QStackedWidget *stackedWidget)
     }
 }
 
-/*
-void deleteAccount(const QString& userID)
-{
-    // Prepare the SQL query to delete the account
-    QSqlQuery queryDeleteAccount;
-    QString queryDeleteAccountString = "DELETE FROM users WHERE userID = :userID";
-    queryDeleteAccount.prepare(queryDeleteAccountString);
-    queryDeleteAccount.bindValue(":userID", userID);
-
-    // Execute the query to delete the account
-    if(queryDeleteAccount.exec())
-    {
-        QMessageBox::information(nullptr, "Account Deleted", "Account deleted successfully.");
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, "Error", "Error deleting account: " + queryDeleteAccount.lastError().text());
-    }
-}
-*/
-
+// Displays a particular user's grades.
 void displayGrades(QStackedWidget *stackedWidgetChemistry, int userID)
 {
     while (stackedWidgetChemistry->count() > 0)
@@ -596,7 +552,7 @@ void displayGrades(QStackedWidget *stackedWidgetChemistry, int userID)
 
     if(query.exec())
     {
-        // Create a new widget to display the results
+        // Create a new widget to display the results.
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
@@ -619,6 +575,7 @@ void displayGrades(QStackedWidget *stackedWidgetChemistry, int userID)
     }
 }
 
+// Displays a particular user's absences.
 void displayAbsences(QStackedWidget *stackedWidgetChemistry, int userID)
 {
     while (stackedWidgetChemistry->count() > 0)
@@ -638,7 +595,7 @@ void displayAbsences(QStackedWidget *stackedWidgetChemistry, int userID)
 
     if(query.exec())
     {
-        // Create a new widget to display the results
+        // Create a new widget to display the results.
         QWidget *page = new QWidget();
         QVBoxLayout *layout = new QVBoxLayout();
 
@@ -661,6 +618,7 @@ void displayAbsences(QStackedWidget *stackedWidgetChemistry, int userID)
     }
 }
 
+// Displays a particular user's feedbacks.
 void displayFeedbacks(QStackedWidget *stackedWidgetFeedback, int userID)
 {
     while (stackedWidgetFeedback->count() > 0)
@@ -704,39 +662,44 @@ void displayFeedbacks(QStackedWidget *stackedWidgetFeedback, int userID)
     }
 }
 
+// Table widget cell actions.
 void LoggedInWindow::on_tableWidget_2_cellClicked(int row, int column)
 {
-    if(ui->tableWidget_2->item(row, column) == nullptr)
+    if (ui->tableWidget_2->item(row, column) == nullptr)
     {
         return;
     }
 
-    // Get the text of the clicked cell
+    // Get the text of the clicked cell.
     QString grade = ui->tableWidget_2->item(row, column)->text();
     qDebug() << "Clicked Grade:" << grade;
 
-    // Display users with the clicked grade
+    // Display users with the clicked grade.
     displayUsersWithGrade(ui->stackedWidgetChemistry, grade);
 }
 
+// Displays the particular user's average grade on a label.
 void LoggedInWindow::setAverageGradeLabel() {
     User* user = new User;
     user->avgGrade(userID, ui->gpaLabel);
     delete user;
 }
 
+// Displays the particular user's absences on a label.
 void LoggedInWindow::setAbsenceLabel() {
     User* user = new User;
     user->totalAbsences(userID, ui->absenceLabel);
     delete user;
 }
 
+// Displays the particular user's feedbacks on a label.
 void LoggedInWindow::setFeedbackLabel() {
     User* user = new User;
     user->totalFeedbacks(userID, ui->feedbackLabel);
     delete user;
 }
 
+// Changes the user on the combo box.
 void LoggedInWindow::onComboBoxUserChanged(int index)
 {
     if (index >= 0)
@@ -746,6 +709,7 @@ void LoggedInWindow::onComboBoxUserChanged(int index)
     }
 }
 
+// Changes the user's grades on the combo box.
 void LoggedInWindow::onComboBoxGradesChanged(int index)
 {
     if (index >= 0)
@@ -755,6 +719,7 @@ void LoggedInWindow::onComboBoxGradesChanged(int index)
     }
 }
 
+// Changes the user's feedbacks on the combo box.
 void LoggedInWindow::onComboBoxFeedbackChanged(int index)
 {
     if (index >= 0)
@@ -764,6 +729,7 @@ void LoggedInWindow::onComboBoxFeedbackChanged(int index)
     }
 }
 
+// Changes the user's absences on the combo box.
 void LoggedInWindow::onComboBoxAbsenceChanged(int index)
 {
     if (index >= 0)
@@ -773,29 +739,35 @@ void LoggedInWindow::onComboBoxAbsenceChanged(int index)
     }
 }
 
+// Shows the GPA of the user on the tab widget in the user menu.
 void LoggedInWindow::showFirstPage() {
     displayGrades(ui->stackedWidget_2, userID);
 }
 
+// Shows the absences of the user on the tab widget in the user menu.
 void LoggedInWindow::showSecondPage() {
     displayAbsences(ui->stackedWidget_2, userID);
 }
 
+// Shows the feedbacks of the user on the tab widget in the user menu.
 void LoggedInWindow::showThirdPage() {
     displayFeedbacks(ui->stackedWidget_2, userID);
 }
 
+// Grades actions when clicked.
 void LoggedInWindow::on_gradesButton_clicked() {
     ui->stackedWidget_2->setCurrentIndex(0);
     displayGrades(ui->stackedWidget_2, userID);
 }
 
+// Absences actions when clicked.
 void LoggedInWindow::on_absencesButton_clicked()
 {
     ui->stackedWidget_2->setCurrentIndex(1);
     displayAbsences(ui->stackedWidget_2, userID);
 }
 
+// Feedback actions when clicked.
 void LoggedInWindow::on_feedbacksButton_clicked()
 {
     ui->stackedWidget_2->setCurrentIndex(2);

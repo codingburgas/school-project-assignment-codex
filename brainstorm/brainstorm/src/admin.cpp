@@ -1,6 +1,7 @@
 #include "../include/db.h"
 #include "../include/admin.h"
 
+// Sets a permission level for a particular user.
 void Admin::setPermissions(int userID, int perms, int loggedInUserID)
 {
     if (userID == loggedInUserID)
@@ -33,6 +34,7 @@ void Admin::setPermissions(int userID, int perms, int loggedInUserID)
     delete db;
 }
 
+// Adds a user to a grade in the database.
 void Admin::addToGrade(int userID, QString grade, int loggedInUserID)
 {
     QSet<QString> validGrades = {"9A", "9B", "9V", "9G", "10A", "10B", "10V", "10G"};
@@ -69,7 +71,6 @@ void Admin::addToGrade(int userID, QString grade, int loggedInUserID)
     else
     {
         QMessageBox::critical(nullptr, "Error", "Failed add user to grade");
-        //QMessageBox::critical(nullptr, "Error", "Failed to execute query: " + query.lastError().text());
     }
     delete db;
 }

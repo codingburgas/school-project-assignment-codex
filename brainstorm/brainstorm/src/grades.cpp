@@ -1,6 +1,7 @@
 #include "../include/db.h"
 #include "../include/grades.h"
 
+// Adds a grade to the database for a particuar user.
 void Grades::addGrade(int userID, const QString& subject, int grade)
 {
     if (grade < 2 || grade > 6)
@@ -27,6 +28,7 @@ void Grades::addGrade(int userID, const QString& subject, int grade)
     delete db;
 }
 
+// Updates a grade in the database for a particuar user.
 void Grades::updateGrade(int gradeID, int newGrade)
 {
     if (newGrade < 2 || newGrade > 6)
@@ -59,7 +61,7 @@ void Grades::updateGrade(int gradeID, int newGrade)
     delete db;
 }
 
-
+// Deletes a grade in the database for a particuar user.
 void Grades::deleteGrade(int gradeID) {
     Database* db = new Database;
     QSqlDatabase database = db->getDb();
