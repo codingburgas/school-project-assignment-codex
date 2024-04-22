@@ -124,7 +124,7 @@
     
 </p>
 
-<h2 id="instalation">Instalation</h2>
+<h2 id="instalation">Installation (to run the source code)</h2>
 <table border="1">
     <tr>
         <th> 1) Download Qt and create an account.</th>
@@ -166,10 +166,7 @@
 
 <h2 id="download">Download</h2>
     
-<p align="center">To download our project, clone our repository by pasting this command in your command prompt:</p>
-    
-<pre align="center">git clone "https://github.com/codingburgas/school-project-assignment-codex.git"</pre>
-
+<p align="center">To run our project, download the release and disable your antivirus software.</p>
 <hr>
 <h3 align="center"> Thank you and enjoy our app! <h3>
 <h4 align="center"> Made with ❤️, C++ & Qt </h4>
