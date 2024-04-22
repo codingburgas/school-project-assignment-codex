@@ -60,11 +60,23 @@
 <br>
 <br>
 
-|                               Teacher UI                                |
+|                               Admin UI                                |
 | :-------------------------------------------------------------------: | 
-| <img src="https://cdn.discordapp.com/attachments/1221804578933309460/1231845132060459079/Untitled.png?ex=66274cae&is=6625fb2e&hm=2899572b24ecdafc221bac291a24e10ef5990292a07213eb7a62c3e0a0e7504d&" alt="Brainstorm Register Screenshot">|
+|<img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232070894780940298/image.png?ex=66281ef0&is=6626cd70&hm=8893350112cdbbfa631850db906b6c473aeef7d991d3839fd279b96b3fb25dc1&" alt="Brainstorm Admin UI Screenshot"> |
 
+<br>
+<br>
 
+|                               Teacher UI                              |
+| :-------------------------------------------------------------------: | 
+| <img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232070336518946856/image.png?ex=66281e6a&is=6626ccea&hm=48bc895f408a6f8d0497fe0349e9b6775243283378540a7113d3fea94a534fe6&" alt="Brainstorm Teacher UI Screenshot">|
+
+<br>
+<br>
+
+|                               User UI                                 |
+| :-------------------------------------------------------------------: | 
+|<img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232071266891075616/image.png?ex=66281f48&is=6626cdc8&hm=eef048357ac3d0414895a9811d5ea981798c317fe86f5ed79f682ee0eead5654&" alt="Brainstorm User UI Screenshot"> |
     
 </details>
     
