@@ -28,6 +28,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     //ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
     QPixmap logo(":/assets/assets/logo.png");
     ui->labelLogo_2->setPixmap(logo);
+    ui->labelLogo_4->setPixmap(logo);
     ui->backgroundLabel->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(147, 146, 175, 1), stop:1 rgba(255, 255, 255, 1));");
 
     // Connect button signals to handleButtonClick slot.
@@ -71,7 +72,7 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     // Set the pixmap to the QLabel.
     ui->label_logo->setPixmap(pixmap);
     ui->label_logo_2->setPixmap(pixmap);
-    ui->label_logo_7->setPixmap(pixmap);
+    //ui->label_logo_7->setPixmap(pixmap);
 
 
     ui->label->setText("<b>Welcome back, " + firstName + " " + lastName + "!</b>");

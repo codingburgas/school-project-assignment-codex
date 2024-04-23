@@ -23,14 +23,14 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>100</y>
+       <x>440</x>
+       <y>10</y>
        <width>541</width>
        <height>71</height>
       </rect>
@@ -39,299 +39,41 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>200</y>
-       <width>331</width>
-       <height>201</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
-}</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="tab">
-      <attribute name="title">
-       <string>Tab 1</string>
-      </attribute>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>191</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
-}</string>
-       </property>
-       <property name="text">
-        <string>Your GPA:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="gpaLabel">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>70</y>
-         <width>151</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
-}</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab_2">
-      <attribute name="title">
-       <string>Tab 2</string>
-      </attribute>
-      <widget class="QLabel" name="absenceLabel">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>70</y>
-         <width>191</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); 
-}</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>261</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); 
-}</string>
-       </property>
-       <property name="text">
-        <string>Your absences:</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab_3">
-      <attribute name="title">
-       <string>Page</string>
-      </attribute>
-      <widget class="QLabel" name="feedbackLabel">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>70</y>
-         <width>191</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); 
-}</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_7">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>251</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.0); 
-}</string>
-       </property>
-       <property name="text">
-        <string>Your feedbacks:</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QListView" name="listView">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>220</y>
-       <width>251</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
-border-radius: 5px;
-}</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="gradesButton">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>250</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-     </property>
-     <property name="text">
-      <string>Your Grades</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="absencesButton">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>300</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-     </property>
-     <property name="text">
-      <string>Your Absences</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="feedbacksButton">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>350</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-     </property>
-     <property name="text">
-      <string>Your Feedbacks</string>
-     </property>
-    </widget>
-    <widget class="QCalendarWidget" name="calendarWidget">
-     <property name="geometry">
-      <rect>
-       <x>730</x>
-       <y>480</y>
-       <width>521</width>
-       <height>211</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QTableWidget {
-    background-color: rgba(255, 255, 255, 1); /* White background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
-}
-
-QTableWidget::item {
-    padding: 5px; /* Padding around each item */
-}
-
-QHeaderView::section {
-    background-color: rgba(200, 200, 200, 1); /* Light gray background for header */
-    border: 1px solid #ccc; /* Light gray border */
-    padding: 5px; /* Padding for header sections */
-    font-weight: bold; /* Bold font for header sections */
-}
-
-QHeaderView::section:checked {
-    background-color: rgba(150, 150, 150, 1); /* Darker background for checked header sections */
-}
-
-QHeaderView::section:pressed {
-    background-color: rgba(100, 100, 100, 1); /* Even darker background when header section is pressed */
-}
-</string>
-     </property>
-    </widget>
     <widget class="QTableWidget" name="tableWidget_3">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>170</y>
-       <width>521</width>
-       <height>271</height>
+       <x>440</x>
+       <y>110</y>
+       <width>741</width>
+       <height>291</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QTableWidget {
     background-color: rgba(50, 50, 50, 1); /* Dark gray background */
+    alternate-background-color: rgba(30, 30, 30, 1); /* Darker background for alternate rows */
     border: 1px solid #555; /* Dark gray border */
+    border-radius: 10px; /* Rounded corners */
 }
 
+QTableWidget::item {
+    padding: 10px; /* Padding around each item */
+    padding-bottom: 12px;
+}
+
+QHeaderView::section {
+    background-color: rgba(70, 70, 70, 1); /* Dark gray background for header */
+    border: 1px solid #555; /* Dark gray border */
+    padding: 8px; /* Padding for header sections */
+}
+
+QHeaderView::section:checked {
+    background-color: rgba(30, 30, 30, 1); /* Darker background for checked header sections */
+}
+
+QHeaderView::section:pressed {
+    background-color: rgba(20, 20, 20, 1); /* Even darker background when header section is pressed */
+}
 
 
 
@@ -349,7 +91,7 @@ QHeaderView::section:pressed {
       <number>8</number>
      </property>
      <property name="columnCount">
-      <number>5</number>
+      <number>7</number>
      </property>
      <attribute name="horizontalHeaderVisible">
       <bool>true</bool>
@@ -385,6 +127,16 @@ QHeaderView::section:pressed {
      <column>
       <property name="text">
        <string>Friday</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Sunday</string>
       </property>
      </column>
      <item row="0" column="0">
@@ -586,16 +338,17 @@ QHeaderView::section:pressed {
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>150</y>
-       <width>251</width>
-       <height>21</height>
+       <x>447</x>
+       <y>88</y>
+       <width>191</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
     background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
     border-radius: 5px; /* Rounded corners */
+    padding-bottom: 10px;
 }</string>
      </property>
      <property name="text">
@@ -608,20 +361,20 @@ QHeaderView::section:pressed {
     <widget class="QStackedWidget" name="stackedWidget_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>430</x>
        <y>410</y>
-       <width>651</width>
+       <width>761</width>
        <height>271</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); 
-    border-radius: 5px;
+    background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 10px; /* Adjust the radius as needed */
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_14"/>
      <widget class="QWidget" name="page_15"/>
@@ -640,73 +393,388 @@ QHeaderView::section:pressed {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_52">
+    <widget class="QFrame" name="frame_3">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1281</width>
-       <height>81</height>
+       <width>391</width>
+       <height>941</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(48, 48, 48, 0.8); /* Very dark gray with 50% opacity */
+      <string notr="true">QFrame {
+    background-color: #302c2c;
 }</string>
      </property>
-     <property name="text">
-      <string/>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
-    </widget>
-    <widget class="QLabel" name="label_logo_7">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>451</width>
-       <height>81</height>
-      </rect>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
      </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_53">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>200</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+     <widget class="QLabel" name="labelLogo_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/logo.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>331</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget {
+    border: 2.75px solid #777777; /* Changed border color */
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab {
+margin-left: 3px;
+    padding: 5px;
+border: 1.75px solid #777777;
+    border-radius: 6px;
+    margin-top: 10px;
+
+}
+
+QTabBar::tab:selected {
+    background-color: #b8daff;
+margin-bottom: -5px; 
+padding-bottom: 10 px;
+}
+
+QTabBar::tab:hover {
+    background-color: darkgray;
+}
+
+QTabBar::tab:selected:active {
+    background-color: gray;
+color: white;
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>191</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your GPA:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="gpaLabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>151</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); /* Very dark gray with 50% opacity */
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+       <widget class="QLabel" name="absenceLabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>191</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your absences:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <widget class="QLabel" name="feedbackLabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>191</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>251</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.0); 
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your feedbacks:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QListView" name="listView">
+      <property name="geometry">
+       <rect>
+        <x>34</x>
+        <y>434</y>
+        <width>251</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListView {
+    border: 2.75px solid #777777;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+QListView::item {
+    padding: 5px;
+}
+
+QListView::item:selected {
+    background-color: #b8daff;
+}
+
+QListView::item:hover {
+    background-color: #f5f5f5;
+}
+
+QListView::item:selected:active {
+    background-color: #339af0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="feedbacksButton">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>564</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 10px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Your Feedbacks</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_53">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>421</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
-    border-radius: 5px; /* Rounded corners */
+color: white;
+    border-radius: 8px; /* Rounded corners */
+padding-bottom: 3px;
 }</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Your Stats&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="margin">
-      <number>8</number>
-     </property>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Your Stats&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="margin">
+       <number>7</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="absencesButton">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>514</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 10px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Your Absences</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="gradesButton">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>464</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 10px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Your Grades</string>
+      </property>
+     </widget>
+     <zorder>label_53</zorder>
+     <zorder>labelLogo_4</zorder>
+     <zorder>tabWidget</zorder>
+     <zorder>listView</zorder>
+     <zorder>feedbacksButton</zorder>
+     <zorder>absencesButton</zorder>
+     <zorder>gradesButton</zorder>
     </widget>
-    <zorder>label_53</zorder>
-    <zorder>label</zorder>
-    <zorder>tabWidget</zorder>
-    <zorder>listView</zorder>
-    <zorder>gradesButton</zorder>
-    <zorder>absencesButton</zorder>
-    <zorder>feedbacksButton</zorder>
-    <zorder>calendarWidget</zorder>
-    <zorder>tableWidget_3</zorder>
     <zorder>label_13</zorder>
+    <zorder>label</zorder>
+    <zorder>tableWidget_3</zorder>
     <zorder>stackedWidget_2</zorder>
     <zorder>label_14</zorder>
-    <zorder>label_52</zorder>
-    <zorder>label_logo_7</zorder>
+    <zorder>frame_3</zorder>
    </widget>
    <widget class="QWidget" name="pageAdmin">
     <widget class="QWidget" name="layoutWidget">
