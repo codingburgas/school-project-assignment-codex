@@ -13,8 +13,8 @@
         <file>assets/icons/chemistry.png</file>
     </qresource>
     <qresource prefix="/assets">
-        <file>assets/background.jpg</file>
         <file>assets/icon.png</file>
         <file>assets/logo.png</file>
+        <file>assets/codex.png</file>
     </qresource>
 </RCC>

@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
@@ -926,9 +926,7 @@ QHeaderView::section:pressed {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
-}</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string/>
@@ -1246,6 +1244,28 @@ QHeaderView::section:pressed {
       </item>
      </layout>
     </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-10</y>
+       <width>1301</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+    background-color: #302c2c;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <zorder>frame</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
@@ -1261,8 +1281,8 @@ QHeaderView::section:pressed {
     <widget class="QTableWidget" name="tableWidget_2">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>170</y>
+       <x>440</x>
+       <y>110</y>
        <width>741</width>
        <height>291</height>
       </rect>
@@ -1468,265 +1488,18 @@ QHeaderView::section:pressed {
       </property>
      </item>
     </widget>
-    <widget class="QWidget" name="layoutWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>210</y>
-       <width>101</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QPushButton" name="pushButtonAddGrade_2">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Add Grade</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonUpdateGrade_2">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Update Grade</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonDeleteGrade_2">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Delete Grade</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>80</y>
-       <width>541</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:700;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_3">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>340</y>
-       <width>101</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QPushButton" name="pushButtonAddAbsence">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Add Absence</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonUpdateAbsence">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Update Absence</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonDeleteAbsence">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Delete Absence</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_7">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>470</y>
-       <width>101</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QPushButton" name="pushButtonAddFeedback">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Add Feedback</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonUpdateFeedback">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Update Feedback</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonDeleteFeedback">
-        <property name="styleSheet">
-         <string notr="true">#minimalButton {
-    background-color: #FFFFFF; /* White background */
-    border: 2px solid #000000; /* Black border */
-    color: #000000; /* Black text color */
-    padding: 8px 16px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-}
-
-#minimalButton:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #FFFFFF; /* White text color on hover */
-}</string>
-        </property>
-        <property name="text">
-         <string>Delete Feedback</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
     <widget class="QStackedWidget" name="stackedWidgetChemistry">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>470</y>
-       <width>741</width>
+       <x>430</x>
+       <y>440</y>
+       <width>761</width>
        <height>181</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
 }</string>
      </property>
@@ -1735,24 +1508,6 @@ QHeaderView::section:pressed {
      </property>
      <widget class="QWidget" name="page"/>
      <widget class="QWidget" name="page_2"/>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>1281</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.8); /* Very dark gray with 50% opacity */
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
     </widget>
     <widget class="QLabel" name="label_logo">
      <property name="geometry">
@@ -1767,95 +1522,410 @@ QHeaderView::section:pressed {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_15">
+    <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>200</y>
-       <width>191</width>
-       <height>111</height>
+       <x>-10</x>
+       <y>-90</y>
+       <width>391</width>
+       <height>941</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
-    border-radius: 10px; /* Adjust the radius as needed */
+      <string notr="true">QFrame {
+    background-color: #302c2c;
 }</string>
      </property>
-     <property name="text">
-      <string>Grade 
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>560</y>
+        <width>261</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 15px; /* Adjust the radius as needed */
+}</string>
+      </property>
+      <property name="text">
+       <string>Feedback 
  settings</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="margin">
-      <number>20</number>
-     </property>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>300</y>
+        <width>261</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 15px; /* Adjust the radius as needed */
+}</string>
+      </property>
+      <property name="text">
+       <string>Grade 
+ settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>430</y>
+        <width>261</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
+    border-radius: 15px; /* Adjust the radius as needed */
+}</string>
+      </property>
+      <property name="text">
+       <string>Absence 
+ settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>440</y>
+        <width>171</width>
+        <height>98</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButtonAddAbsence">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Add Absence</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonUpdateAbsence">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Update Absence</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonDeleteAbsence">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Delete Absence</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>310</y>
+        <width>171</width>
+        <height>98</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButtonAddGrade_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Add Grade</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonUpdateGrade_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Update Grade</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonDeleteGrade_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Delete Grade</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>570</y>
+        <width>171</width>
+        <height>98</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QPushButton" name="pushButtonAddFeedback">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Add Feedback</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonUpdateFeedback">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Update Feedback</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonDeleteFeedback">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #f6f6f6, stop: 1 #e0e0e0);
+    border-radius: 14px;
+	color: black;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0e0e0, stop: 1 #f6f6f6);
+}
+
+QPushButton:pressed {
+    background: #dcdcdc;
+}</string>
+         </property>
+         <property name="text">
+          <string>Delete Feedback</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="labelLogo_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/logo.png</pixmap>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_16">
+    <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>330</y>
-       <width>191</width>
-       <height>111</height>
+       <x>440</x>
+       <y>20</y>
+       <width>541</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
-    border-radius: 10px; /* Adjust the radius as needed */
-}</string>
+      <string notr="true">color: #333333;</string>
      </property>
      <property name="text">
-      <string>Absence 
- settings</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="margin">
-      <number>20</number>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt; font-weight:700;&quot;&gt;Welcome back!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_17">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>460</y>
-       <width>191</width>
-       <height>111</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
-    border-radius: 10px; /* Adjust the radius as needed */
-}</string>
-     </property>
-     <property name="text">
-      <string>Feedback 
- settings</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="margin">
-      <number>20</number>
-     </property>
-    </widget>
-    <zorder>label_17</zorder>
-    <zorder>label_16</zorder>
-    <zorder>label_15</zorder>
-    <zorder>tableWidget_2</zorder>
-    <zorder>layoutWidget_2</zorder>
-    <zorder>layoutWidget_3</zorder>
-    <zorder>layoutWidget_7</zorder>
-    <zorder>stackedWidgetChemistry</zorder>
-    <zorder>label_4</zorder>
-    <zorder>label_2</zorder>
-    <zorder>label_logo</zorder>
    </widget>
   </widget>
   <widget class="QLabel" name="backgroundLabel">

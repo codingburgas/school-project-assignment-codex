@@ -22,10 +22,13 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     addUsersIDsToComboBox();
 
     // Sets background image and makes it transparent.
-    QPixmap backgroundImage(":/assets/assets/background.jpg");
-    ui->backgroundLabel->setPixmap(backgroundImage);
-    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
-    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
+    //QPixmap backgroundImage(":/assets/assets/background.jpg");
+    //ui->backgroundLabel->setPixmap(backgroundImage);
+    //ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
+    //ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
+    QPixmap logo(":/assets/assets/logo.png");
+    ui->labelLogo_2->setPixmap(logo);
+    ui->backgroundLabel->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(147, 146, 175, 1), stop:1 rgba(255, 255, 255, 1));");
 
     // Connect button signals to handleButtonClick slot.
     connect(ui->pushButtonAddGrade, &QPushButton::clicked, this, &LoggedInWindow::handleButtonClick);

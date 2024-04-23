@@ -10,18 +10,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setFixedSize(size()); // Set fixed size.
+    setFixedSize(size()); // Set window fixed size.
 
+    // Set window icon
     QIcon icon(":/assets/assets/icon.png");
     this->setWindowIcon(icon);
+
     QPixmap logo(":/assets/assets/logo.png");
     ui->labelLogo->setPixmap(logo);
 
-    // Set background image and make it transparent.
-    QPixmap backgroundImage(":/assets/assets/background.jpg");
-    ui->backgroundLabel->setPixmap(backgroundImage);
-    ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
-    ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
+    ui->backgroundLabel->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(147, 146, 175, 1), stop:1 rgba(255, 255, 255, 1));");
+    QPixmap codexLogo(":/assets/assets/codex.png");
+    codexLogo = codexLogo.scaled(QSize(200, 200), Qt::KeepAspectRatio);
+    ui->codexLogoLabel->setPixmap(codexLogo);
 }
 
 // Destructor.
