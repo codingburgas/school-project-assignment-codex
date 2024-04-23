@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="pageUser">
     <widget class="QLabel" name="label">
@@ -371,6 +371,7 @@ QHeaderView::section:pressed {
       <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
      </property>
      <property name="currentIndex">
@@ -830,7 +831,7 @@ QPushButton:pressed {
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>1</x>
@@ -976,6 +977,7 @@ QComboBox::down-arrow {
              <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
             </property>
             <widget class="QWidget" name="page_3"/>
@@ -1122,6 +1124,7 @@ QComboBox::down-arrow {
              <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
             </property>
             <property name="currentIndex">
@@ -1267,6 +1270,7 @@ QComboBox::down-arrow {
              <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
             </property>
             <property name="currentIndex">
@@ -1412,6 +1416,7 @@ QComboBox::down-arrow {
              <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
             </property>
             <widget class="QWidget" name="page_9"/>
@@ -1425,14 +1430,6 @@ QComboBox::down-arrow {
      </layout>
     </widget>
     <zorder>frame</zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder></zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder>layoutWidget</zorder>
-    <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>label_18</zorder>
     <zorder>label_logo_2</zorder>
@@ -1458,6 +1455,7 @@ QComboBox::down-arrow {
 QTableWidget::item {
     padding: 10px; /* Padding around each item */
     padding-bottom: 12px;
+color: white;
 }
 
 QHeaderView::section {
@@ -1661,6 +1659,7 @@ QHeaderView::section:pressed {
       <string notr="true">QLabel {
     background: rgba(48, 44, 44, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 10px; /* Adjust the radius as needed */
+color: white;
 }</string>
      </property>
      <property name="currentIndex">
@@ -1715,6 +1714,7 @@ QHeaderView::section:pressed {
        <string notr="true">QLabel {
     background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 15px; /* Adjust the radius as needed */
+color: white;
 }</string>
       </property>
       <property name="text">
@@ -1741,6 +1741,7 @@ QHeaderView::section:pressed {
        <string notr="true">QLabel {
     background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 15px; /* Adjust the radius as needed */
+color: white;
 }</string>
       </property>
       <property name="text">
@@ -1767,6 +1768,7 @@ QHeaderView::section:pressed {
        <string notr="true">QLabel {
     background: rgba(68, 68, 68, 0.7); /* Very dark gray with 50% opacity */
     border-radius: 15px; /* Adjust the radius as needed */
+color: white;
 }</string>
       </property>
       <property name="text">

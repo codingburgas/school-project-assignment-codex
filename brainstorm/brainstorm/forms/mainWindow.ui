@@ -66,6 +66,9 @@
        <height>361</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
      <property name="currentIndex">
       <number>1</number>
      </property>
@@ -407,6 +410,7 @@ QPushButton:pressed {
       <string notr="true">QPushButton
 {
 border-radius: 15px;
+color: white;
 }</string>
      </property>
      <property name="text">
@@ -504,7 +508,7 @@ border-radius: 15px;
      <x>0</x>
      <y>0</y>
      <width>1160</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
