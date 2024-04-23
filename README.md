@@ -31,6 +31,8 @@
     <li><a href="#about-the-project">  The Project</a></li>
     <li><a href="#used-technologies">  Technologies</a></li>
     <li><a href="#contributors">   Contributors</a></li>
+    <li><a href="#documentation">  Documentation</a></li>
+    <li><a href="#installation">  Installation</a></li>
     <li><a href="#download">    Download</a></li>
 </details>
     
@@ -55,28 +57,28 @@
     
 |                               Register                                |
 | :-------------------------------------------------------------------: | 
-| <img src="https://cdn.discordapp.com/attachments/1221804578933309460/1231288279907700837/image.png?ex=66254612&is=6623f492&hm=d0c64395bd8abf29f578c235c42f57b6ae6216f8d401a69df771d56659b2ae62&" alt="Brainstorm Register Screenshot">|
+| <img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/c8900c89-b19f-4d72-b564-576f515aff01" alt="Brainstorm Register Screenshot">|
 
 <br>
 <br>
 
 |                               Admin UI                                |
 | :-------------------------------------------------------------------: | 
-|<img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232070894780940298/image.png?ex=66281ef0&is=6626cd70&hm=8893350112cdbbfa631850db906b6c473aeef7d991d3839fd279b96b3fb25dc1&" alt="Brainstorm Admin UI Screenshot"> |
+|<img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/f5d69f74-8c1b-41e5-b553-eb201283876e" alt="Brainstorm Admin UI Screenshot"> |
 
 <br>
 <br>
 
 |                               Teacher UI                              |
 | :-------------------------------------------------------------------: | 
-| <img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232070336518946856/image.png?ex=66281e6a&is=6626ccea&hm=48bc895f408a6f8d0497fe0349e9b6775243283378540a7113d3fea94a534fe6&" alt="Brainstorm Teacher UI Screenshot">|
+| <img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/e6c39bb5-91c8-494f-b78d-9c9dd7593691" alt="Brainstorm Teacher UI Screenshot">|
 
 <br>
 <br>
 
 |                               User UI                                 |
 | :-------------------------------------------------------------------: | 
-|<img src="https://cdn.discordapp.com/attachments/1221804578933309460/1232071266891075616/image.png?ex=66281f48&is=6626cdc8&hm=eef048357ac3d0414895a9811d5ea981798c317fe86f5ed79f682ee0eead5654&" alt="Brainstorm User UI Screenshot"> |
+|<img src="https://github.com/codingburgas/school-project-assignment-codex/assets/107105735/a73d1ef7-a8b4-4811-b2bd-db43bfe93adf" alt="Brainstorm User UI Screenshot"> |
     
 </details>
     
@@ -124,7 +126,18 @@
     
 </p>
 
-<h2 id="instalation">Installation (to run the source code)</h2>
+<h2 id="documentation">Documentation</h2>
+<hr>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Word Logo"> <a href="https://1drv.ms/w/s!AuncKZbHvTNsgqpY0So7PuB6IyvvfA?e=glbBqX">Documentation</a>
+<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="20" alt="MS PowerPoint Logo"> <a href="https://1drv.ms/p/s!AuncKZbHvTNsgqVD8bSEh8rhhZU9HA?e=YQkJVs">Presentation</a>
+<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Excel Logo"> <a href="https://1drv.ms/x/s!AuncKZbHvTNsgqN-Fv5WGaE3dW7gcA?e=JJwUCn">QA Documentation</a>
+
+<hr>
+
+<h2 id="installation">Installation (to run the source code)</h2>
 <table border="1">
     <tr>
         <th> 1) Download Qt and create an account.</th>
@@ -153,7 +166,7 @@
 
 <table border="1">
     <tr>
-        <th> 7) Select the first two files from the extracted folder and add them to the new path (added in the system variables) on your computer.</th>
+        <th> 7) Select the first three files from the extracted folder and add them to the new path (added in the system variables) on your computer.</th>
         <th> 8) Clone our repository and open ".pro" file.</th>
         <th> 9) Debug the application and enjoy!</th>
     </tr>
