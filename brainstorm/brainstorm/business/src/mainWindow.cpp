@@ -1,7 +1,7 @@
-#include "../include/mainWindow.h"
-#include "../include/db.h"
-#include "../include/loggedInWindow.h"
-#include "../include/validatorlib.h"
+#include "../../business/include/mainWindow.h"
+#include "../../data/include/db.h"
+#include "../../business/include/loggedInWindow.h"
+#include "../../business/include/validatorlib.h"
 #include "ui_mainWindow.h"
 
 // Constructor.

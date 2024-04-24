@@ -1,5 +1,5 @@
-#include "../include/db.h"
-#include "../include/admin.h"
+#include "../../data/include/db.h"
+#include "../../data/include/admin.h"
 
 // Sets a permission level for a particular user.
 void Admin::setPermissions(int userID, int perms, int loggedInUserID)

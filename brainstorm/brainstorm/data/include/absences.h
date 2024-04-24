@@ -1,7 +1,7 @@
 #ifndef ABSENCES_H
 #define ABSENCES_H
 
-#include "pch.h"
+#include "../../business/include/pch.h"
 
 // Contains the absence methods.
 class Absences {

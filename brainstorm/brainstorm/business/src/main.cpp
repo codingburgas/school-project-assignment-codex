@@ -1,4 +1,4 @@
-#include "../include/mainWindow.h"
+#include "../../business/include/mainWindow.h"
 
 // Main function.
 int main(int argc, char *argv[])

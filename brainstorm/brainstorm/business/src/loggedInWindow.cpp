@@ -1,7 +1,7 @@
-#include "../include/loggedInWindow.h"
-#include "../include/gradesButtons.h"
-#include "../include/user.h"
-#include "../include/db.h"
+#include "../../business/include/loggedInWindow.h"
+#include "../../business/include/gradesButtons.h"
+#include "../../data/include/user.h"
+#include "../../data/include/db.h"
 #include "ui_loggedInWindow.h"
 
 // Constructor.
@@ -21,11 +21,6 @@ LoggedInWindow::LoggedInWindow(QWidget *parent, const QString& username, int per
     addUsersToComboBox();
     addUsersIDsToComboBox();
 
-    // Sets background image and makes it transparent.
-    //QPixmap backgroundImage(":/assets/assets/background.jpg");
-    //ui->backgroundLabel->setPixmap(backgroundImage);
-    //ui->backgroundLabel->setScaledContents(true); // Scale the image to fit the label.
-    //ui->backgroundLabel->setStyleSheet("background-color: rgba(255, 255, 255, 1);"); // Set transparency.
     QPixmap logo(":/assets/assets/logo.png");
     ui->labelLogo_2->setPixmap(logo);
     ui->labelLogo_4->setPixmap(logo);

@@ -1,5 +1,5 @@
-#include "../include/db.h"
-#include "../include/absences.h"
+#include "../../data/include/db.h"
+#include "../../data/include/absences.h"
 
 // Adds an absence to the database for a particular user.
 void Absences::addAbsence(int userID, const QString& subject, const QString& type)

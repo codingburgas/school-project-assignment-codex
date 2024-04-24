@@ -131,7 +131,7 @@ QHeaderView::section:pressed {
      </column>
      <column>
       <property name="text">
-       <string>New Column</string>
+       <string>Saturday</string>
       </property>
      </column>
      <column>
@@ -479,7 +479,7 @@ color: white;
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">

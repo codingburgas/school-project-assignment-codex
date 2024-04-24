@@ -1,7 +1,7 @@
 #ifndef USER_H
 #define USER_H
 
-#include "pch.h"
+#include "../../business/include/pch.h"
 
 // Contains the user methods.
 class User {

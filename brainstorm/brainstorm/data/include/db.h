@@ -1,7 +1,7 @@
 #ifndef DB_H
 #define DB_H
 
-#include "pch.h"
+#include "../../business/include/pch.h"
 
 // Contains the database methods (databaselib.lib).
 class Database

@@ -1,4 +1,4 @@
-#include "../include/user.h"
+#include "../../data/include/user.h"
 
 // Retrieves a particular user's grades from the database.
 QList<int> User::retrieveGrades(int userID) {

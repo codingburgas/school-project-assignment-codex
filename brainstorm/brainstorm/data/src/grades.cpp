@@ -1,5 +1,5 @@
-#include "../include/db.h"
-#include "../include/grades.h"
+#include "../../data/include/db.h"
+#include "../../data/include/grades.h"
 
 // Adds a grade to the database for a particuar user.
 void Grades::addGrade(int userID, const QString& subject, int grade)

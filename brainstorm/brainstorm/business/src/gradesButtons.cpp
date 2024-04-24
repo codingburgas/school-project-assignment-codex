@@ -1,10 +1,10 @@
-#include "../include/gradesButtons.h"
-#include "../include/absences.h"
-#include "../include/feedback.h"
-#include "../include/grades.h"
-#include "../include/admin.h"
-#include "../include/validatorlib.h"
-#include "../include/db.h"
+#include "../../business/include/gradesButtons.h"
+#include "../../data/include/absences.h"
+#include "../../data/include/feedback.h"
+#include "../../data/include/grades.h"
+#include "../../data/include/admin.h"
+#include "../../business/include/validatorlib.h"
+#include "../../data/include/db.h"
 #include "ui_gradesButtons.h"
 
 // Constructor.

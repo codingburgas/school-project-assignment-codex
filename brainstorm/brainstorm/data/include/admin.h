@@ -1,7 +1,7 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-#include "pch.h"
+#include "../../business/include/pch.h"
 
 // Contains the administrator methods.
 class Admin {

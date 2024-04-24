@@ -1,5 +1,5 @@
-#include "../include/db.h"
-#include "../include/feedback.h"
+#include "../../data/include/db.h"
+#include "../../data/include/feedback.h"
 
 // Adds a feedback to the database for a particuar user.
 void Feedbacks::addFeedback(int userID, const QString& subject, const QString& type, const QString& reason)

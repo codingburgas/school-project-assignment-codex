@@ -1,7 +1,7 @@
 #ifndef GRADES_H
 #define GRADES_H
 
-#include "pch.h"
+#include "../../business/include/pch.h"
 
 // Contains the grades methods.
 class Grades {

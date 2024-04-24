@@ -7,35 +7,33 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++17
 
 SOURCES += \
-    src/absences.cpp \
-    src/admin.cpp \
-    src/feedback.cpp \
-    src/gradesButtons.cpp \
-    src/grades.cpp \
-    src/loggedInWindow.cpp \
-    src/mainWindow.cpp \
-    src/main.cpp \
-    src/user.cpp
+    business/src/gradesButtons.cpp \
+    business/src/loggedInWindow.cpp \
+    business/src/main.cpp \
+    business/src/mainWindow.cpp \
+    data/src/absences.cpp \
+    data/src/admin.cpp \
+    data/src/feedback.cpp \
+    data/src/grades.cpp \
+    data/src/user.cpp
 
 HEADERS += \
-    include/absences.h \
-    include/admin.h \
-    include/feedback.h \
-    include/gradesButtons.h \
-    include/db.h \
-    include/grades.h \
-    include/mainWindow.h \
-    include/loggedInWindow.h \
-    include/pch.h \
-    include/user.h \
-    include/validatorlib.h
+    business/include/gradesButtons.h \
+    business/include/loggedInWindow.h \
+    business/include/mainWindow.h \
+    business/include/pch.h \
+    business/include/validatorlib.h \
+    data/include/absences.h \
+    data/include/admin.h \
+    data/include/db.h \
+    data/include/feedback.h \
+    data/include/grades.h \
+    data/include/user.h
 
 FORMS += \
-    forms/loggedInWindow.ui \
-    forms/mainWindow.ui \
-    forms/mainWindow.ui \
-    forms/loggedInWindow.ui \
-    forms/gradesButtons.ui
+    presentation/gradesButtons.ui \
+    presentation/loggedInWindow.ui \
+    presentation/mainWindow.ui
 
 LIBS += -L../lib/ -lvalidatorlib \
         -L../lib/ -ldatabaselib
