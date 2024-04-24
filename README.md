@@ -134,6 +134,8 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="20" alt="MS PowerPoint Logo"> <a href="https://1drv.ms/p/s!AuncKZbHvTNsgqVD8bSEh8rhhZU9HA?e=YQkJVs">Presentation</a>
 <br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Excel Logo"> <a href="https://1drv.ms/x/s!AuncKZbHvTNsgqN-Fv5WGaE3dW7gcA?e=JJwUCn">QA Documentation</a>
+<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" width="20" alt="MS Word Logo"> <a href="https://1drv.ms/w/s!AuncKZbHvTNsgqsvlCUFXkxhjUwMPg?e=adcaLQ">QA Test Plan</a>
 
 <hr>
 
